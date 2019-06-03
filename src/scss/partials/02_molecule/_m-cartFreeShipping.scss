@@ -1,0 +1,19 @@
+.m-cartFreeShipping{
+    margin-top: 10px;
+}
+.m-cartFreeShipping__progress{
+    background: $bg-light;
+}
+.m-cartFreeShipping__progressBar{
+    background: $bg-brand;
+}
+.m-cartFreeShipping__text{
+    @include f-14-primary-regular;
+    text-align: right;
+    margin: 0;
+    margin-top: 5px;
+}
+.m-cartFreeShipping__price{
+    color: $text-brand;
+    font-weight: 500;
+}

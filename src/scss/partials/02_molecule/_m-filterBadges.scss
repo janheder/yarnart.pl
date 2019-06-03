@@ -1,0 +1,39 @@
+.m-filterBadges{
+    display: flex;
+    flex-direction: row;
+    margin: 0 -5px 2rem -5px;
+}
+.m-filterBadges__single{
+    padding: 5px;
+}
+.m-filterBadges__wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-primary;
+    background: $bg-light;
+    padding: 0 0 0 10px;
+    height: 40px;
+    overflow: hidden;
+}
+.m-filterBadges__title{
+    @include f-14-primary-regular;
+}
+.m-filterBadges__remove{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    padding: 0 10px;
+
+    &:hover, &:active, &:focus{
+        background: $bg-brand;
+    }
+}
+.m-filterBadges__Icon {
+    height: 8px;
+    width: 8px;
+}

@@ -1,0 +1,35 @@
+.m-cartBarResponsive{
+    position: fixed;
+    display: none;
+    flex-direction: row;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $bg-white;
+    z-index: 4;
+    padding: 5px 10px;
+    box-shadow: $box-shadow-primary;
+}
+.m-cartBarResponsive__priceWrap{
+    flex-grow: 1;
+    padding-right: 15px;
+}
+.m-cartBarResponsive__text{
+    margin: 0;
+    padding-bottom: 5px;
+}
+.m-cartBarResponsive__price{
+    @include f-18-primary-semibold;
+    color: $text-red;
+    margin: 0;
+    line-height: 1;
+}
+.m-cartBarResponsive__btnWrap{
+    display: flex;
+}
+
+@media screen and (max-width: 991px){
+    .m-cartBarResponsive{
+        display: flex;
+    }
+}

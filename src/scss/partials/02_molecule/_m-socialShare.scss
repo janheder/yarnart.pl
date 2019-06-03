@@ -1,0 +1,15 @@
+.m-socialShare{
+    display: flex;
+    flex-direction: row;
+}
+.m-socialShare__title{
+    @include f-14-dark-regular;
+    margin-right: 10px;
+}
+.m-socialShare__link{
+    margin-right: 10px;
+    
+    &:last-child{
+        margin: 0;
+    }
+}

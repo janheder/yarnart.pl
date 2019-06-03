@@ -1,0 +1,85 @@
+nav.o-navMain
+
+	.o-navMain__navToggler.m-navToggler(id="js-navToggler")
+		.a-icon.-hamburger.m-navToggler__icon
+
+
+	.o-navMain__logo.m-navLogo
+		a.m-navLogo__link(href="#")
+			img.m-navLogo__img(src=URLbase+"img/logo.svg" alt="" title="")
+
+
+	.o-navMain__search.m-navSearch(id="js-navSearch")
+		form.m-navSearch__form(method="POST" id="search-form")
+			.m-navSearch__close(id="js-navSearchTogglerClose")
+				.a-icon.-cross.m-navSearch__closeIcon
+			input.m-navSearch__input(type="text" name="searchbox" id="searchbox" placeholder="Hledejte název produktu, značku nebo typ" required)
+			button.m-navSearch__button #[span.a-icon.-search.m-navSearch__icon]
+		
+	.o-navMain__navSearchToggler.m-navSearchToggler(id="js-navSearchToggler")
+		.a-icon.-search.m-navSearchToggler__icon
+		
+	//
+		<a class="o-navMain__user m-navUser" href="#" data-toggle="modal" data-target="#modal-login">
+			<div class="a-icon -user -grey m-navUser__icon"></div>
+			<div class="m-navUser__info"><span class="m-navUser__title">Přihlášení</span></div>
+		</a>
+
+	.o-navMain__user.m-navUser(data-toggle="collapse" data-target="#collapseNavUser" aria-expanded="false" aria-controls="collapseNavUser")
+		.a-icon.-user.-grey.m-navUser__icon
+		.m-navUser__info
+			span.m-navUser__text Přihlášen jako
+			span.m-navUser__title Petr Novák
+		.collapse.m-navUser__collapse(id="collapseNavUser" aria-labelledby="collapseNavUser")
+			a.m-navUser__collapseLink(href="#") Změna osobních údajů
+			a.m-navUser__collapseLink(href="#") Historie objednávek
+			a.m-navUser__collapseLink(href="#") Odhlásit
+
+	//
+		<a class="o-navMain__cart m-navCart" href="#">
+			<div class="m-navCart__iconWrap">
+				<div class="a-icon -cart -grey m-navCart__icon"></div>
+			</div>
+			<div class="m-navCart__info"><span class="m-navCart__title">Nákupní košík</span></div>
+		</a>
+
+	.o-navMain__cart.m-navCart.-active
+		a.m-navCart__desktopLink(href="#")
+		.m-navCart__toggle(data-toggle="collapse" data-target="#collapseNavCart" aria-expanded="false" aria-controls="collapseNavCart")
+			.m-navCart__iconWrap
+				.a-icon.-cart.-red.m-navCart__icon
+					.m-navCart__icoNumber 2
+			.m-navCart__info
+				span.m-navCart__text Nákupní košík
+				span.m-navCart__title 859 Kč
+			.collapse.m-navCart__collapse(id="collapseNavCart" aria-labelledby="collapseNavCart")
+				.m-navCart__collapseItem
+					.m-navCart__collapseThumb
+						img.m-navCart__collapseImg.lazy(src=URLbase+"img/placeholder-60x60.png" data-src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
+					.m-navCart__collapseInfo
+						.m-navCart__collapseName Postel Angelika 160/200 cm masiv borovice
+						.m-navCart__collapsePrice 2 000 Kč
+						.m-navCart__collapseStock Skladem
+
+				.m-navCart__collapseItem
+					.m-navCart__collapseThumb
+						img.m-navCart__collapseImg.lazy(src=URLbase+"img/placeholder-60x60.png" data-src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
+					.m-navCart__collapseInfo
+						.m-navCart__collapseName Postel Angelika 160/200 cm masiv borovice
+						.m-navCart__collapsePrice 2 000 Kč
+						.m-navCart__collapseStock Skladem
+
+				.m-navCart__collapseOverview
+					.m-navCart__collapsePriceWrap
+						.m-navCart__collapseTitle Celková cena
+						.m-navCart__collapseText Včetně DPH
+					.m-navCart__collapseSum 2 000 Kč
+
+				.m-navCart__collapseShipping Nakupte ještě za 1077 Kč a máte Dopravu zdarma	
+
+				.m-navCart__collapseBtn
+					a.btn.-small.-fullWidth(href="#") Objednat zboží
+
+.a-darkOverlay(id="js-darkOverlay")
+
+.a-navPush

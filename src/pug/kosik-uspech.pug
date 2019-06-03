@@ -1,0 +1,23 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug  
+    body
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
+        main
+            .container
+                .o-cartEmpty.-success
+                    img.o-cartEmpty__img(src=URLbase+"img/cart-empty-success.svg" alt="Objednávka byla úspěšně odeslána" title="Objednávka byla úspěšně odeslána")
+                    h1.o-cartEmpty__title Objednávka byla úspěšně odeslána
+                    p.o-cartEmpty__text Rekapitulace objednávky a platební pokyny byly odeslány na Váš email.
+                    a.btn.o-cartEmpty__link(href="#") Začít nakupovat #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+                    p.o-cartEmpty__text.-small Pokud máte problém s objednávkou, kontaktujte nás na email@email.cz nebo na telefonním čísle 111 222 333
+
+
+
+        include partials/_footer.pug
+
+        include partials/_js-include.pug

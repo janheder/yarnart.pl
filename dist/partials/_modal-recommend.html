@@ -1,0 +1,26 @@
+
+<div class="modal fade" id="modal-recommend" tabindex="-1" role="dialog" aria-labelledby="modal-recommend" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-recommend-heading">Doporučit produkt známému</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="cross-icon"></span></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="" name="recommend_form">
+          <div class="form-group">
+            <label for="recommend_form_name">Vaše jméno</label>
+            <input class="form-control" type="text" name="recommend_form_name" id="recommend_form_name" required="required" autocomplete="given-name"/>
+          </div>
+          <div class="form-group">
+            <label for="recommend_form_email">Email známého</label>
+            <input class="form-control" type="email" name="recommend_form_email" id="recommend_form_email" required="required" autocomplete="email"/>
+          </div>
+          <div class="form-group">
+            <button class="form-control btn" type="submit" name="recommend_form_submit" id="recommend_form_submit">Odeslat zprávu</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

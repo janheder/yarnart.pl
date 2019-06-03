@@ -1,0 +1,56 @@
+.modal.fade.o-modal(id="modal-reklamace" tabindex="-1" role="dialog" aria-labelledby="modal-reklamace" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.o-modal__dialog(role="document")
+        .modal-content.o-modal__content
+
+            .modal-header.o-modal__header
+                h5.modal-title.o-modal__title(id="modal-reklamace-heading") Reklamace
+
+                button.o-modal__close(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span.a-icon.-cross.-red.o-modal__closeIcon
+
+            .modal-body.o-modal__body
+                form.o-form(method="post" action="" name="question_form")
+
+
+                    .o-form__group.m-formGroup
+                        input.m-formGroup__input(type="text" name="question_form_name" id="question_form_name" autocomplete="given-name" required placeholder=" ")
+                        label.m-formGroup__label(for="question_form_name") Jméno a příjemní
+                        span.m-formGroup__error Neplatné jméno
+                        span.m-formGroup__success
+
+                    .o-form__group.m-formGroup
+                        input.m-formGroup__input(type="text" name="question_form_id" id="question_form_id" autocomplete="" required placeholder=" ")
+                        label.m-formGroup__label(for="question_form_id") Číslo objednávky
+                        span.m-formGroup__error Neplatné číslo objednávky
+                        span.m-formGroup__success
+
+                    .o-form__group.m-formGroup
+                        input.m-formGroup__input(type="tel" name="question_form_tel" id="question_form_tel" autocomplete="tel" required placeholder=" ")
+                        label.m-formGroup__label(for="question_form_tel") Telefon
+                        span.m-formGroup__error Neplatný telefon
+                        span.m-formGroup__success
+
+                    .o-form__group.m-formGroup
+                        input.m-formGroup__input(type="email" name="question_form_email" id="question_form_email" autocomplete="email" required placeholder=" ")
+                        label.m-formGroup__label(for="question_form_email") Emailová adresa
+                        span.m-formGroup__error Neplatný email
+                        span.m-formGroup__success
+
+                    .o-form__group.m-formGroup.-textarea
+                        textarea.m-formGroup__input(name="question_form_text" id="question_form_text" rows="4" required placeholder=" ")
+                        label.m-formGroup__label(for="question_form_text") Vyjádření k závadě
+                        span.m-formGroup__error Neplatný text
+                        span.m-formGroup__success
+
+                    .o-form__group.m-formGroup.-textarea
+                        textarea.m-formGroup__input(name="question_form_text2" id="question_form_text2" rows="4" placeholder=" ")
+                        label.m-formGroup__label(for="question_form_text2") Případný návrh řešení problému #[span.m-formGroup__muted (nepovinné)]
+                        span.m-formGroup__error Neplatný text
+                        span.m-formGroup__success
+
+                    .o-form__group.m-formGroup.-checkbox
+                        input.m-formGroup__input(type="checkbox" name="question_form_legal" id="question_form_legal" required)
+                        span.m-formGroup__checkbox.a-checkbox
+                        label.m-formGroup__label(for="question_form_legal") Souhlasím s podmínkami #[a(href="#") ochrany osobních údajů]          
+
+                    button.btn.-fullWidth(type="submit" name="question_form_submit" id="question_form_submit") Odeslat dotaz

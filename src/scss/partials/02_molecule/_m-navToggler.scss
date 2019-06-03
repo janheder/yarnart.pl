@@ -1,0 +1,26 @@
+.m-navToggler{
+    height: 100%;
+    width: 50px;
+    cursor: pointer;
+    display: none;
+}
+.m-navToggler.-active{
+
+    .-hamburger{
+        background: transparent; 
+
+        &::before{
+            transform: rotate(45deg);
+       }
+        &::after{
+            transform: rotate(-45deg);
+       }
+    }
+}
+
+@media screen and (max-width:991px){
+    .m-navToggler{
+        display: block;
+        flex-shrink: 0;
+    }
+}

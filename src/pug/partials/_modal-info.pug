@@ -1,0 +1,14 @@
+.modal.fade(id="modal-info" tabindex="-1" role="dialog" aria-labelledby="modal-info-heading" aria-hidden="true")
+    .modal-dialog(role="document")
+        .modal-content
+
+            .modal-header.post__image-container
+                img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-page-contact-thumb-large.jpg" data-src=URLbase+"img/page-contact-thumb-large.jpg" alt="#" title="#")
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span.cross-icon
+
+            .modal-body.modal-info__body
+                h5.modal-title(id="modal-info-heading") Lorem ipsum dolor sit amet
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            .modal-footer.modal-info__footer
+                a.btn(href="#") Text tlačítka #[span.btn__icon.arrow-icon.white]

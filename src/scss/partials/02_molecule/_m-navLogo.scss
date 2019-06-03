@@ -1,0 +1,30 @@
+.m-navLogo{
+    padding: 0 20px;
+}
+.m-navLogo__link{
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.m-navLogo__img{
+    height: 100%;
+}
+
+@media screen and (max-width:991px){
+    .m-navLogo{
+        padding: 0 0 0 10px;
+        flex-grow: 1;
+    }
+    .m-navLogo__link{
+        justify-content: flex-start;
+        margin-top: -5px;
+        height: 28px;
+    }
+}
+@media screen and (max-width:500px){
+    .m-navLogo{
+        padding: 0 5px;
+    }
+}

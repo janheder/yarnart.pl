@@ -1,0 +1,44 @@
+
+<div class="modal fade o-modal" id="modal-reklamace" tabindex="-1" role="dialog" aria-labelledby="modal-reklamace" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered o-modal__dialog" role="document">
+    <div class="modal-content o-modal__content">
+      <div class="modal-header o-modal__header">
+        <h5 class="modal-title o-modal__title" id="modal-reklamace-heading">Reklamace</h5>
+        <button class="o-modal__close close" type="button" data-dismiss="modal" aria-label="Close"><span class="a-icon -cross -red o-modal__closeIcon"></span></button>
+      </div>
+      <div class="modal-body o-modal__body">
+        <form class="o-form" method="post" action="" name="question_form">
+          <div class="o-form__group m-formGroup">
+            <input class="m-formGroup__input" type="text" name="question_form_name" id="question_form_name" autocomplete="given-name" required="required" placeholder=" "/>
+            <label class="m-formGroup__label" for="question_form_name">Jméno a příjemní</label><span class="m-formGroup__error">Neplatné jméno</span><span class="m-formGroup__success"></span>
+          </div>
+          <div class="o-form__group m-formGroup">
+            <input class="m-formGroup__input" type="text" name="question_form_id" id="question_form_id" autocomplete="" required="required" placeholder=" "/>
+            <label class="m-formGroup__label" for="question_form_id">Číslo objednávky</label><span class="m-formGroup__error">Neplatné číslo objednávky</span><span class="m-formGroup__success"></span>
+          </div>
+          <div class="o-form__group m-formGroup">
+            <input class="m-formGroup__input" type="tel" name="question_form_tel" id="question_form_tel" autocomplete="tel" required="required" placeholder=" "/>
+            <label class="m-formGroup__label" for="question_form_tel">Telefon</label><span class="m-formGroup__error">Neplatný telefon</span><span class="m-formGroup__success"></span>
+          </div>
+          <div class="o-form__group m-formGroup">
+            <input class="m-formGroup__input" type="email" name="question_form_email" id="question_form_email" autocomplete="email" required="required" placeholder=" "/>
+            <label class="m-formGroup__label" for="question_form_email">Emailová adresa</label><span class="m-formGroup__error">Neplatný email</span><span class="m-formGroup__success"></span>
+          </div>
+          <div class="o-form__group m-formGroup -textarea">
+            <textarea class="m-formGroup__input" name="question_form_text" id="question_form_text" rows="4" required="required" placeholder=" "></textarea>
+            <label class="m-formGroup__label" for="question_form_text">Vyjádření k závadě</label><span class="m-formGroup__error">Neplatný text</span><span class="m-formGroup__success"></span>
+          </div>
+          <div class="o-form__group m-formGroup -textarea">
+            <textarea class="m-formGroup__input" name="question_form_text2" id="question_form_text2" rows="4" placeholder=" "></textarea>
+            <label class="m-formGroup__label" for="question_form_text2">Případný návrh řešení problému <span class="m-formGroup__muted">(nepovinné)</span></label><span class="m-formGroup__error">Neplatný text</span><span class="m-formGroup__success"></span>
+          </div>
+          <div class="o-form__group m-formGroup -checkbox">
+            <input class="m-formGroup__input" type="checkbox" name="question_form_legal" id="question_form_legal" required="required"/><span class="m-formGroup__checkbox a-checkbox"></span>
+            <label class="m-formGroup__label" for="question_form_legal">Souhlasím s podmínkami <a href="#">ochrany osobních údajů</a>          </label>
+          </div>
+          <button class="btn -fullWidth" type="submit" name="question_form_submit" id="question_form_submit">Odeslat dotaz</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

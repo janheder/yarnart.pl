@@ -1,0 +1,45 @@
+.m-registerBanner{
+    background: $bg-brand;
+    padding: 3rem;
+    height: 100%;
+    border-radius: $border-radius-primary;
+    background-image: url("../img/user-banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.m-registerBanner__title{
+    @include f-36-white-semibold;
+    padding: 4rem 0;
+    position: relative;
+    margin-bottom: 8rem;
+
+    &::after{
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 54px;
+        height: 2px;
+        background: $bg-white;
+        position: absolute;
+    }
+}
+.m-registerBanner__subtitle{
+    @include f-16-white-semibold;
+}
+.m-registerBanner__list{
+    padding: 0;
+}
+.m-registerBanner__point{
+    @include f-14-white-regular;
+
+    &::before{
+        border: 2px solid $border-white;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .m-registerBanner__title{
+        padding: 2rem 0;
+        margin-bottom: 4rem;
+    }
+}

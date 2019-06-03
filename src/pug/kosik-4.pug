@@ -1,0 +1,255 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug  
+    body
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+        section.o-cartNav
+            .container.o-cartNav__container
+                .o-cartNav__single.-active
+                    .o-cartNav__number 1
+                    .o-cartNav__title Nákupní košík
+                    
+                .o-cartNav__single
+                    .o-cartNav__number 2
+                    .o-cartNav__title Doprava a platba
+                    
+                .o-cartNav__single
+                    .o-cartNav__number 3
+                    .o-cartNav__title Osobní údaje
+                    
+                .o-cartNav__single
+                    .o-cartNav__number 4
+                    .o-cartNav__title Shrnutí objednávky
+
+        section.o-cartNavResponsive
+            a.o-cartNavResponsive__link.-prev.-disabled(href="/kosik.html?krok=3")
+                span.a-icon.-cheveron.o-cartNavResponsive__icon
+            p.o-cartNavResponsive__title 4/4 Shrnutí objednávky
+            a.o-cartNavResponsive__link.-next(onclick="$('#cart_3_submit').click();")
+                span.a-icon.-cheveron.o-cartNavResponsive__icon
+
+        .a-cartNavResponsivePush
+
+
+        main
+            .container
+
+                .m-alert.-success Všechny údaje pěčlivě zkontrolujte a následně objednávku potvrďte tlačítkem "Odeslat objednávku"
+
+                form(method="post" action="" name="cart_form")
+                    .m-cartItemTop
+                        .m-cartItemTop__item.-img Produkt
+                        .m-cartItemTop__col
+                            .m-cartItemTop__item.-name
+                            .m-cartItemTop__wrap
+                                .m-cartItemTop__item.-qty Množství
+                                .m-cartItemTop__item.-price Cena za kus
+                                .m-cartItemTop__item.-sum.-right Cena celkem
+
+
+                    .m-cartItemSingle
+                        .m-cartItemSingle__col-1  
+                            .m-cartItemSingle__thumb-wrap
+                                .m-cartItemSingle__thumb
+                                    img.m-cartItemSingle__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+
+                        .m-cartItemSingle__col-2   
+                            .m-cartItemSingle__name-wrap
+                                p.m-cartItemSingle__name #{ProductName}
+                                p.m-cartItemSingle__tags #[span Rozměr: 80/200 cm] #[span Varianta: grey flex]
+                                p.m-cartItemSingle__stock Dostupné skladem   
+
+                            .m-cartItemSingle__inner    
+                                .m-cartItemSingle__qty-wrap 
+                                    p.m-cartItemSingle__qty-text 1 kus/ů
+                                .m-cartItemSingle__price-wrap
+                                    span.m-cartItemSingle__price-old 14 290 Kč
+                                    p.m-cartItemSingle__price 8 489 Kč
+                                .m-cartItemSingle__sum-wrap.text-right
+                                    p.m-cartItemSingle__sum #[span 8 489] Kč
+
+
+
+                    .row.m-cartItemSingle
+                        .m-cartItemSingle__col-1  
+                            .m-cartItemSingle__thumb-wrap
+                                .m-cartItemSingle__thumb
+                                    img.m-cartItemSingle__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+
+                        .m-cartItemSingle__col-2   
+                            .m-cartItemSingle__name-wrap
+                                p.m-cartItemSingle__name #{ProductName}
+                                p.m-cartItemSingle__stock Dostupné skladem   
+
+                            .m-cartItemSingle__inner    
+                                .m-cartItemSingle__qty-wrap 
+                                    p.m-cartItemSingle__qty-text 1 kus/ů
+                                .m-cartItemSingle__price-wrap
+                                    span.m-cartItemSingle__price-old 14 290 Kč
+                                    p.m-cartItemSingle__price 8 489 Kč
+                                .m-cartItemSingle__sum-wrap.text-right
+                                    p.m-cartItemSingle__sum #[span 8 489] Kč
+
+                    .m-cartDeliveryOverview
+
+                        .m-cartDeliveryOverview__wrap
+                            h5.m-cartDeliveryOverview__text Způsob dopravy
+                            p.m-cartDeliveryOverview__title Česká pošta:
+                            h3.m-cartDeliveryOverview__price #[span.m-cartPriceOverview__priceNumber 75] Kč
+
+                        .m-cartDeliveryOverview__wrap
+                            h5.m-cartDeliveryOverview__text Způsob platby
+                            p.m-cartDeliveryOverview__title Převod na účet:
+                            h3.m-cartDeliveryOverview__price #[span.m-cartPriceOverview__priceNumber 0] Kč
+
+                    .m-cartPriceOverview
+                        p.m-cartPriceOverview__text Celková cena s DPH:
+                        h3.m-cartPriceOverview__price #[span.m-cartPriceOverview__priceNumber 65 599] Kč
+
+                    .o-cartUserOverview
+                        .row
+                            .col-12.col-sm-6.col-md-4.o-cartUserOverview__col
+                                .o-cartUserOverview__item.m-cartUserItem
+                                    .m-cartUserItem__top
+                                        .m-cartUserItem_title Osobní údaje
+                                            
+                                    .m-cartUserItem__bottom
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Jméno a příjmení
+                                                .m-cartUserItem__text Petr Novák
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Email
+                                                .m-cartUserItem__text petrnovak@email.cz
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Telefon
+                                                .m-cartUserItem__text +420 765 986 987
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Ulice, číslo popisné
+                                                .m-cartUserItem__text Petra Bezruče, 18
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Město/obec
+                                                .m-cartUserItem__text Praha 1
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small PSČ
+                                                .m-cartUserItem__text 187 98
+
+
+                            .col-12.col-sm-6.col-md-4.o-cartUserOverview__col
+                                .o-cartUserOverview__item.m-cartUserItem
+                                    .m-cartUserItem__top
+                                        .m-cartUserItem_title Fakturační adresa
+                                            
+                                    .m-cartUserItem__bottom
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Jméno a příjmení
+                                                .m-cartUserItem__text Petr Novák
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Název firmy
+                                                .m-cartUserItem__text abcd s.r.o.
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small IČO
+                                                .m-cartUserItem__text 14803685
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small DIČ
+                                                .m-cartUserItem__text CZ14803685
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Ulice, číslo popisné
+                                                .m-cartUserItem__text Petra Bezruče, 18
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Město/obec
+                                                .m-cartUserItem__text Praha 1
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small PSČ
+                                                .m-cartUserItem__text 187 98           
+
+
+                            .col-12.col-sm-6.col-md-4.o-cartUserOverview__col
+                                .o-cartUserOverview__item.m-cartUserItem
+                                    .m-cartUserItem__top
+                                        .m-cartUserItem_title Dodací adresa
+                                            
+                                    .m-cartUserItem__bottom
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Jméno a příjmení
+                                                .m-cartUserItem__text Petr Novák
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Název firmy
+                                                .m-cartUserItem__text abcd s.r.o.
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Ulice, číslo popisné
+                                                .m-cartUserItem__text Petra Bezruče, 18
+
+                                        .m-cartUserItem__row
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small Město/obec
+                                                .m-cartUserItem__text Praha 1
+                                            .m-cartUserItem__single
+                                                .m-cartUserItem__small PSČ
+                                                .m-cartUserItem__text 187 98   
+
+
+                    .o-cartUserNotes
+                        h2.o-cartUserNotes__title Poznámka k objednávce
+                        .o-form__group.m-formGroup.-textarea
+                            textarea.m-formGroup__input(name="question_form_text2" id="question_form_text2" rows="5" placeholder=" ")
+                            label.m-formGroup__label(for="question_form_text2") Text poznámky
+                                span.m-formGroup__error Neplatný text 
+                                span.m-formGroup__success
+
+
+                    .o-cartUsefInfo
+                        .o-form.o-cartUsefInfo__form
+                            
+                            .m-formGroup.-checkbox
+                                input.m-formGroup__input(type="checkbox" name="cart_form_heureka" id="cart_form_heureka")
+                                span.m-formGroup__checkbox.a-checkbox
+                                label.m-formGroup__label(for="cart_form_heureka") Nesouhlasím se zasláním dotazníku spokojenosti v rámci programu Ověřeno zákazníky, který pomáhá zlepšovat vaše služby.  
+
+                            .m-formGroup.-checkbox
+                                input.m-formGroup__input(type="checkbox" name="cart_form_termsa" id="cart_form_terms" required)
+                                span.m-formGroup__checkbox.a-checkbox
+                                label.m-formGroup__label(for="cart_form_terms") Souhlasím s #[a(href="#") obchodními podmínkami] 
+
+
+
+                    .m-cartButtons
+                        a.btn.-dark(href="#") Krok zpět
+                        button.btn(type="submit" id="cart_3_submit") Dokončit objednávku #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+
+            .m-cartBarResponsive
+                .m-cartBarResponsive__priceWrap
+                    p.m-cartBarResponsive__text Celková cena s DPH
+                    h3.m-cartBarResponsive__price #[span 65 599] Kč
+                .m-cartBarResponsive__btnWrap
+                    button.btn.m-cartBarResponsive__btn(onclick="$('#cart_3_submit').click();") Dokončit objednávku #[span.a-btnIcon #[span.a-icon.-cheveron.-white]] 
+
+
+        include partials/_footer.pug
+
+        include partials/_js-include.pug

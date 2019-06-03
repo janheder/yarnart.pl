@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Cerebri Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/CerebriSans-Regular.woff2") format("woff2"),
+         url("../fonts/CerebriSans-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Cerebri Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/CerebriSans-SemiBold.woff2") format("woff2"),
+         url("../fonts/CerebriSans-SemiBold.woff") format("woff");
+}
+
+$font-family-primary: "Cerebri Sans", sans-serif;
+$font-family-secondary: "Cerebri Sans", sans-serif;
+$font-family-system: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

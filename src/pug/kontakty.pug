@@ -1,0 +1,75 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug
+    body
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
+        include partials/_modal-reklamace.pug
+
+        section.o-pageHeading
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Kontakty
+        main 
+            .container
+                .printArea
+                    article
+                        .row
+                            .col-12.col-sm-12.col-md-6
+                                .m-contactItem
+                                    h2.m-contactItem__title Zákaznická linka
+                                    .m-contactItem_content
+                                        strong.m-contactItem__subtitle Provozní doba: Po-Pá 8.00–16.00
+                                        .m-contactItem__phoneWrap
+                                            span.a-icon.-phone.m-contactItem__icon 
+                                            .m-contactItem__phone +420 606 311 796
+                                        p.m-contactItem__text Na tomto telefonním čísle zjistíte obecné informace o dostupnostech jednotlivých produktů, době dodání, technické specifikace a máte možnost provést telefonickou objednávku zboží.
+                                        strong.m-contactItem__subtitle Mimo pracovní dobu, mailově na info@best-nabytek.cz
+
+
+                            .col-12.col-sm-12.col-md-6
+                                .m-contactItem
+                                    h2.m-contactItem__title Stav objednávek
+                                    .m-contactItem_content
+                                        strong.m-contactItem__subtitle Provozní doba: Po-Pá 8.00–16.00
+                                        .m-contactItem__phoneWrap
+                                            span.a-icon.-phone.m-contactItem__icon 
+                                            .m-contactItem__phone +420 606 311 796
+                                        p.m-contactItem__text Na tomto telefonním čísle zjistíte stav objednávky.
+                                        strong.m-contactItem__subtitle Osobní odběr, pouze po předchozí tel. domluvě na +420 602 161 304
+                                        strong.m-contactItem__subtitle Mimo pracovní dobu, mailově na info@best-nabytek.cz
+
+                            .col-12.col-sm-12.col-md-6
+                                .m-contactItem
+                                    h2.m-contactItem__title Informace o přepravě zboží
+                                    .m-contactItem_content
+                                        strong.m-contactItem__subtitle Provozní doba: Po-Pá 8.00–16.00
+                                        .m-contactItem__phoneWrap
+                                            span.a-icon.-phone.m-contactItem__icon 
+                                            .m-contactItem__phone +420 602 764 755
+                                        strong.m-contactItem__subtitle Mimo pracovní dobu, mailově na info@best-nabytek.cz
+
+
+                            .col-12.col-sm-12.col-md-6
+                                .m-contactItem
+                                    h2.m-contactItem__title Reklamace
+                                    .m-contactItem_content
+                                
+                                        strong.m-contactItem__subtitle Zde podávejte případné reklamace. Reklamaci provedete kliknutím na tlačítko níže s názvem REKLAMACE. Máte zde možnost přiložit fotografie a popsat případné nedostatky.
+                                        .m-contactItem__button
+                                            button.btn.-secondary(data-toggle="modal" data-target="#modal-reklamace") #[span.-icon.-envelope] Reklamační formulář
+
+
+                        .page-contact__map
+                            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.657631663965!2d18.3637427160331!3d49.679587479376394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713f710ff234161%3A0x732b453a9946a156!2zSmFuYSDEjGFwa2EgMzA5NywgRnLDvWRlaywgNzM4IDAxIEZyw71kZWstTcOtc3Rlaw!5e0!3m2!1scs!2scz!4v1550161260983" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen)
+
+                        h3 Informační oznámení o EET
+                        p "Podle zákona o evidenci tržeb je prodávající povinen  vystavit  kupujícímu  účtenku.  Zároveň  je povinen zaevidovat přijatou  tržbu  u správce  daně  online;  v  případě  technického  výpadku  pak  nejpozději  do 48 hodin.", eviduje-li poplatník v daném pokladním místě tržby v běžném režimu.
+
+
+        include partials/_footer.pug
+
+        include partials/_js-include.pug

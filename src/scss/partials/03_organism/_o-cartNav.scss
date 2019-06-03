@@ -1,0 +1,71 @@
+.o-cartNav{
+    background: $bg-light;
+    padding: 0;
+}
+.o-cartNav__container{
+    display: flex;
+    flex-direction: row;
+}
+.o-cartNav__single{
+    background: transparent;
+    position: relative;
+    height: 100px;
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.o-cartNav__title{
+    @include f-16-primary-regular;
+    margin-bottom: 0px;
+    margin-left: 15px;
+}
+.o-cartNav__number{
+    @include f-16-primary-regular;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: $bg-primary;
+    color: $text-white;
+    z-index: 2;
+}
+
+.o-cartNav__single.-active{
+    .o-cartNav__title{
+        color: $text-brand;
+    }
+    .o-cartNav__number{
+        color: $text-white;
+        background: $bg-brand;
+    }
+}
+.o-cartNav__single.-complete{
+    .o-cartNav__title{
+        color: $text-brand-secondary;
+    }
+    .o-cartNav__number{
+        color: $text-white;
+        background: $bg-brand-secondary;
+    }
+    &:hover, &:active, &:focus{
+        text-decoration: none;
+        .o-cartNav__title{
+            color: $text-brand-secondary;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 991px){
+    .o-cartNav{
+        display: none;
+    }
+}

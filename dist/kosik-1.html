@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
+    <title>MojeSpaní.cz</title>
+    <meta content="index,follow,snippet,archive" name="robots">
+    <meta content="Nábytek z masivu, postele včetně příslušenství, dětské zboží a mnoho dalšího vždy za velice příznivé ceny." name="description">
+    <meta content="" lang="cs" name="keywords">
+    <meta content="Eline.cz" name="author">
+    <link rel="canonical" href="https://mojespani.cz">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MojeSpaní.cz">
+    <meta property="og:description" content="Nábytek z masivu, postele včetně příslušenství, dětské zboží a mnoho dalšího vždy za velice příznivé ceny.">
+    <meta property="og:url" content="https://mojespani.cz">
+    <meta property="og:site_name" content="mojespani.cz">
+    <meta property="og:image" content="img/placeholder-200x200.png">
+    <meta property="og:image:secure_url" content="img/placeholder-200x200.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mojespani">
+    <meta name="twitter:title" content="MojeSpaní.cz">
+    <meta name="twitter:description" content="Nábytek z masivu, postele včetně příslušenství, dětské zboží a mnoho dalšího vždy za velice příznivé ceny.">
+    <meta name="twitter:image" content="img/placeholder-200x200.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#24272D">
+    <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" onerror="loadBootstrap()" id="loadBootstrap">
+    <script>
+      function loadBootstrap() {
+      	$( "#loadBootstrap" ).append('<link href="css/plugins/bootstrap.min.css" rel="stylesheet">');
+      }
+      
+      
+    </script>
+    <!-- Plugins CSS-->
+    <link href="css/plugins/easy-autocomplete.min.css" rel="stylesheet">
+    <link href="css/plugins/jquery.cookiebar.min.css" rel="stylesheet">
+    <link href="css/plugins/swiper.min.css" rel="stylesheet">
+    <link href="css/plugins/photoswipe.min.css" rel="stylesheet">
+    <link href="css/plugins/default-skin.min.css" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')</script>
+  </head>
+  <body>
+    <div class="modal fade o-modal" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered o-modal__dialog" role="document">
+        <div class="modal-content o-modal__content">
+          <div class="modal-header o-modal__header">
+            <h5 class="modal-title o-modal__title" id="modal-login-heading">Přihlášení</h5>
+            <button class="o-modal__close close" type="button" data-dismiss="modal" aria-label="Close"><span class="a-icon -cross -red o-modal__closeIcon"></span></button>
+          </div>
+          <div class="modal-body o-modal__body">
+            <form class="o-form" method="post" action="" name="login_form">
+              <div class="o-form__group m-formGroup">
+                <input class="m-formGroup__input" type="text" name="login_form_name" id="login_form_name" autocomplete="username" required placeholder=" ">
+                <label class="m-formGroup__label" for="login_form_name">Uživatelské jméno</label><span class="m-formGroup__error">Uživatelské jméno</span><span class="m-formGroup__success"></span>
+              </div>
+              <div class="o-form__group m-formGroup">
+                <input class="m-formGroup__input" type="password" name="login_form_pass" id="login_form_pass" autocomplete="password" required placeholder=" ">
+                <label class="m-formGroup__label" for="login_form_name">Heslo</label><span class="m-formGroup__error">Neplatné heslo</span><span class="m-formGroup__success"></span>
+              </div>
+              <div class="o-form__group m-formGroup"><a class="o-form__link -alignRight" href="#">Obnovit zapomenuté heslo</a></div>
+              <div class="o-form__group m-formGroup">
+                <button class="btn -fullWidth" type="submit" name="login_form_submit" id="login_form_submit">Přihlásit</button>
+              </div><span class="o-form__text">Nemáte u nás účet? <a class="o-form__link" href="#">Zaregistrujte se</a></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="o-header -cart">
+      <nav class="o-navMain">
+        <div class="o-navMain__navToggler m-navToggler" id="js-navToggler">
+          <div class="a-icon -hamburger m-navToggler__icon"></div>
+        </div>
+        <div class="o-navMain__logo m-navLogo"><a class="m-navLogo__link" href="#"><img class="m-navLogo__img" src="img/logo.svg" alt="" title=""></a></div>
+        <div class="o-navMain__search m-navSearch" id="js-navSearch">
+          <form class="m-navSearch__form" method="POST" id="search-form">
+            <div class="m-navSearch__close" id="js-navSearchTogglerClose">
+              <div class="a-icon -cross m-navSearch__closeIcon"></div>
+            </div>
+            <input class="m-navSearch__input" type="text" name="searchbox" id="searchbox" placeholder="Hledejte název produktu, značku nebo typ" required>
+            <button class="m-navSearch__button"><span class="a-icon -search m-navSearch__icon"></span></button>
+          </form>
+        </div>
+        <div class="o-navMain__navSearchToggler m-navSearchToggler" id="js-navSearchToggler">
+          <div class="a-icon -search m-navSearchToggler__icon"></div>
+        </div>
+        <!--
+        <a class="o-navMain__user m-navUser" href="#" data-toggle="modal" data-target="#modal-login">
+        	<div class="a-icon -user -grey m-navUser__icon"></div>
+        	<div class="m-navUser__info"><span class="m-navUser__title">Přihlášení</span></div>
+        </a>
+        
+        -->
+        <div class="o-navMain__user m-navUser" data-toggle="collapse" data-target="#collapseNavUser" aria-expanded="false" aria-controls="collapseNavUser">
+          <div class="a-icon -user -grey m-navUser__icon"></div>
+          <div class="m-navUser__info"><span class="m-navUser__text">Přihlášen jako</span><span class="m-navUser__title">Petr Novák</span></div>
+          <div class="collapse m-navUser__collapse" id="collapseNavUser" aria-labelledby="collapseNavUser"><a class="m-navUser__collapseLink" href="#">Změna osobních údajů</a><a class="m-navUser__collapseLink" href="#">Historie objednávek</a><a class="m-navUser__collapseLink" href="#">Odhlásit</a></div>
+        </div>
+        <!--
+        <a class="o-navMain__cart m-navCart" href="#">
+        	<div class="m-navCart__iconWrap">
+        		<div class="a-icon -cart -grey m-navCart__icon"></div>
+        	</div>
+        	<div class="m-navCart__info"><span class="m-navCart__title">Nákupní košík</span></div>
+        </a>
+        
+        -->
+        <div class="o-navMain__cart m-navCart -active"><a class="m-navCart__desktopLink" href="#"></a>
+          <div class="m-navCart__toggle" data-toggle="collapse" data-target="#collapseNavCart" aria-expanded="false" aria-controls="collapseNavCart">
+            <div class="m-navCart__iconWrap">
+              <div class="a-icon -cart -red m-navCart__icon">
+                <div class="m-navCart__icoNumber">2</div>
+              </div>
+            </div>
+            <div class="m-navCart__info"><span class="m-navCart__text">Nákupní košík</span><span class="m-navCart__title">859 Kč</span></div>
+            <div class="collapse m-navCart__collapse" id="collapseNavCart" aria-labelledby="collapseNavCart">
+              <div class="m-navCart__collapseItem">
+                <div class="m-navCart__collapseThumb"><img class="m-navCart__collapseImg lazy" src="img/placeholder-60x60.png" data-src="img/product-thumb-small.jpg" alt="#" title="#"></div>
+                <div class="m-navCart__collapseInfo">
+                  <div class="m-navCart__collapseName">Postel Angelika 160/200 cm masiv borovice</div>
+                  <div class="m-navCart__collapsePrice">2 000 Kč</div>
+                  <div class="m-navCart__collapseStock">Skladem</div>
+                </div>
+              </div>
+              <div class="m-navCart__collapseItem">
+                <div class="m-navCart__collapseThumb"><img class="m-navCart__collapseImg lazy" src="img/placeholder-60x60.png" data-src="img/product-thumb-small.jpg" alt="#" title="#"></div>
+                <div class="m-navCart__collapseInfo">
+                  <div class="m-navCart__collapseName">Postel Angelika 160/200 cm masiv borovice</div>
+                  <div class="m-navCart__collapsePrice">2 000 Kč</div>
+                  <div class="m-navCart__collapseStock">Skladem</div>
+                </div>
+              </div>
+              <div class="m-navCart__collapseOverview">
+                <div class="m-navCart__collapsePriceWrap">
+                  <div class="m-navCart__collapseTitle">Celková cena</div>
+                  <div class="m-navCart__collapseText">Včetně DPH</div>
+                </div>
+                <div class="m-navCart__collapseSum">2 000 Kč</div>
+              </div>
+              <div class="m-navCart__collapseShipping">Nakupte ještě za 1077 Kč a máte Dopravu zdarma	</div>
+              <div class="m-navCart__collapseBtn"><a class="btn -small -fullWidth" href="#">Objednat zboží</a></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="a-darkOverlay" id="js-darkOverlay"></div>
+      <div class="a-navPush"></div>
+    </header>
+    <section class="o-cartNav">
+      <div class="container o-cartNav__container">
+        <div class="o-cartNav__single -active">
+          <div class="o-cartNav__number">1</div>
+          <div class="o-cartNav__title">Nákupní košík</div>
+        </div>
+        <div class="o-cartNav__single">
+          <div class="o-cartNav__number">2</div>
+          <div class="o-cartNav__title">Doprava a platba</div>
+        </div>
+        <div class="o-cartNav__single">
+          <div class="o-cartNav__number">3</div>
+          <div class="o-cartNav__title">Osobní údaje</div>
+        </div>
+        <div class="o-cartNav__single">
+          <div class="o-cartNav__number">4</div>
+          <div class="o-cartNav__title">Shrnutí objednávky</div>
+        </div>
+      </div>
+    </section>
+    <section class="o-cartNavResponsive"><a class="o-cartNavResponsive__link -prev -disabled" href="#"><span class="a-icon -cheveron o-cartNavResponsive__icon"></span></a>
+      <p class="o-cartNavResponsive__title">1/4 Nákupní košík</p><a class="o-cartNavResponsive__link -next" onclick="$('#cart-form-submit').trigger('click');"><span class="a-icon -cheveron o-cartNavResponsive__icon"></span></a>
+    </section>
+    <div class="a-cartNavResponsivePush"></div>
+    <main>
+      <div class="container">
+        <form method="post" action="" name="cart_form">
+          <div class="m-cartItemTop">
+            <div class="m-cartItemTop__item -img">Produkt</div>
+            <div class="m-cartItemTop__col">
+              <div class="m-cartItemTop__item -name"></div>
+              <div class="m-cartItemTop__wrap">
+                <div class="m-cartItemTop__item -qty">Množství</div>
+                <div class="m-cartItemTop__item -price">Cena za kus</div>
+                <div class="m-cartItemTop__item -sum">Cena celkem</div>
+                <div class="m-cartItemTop__item -remove"></div>
+              </div>
+            </div>
+          </div>
+          <div class="m-cartItemSingle">
+            <div class="m-cartItemSingle__col-1"> 
+              <div class="m-cartItemSingle__thumb-wrap">
+                <div class="m-cartItemSingle__thumb"><img class="m-cartItemSingle__img lazy" src="img/placeholder-200x200.png" data-src="img/product-thumb-small.jpg"></div>
+              </div>
+            </div>
+            <div class="m-cartItemSingle__col-2">  
+              <div class="m-cartItemSingle__name-wrap"><a class="m-cartItemSingle__name" href="#">Postel Angelika 160/200 cm masiv borovice</a>
+                <p class="m-cartItemSingle__tags"><span>Rozměr: 80/200 cm</span> <span>Varianta: grey flex</span></p>
+                <p class="m-cartItemSingle__stock">Dostupné skladem   </p>
+              </div>
+              <div class="m-cartItemSingle__inner">   
+                <div class="m-cartItemSingle__qty-wrap"> 
+                  <div class="m-cartItemSingle__qty">
+                    <div class="m-numberStepper -dark">
+                      <input class="m-numberStepper__input" type="number" min="1" max="99" value="1" name="cart-item-single-qty">
+                      <div class="m-numberStepper__btnUp"><span class="m-numberStepper__iconUp"></span></div>
+                      <div class="m-numberStepper__btnDown"><span class="m-numberStepper__iconDown"></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-cartItemSingle__price-wrap"><span class="m-cartItemSingle__price-old">14 290 Kč</span>
+                  <p class="m-cartItemSingle__price">8 489 Kč</p>
+                </div>
+                <div class="m-cartItemSingle__sum-wrap">
+                  <p class="m-cartItemSingle__sum"><span>18 546</span> Kč</p>
+                </div>
+                <div class="m-cartItemSingle__delete-wrap"><a class="a-icon -crossCircle -red" href="#"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="m-cartItemSingle">
+            <div class="m-cartItemSingle__col-1"> 
+              <div class="m-cartItemSingle__thumb-wrap">
+                <div class="m-cartItemSingle__thumb"><img class="m-cartItemSingle__img lazy" src="img/placeholder-200x200.png" data-src="img/product-thumb-small.jpg"></div>
+              </div>
+            </div>
+            <div class="m-cartItemSingle__col-2">  
+              <div class="m-cartItemSingle__name-wrap"><a class="m-cartItemSingle__name" href="#">Postel Angelika 160/200 cm masiv borovice</a>
+                <p class="m-cartItemSingle__tags"><span>Rozměr: 80/200 cm</span> <span>Varianta: grey flex</span></p>
+                <p class="m-cartItemSingle__stock">Dostupné skladem   </p>
+              </div>
+              <div class="m-cartItemSingle__inner">   
+                <div class="m-cartItemSingle__qty-wrap"> 
+                  <div class="m-cartItemSingle__qty">
+                    <div class="m-numberStepper -dark">
+                      <input class="m-numberStepper__input" type="number" min="1" max="99" value="1" name="cart-item-single-qty">
+                      <div class="m-numberStepper__btnUp"><span class="m-numberStepper__iconUp"></span></div>
+                      <div class="m-numberStepper__btnDown"><span class="m-numberStepper__iconDown"></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-cartItemSingle__price-wrap"><span class="m-cartItemSingle__price-old">14 290 Kč</span>
+                  <p class="m-cartItemSingle__price">8 489 Kč</p>
+                </div>
+                <div class="m-cartItemSingle__sum-wrap">
+                  <p class="m-cartItemSingle__sum"><span>18 546</span> Kč</p>
+                </div>
+                <div class="m-cartItemSingle__delete-wrap"><a class="a-icon -crossCircle -red" href="#"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="m-cartItemSingle">
+            <div class="m-cartItemSingle__col-1"> 
+              <div class="m-cartItemSingle__thumb-wrap">
+                <div class="m-cartItemSingle__thumb"><img class="m-cartItemSingle__img lazy" src="img/placeholder-200x200.png" data-src="img/product-thumb-small.jpg"></div>
+              </div>
+            </div>
+            <div class="m-cartItemSingle__col-2">  
+              <div class="m-cartItemSingle__name-wrap"><a class="m-cartItemSingle__name" href="#">Postel Angelika 160/200 cm masiv borovice</a>
+                <p class="m-cartItemSingle__tags"><span>Rozměr: 80/200 cm</span> <span>Varianta: grey flex</span></p>
+                <p class="m-cartItemSingle__stock">Dostupné skladem   </p>
+              </div>
+              <div class="m-cartItemSingle__inner">   
+                <div class="m-cartItemSingle__qty-wrap"> 
+                  <div class="m-cartItemSingle__qty">
+                    <div class="m-numberStepper -dark">
+                      <input class="m-numberStepper__input" type="number" min="1" max="99" value="1" name="cart-item-single-qty">
+                      <div class="m-numberStepper__btnUp"><span class="m-numberStepper__iconUp"></span></div>
+                      <div class="m-numberStepper__btnDown"><span class="m-numberStepper__iconDown"></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-cartItemSingle__price-wrap"><span class="m-cartItemSingle__price-old">14 290 Kč</span>
+                  <p class="m-cartItemSingle__price">8 489 Kč</p>
+                </div>
+                <div class="m-cartItemSingle__sum-wrap">
+                  <p class="m-cartItemSingle__sum"><span>18 546</span> Kč</p>
+                </div>
+                <div class="m-cartItemSingle__delete-wrap"><a class="a-icon -crossCircle -red" href="#"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="m-cartPriceOverview">
+            <p class="m-cartPriceOverview__text">Celková cena s DPH:</p>
+            <h3 class="m-cartPriceOverview__price"><span class="m-cartPriceOverview__priceNumber">65 599</span> Kč</h3>
+          </div>
+          <div class="m-cartFreeShipping">
+            <div class="progress m-cartFreeShipping__progress">
+              <div class="progress-bar m-cartFreeShipping__progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="8000" style="width: 25%;">      </div>
+            </div>
+            <p class="m-cartFreeShipping__text">Nakupte ještě za <span class="m-cartFreeShipping__price">5 100 Kč</span> a máte dopravu zdarma</p>
+          </div>
+          <div class="m-cartButtons"><a class="btn -dark" href="#"><span class="a-btnIcon -rotate180"><span class="a-icon -cheveron -white"></span></span> Zpět do obchodu</a>
+            <button class="btn" type="submit" id="cart-form-submit">Doprava a platba <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span></button>
+          </div>
+        </form>
+      </div>
+      <div class="m-cartBarResponsive">
+        <div class="m-cartBarResponsive__priceWrap">
+          <p class="m-cartBarResponsive__text">Celková cena s DPH</p>
+          <h3 class="m-cartBarResponsive__price"><span>65 599</span> Kč</h3>
+        </div>
+        <div class="m-cartBarResponsive__btnWrap">
+          <button class="btn m-cartBarResponsive__btn" onclick="$('#cart-form-submit').trigger('click');">Doprava a platba <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span> </button>
+        </div>
+      </div>
+    </main>
+    <footer class="o-footer">
+      <section class="o-footerContacts">
+        <div class="container o-footerContacts__container">
+          <div class="row o-footerContacts__row">
+            <div class="col-12 col-md-6 o-footerContacts__col">
+              <h4 class="o-footerContacts__title">Kontaktní informace</h4>
+              <div class="o-footerContacts__wrap">
+                <div class="o-footerContacts__single">
+                  <div class="a-icon -phone -white o-footerContacts__icon"></div> +420 727 877 380
+                </div>
+                <div class="o-footerContacts__single">
+                  <div class="a-icon -envelope -white o-footerContacts__icon"></div> info@mojespani.cz
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 o-footerContacts__col">
+              <h4 class="o-footerContacts__title">Sledujte nás také na</h4><a class="o-footerContacts__Socialwrap" href="#">
+                <div class="a-icon -facebook -white o-footerContacts__socialIcon"></div>
+                <div class="o-footerContacts__socialName">Facebook</div></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="o-footerMain">
+        <div class="container o-footerMain__container">
+          <div class="row o-footerMain__row">
+            <div class="col-6 col-sm-6 col-lg-3">
+              <h5 class="o-footerMain__title">O nákupu</h5><a class="o-footerMain__link" href="#">Obchodní podmínky</a><a class="o-footerMain__link" href="#">Reklamační řád</a><a class="o-footerMain__link" href="#">Jak nakupovat</a><a class="o-footerMain__link" href="#">Osobní odběry</a><a class="o-footerMain__link" href="#">Možnosti platby</a>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-3">
+              <h5 class="o-footerMain__title">Uživatelský účet</h5><a class="o-footerMain__link" href="#" data-toggle="modal" data-target="#modal-login">Přihlášení</a><a class="o-footerMain__link" href="#">Vytvořit účet</a><a class="o-footerMain__link" href="#">Zapomenuté údaje</a>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-3">
+              <h5 class="o-footerMain__title">Další odkazy</h5><a class="o-footerMain__link" href="#">Výhody nákupu</a><a class="o-footerMain__link" href="#">Doprava zdarma</a><a class="o-footerMain__link" href="#">Ochrana osobních údajů</a><a class="o-footerMain__link" href="#">Zásady používání cookie</a>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-3">
+              <h5 class="o-footerMain__title">Kontaktní informace</h5>
+              <p class="o-footerMain__text">Ondera Aleš</p>
+              <p class="o-footerMain__text">J.Čapka 3097</p>
+              <p class="o-footerMain__text">Frýdek-Místek, 738 01</p><a class="o-footerMain__link" href="#">Více kontaktů</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <section class="o-copyright">
+      <div class="container o-copyright__container">
+        <div class="o-copyright__wrap">
+          <h5 class="o-copyright__h5">Copyright © 2018 <a class="o-copyright__link" href="https://mojespani.cz">mojespani.cz</a></h5>
+          <h5 class="o-copyright__pull">Vytvořeno v <a class="o-copyright__link" href="http://eline.cz">Eline.cz</a></h5>
+        </div>
+      </div>
+    </section>
+    <!-- Popper for Bootstrap support-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script>
+      if(typeof(Popper) === 'undefined') {
+      document.write('<script src="js/popper.min.js">\x3C/script>')}
+      
+    </script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+      if(typeof($.fn.modal) === 'undefined') {
+      document.write('<script src="js/bootstrap.min.js">\x3C/script>')}
+      
+      
+    </script>
+    <!-- Custom js plugins and scripts-->
+    <script src="js/plugins/jquery.cookiebar.min.js"></script>
+    <script src="js/plugins/jquery.easy-autocomplete.min.js"></script>
+    <script src="js/plugins/lazyload.min.js"></script>
+    <script src="js/plugins/photoswipe.min.js"></script>
+    <script src="js/plugins/photoswipe-ui-default.min.js"></script>
+    <script src="js/plugins/swiper.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <!-- Search autocomplete test-->
+    <script>
+      var options = {
+      	data: ["blue", "green", "pink", "red", "yellow"]
+      };
+      $("#searchbox").easyAutocomplete(options);
+      
+    </script>
+    <!-- Photo swiper HTML setup-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Zavřít (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Sdílet"></button>
+            <button class="pswp__button pswp__button--fs" title="Celá obrazovka"></button>
+            <button class="pswp__button pswp__button--zoom" title="Přiblížit/Oddálit"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Předchozí"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Další"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

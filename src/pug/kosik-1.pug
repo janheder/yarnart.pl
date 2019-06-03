@@ -1,0 +1,107 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug  
+    body
+        include partials/_modal-login.pug
+        header.o-header.-cart
+            include partials/_navMain.pug
+        section.o-cartNav
+            .container.o-cartNav__container
+                .o-cartNav__single.-active
+                    .o-cartNav__number 1
+                    .o-cartNav__title Nákupní košík
+                    
+                .o-cartNav__single
+                    .o-cartNav__number 2
+                    .o-cartNav__title Doprava a platba
+                    
+                .o-cartNav__single
+                    .o-cartNav__number 3
+                    .o-cartNav__title Osobní údaje
+                    
+                .o-cartNav__single
+                    .o-cartNav__number 4
+                    .o-cartNav__title Shrnutí objednávky
+                    
+
+        section.o-cartNavResponsive
+            a.o-cartNavResponsive__link.-prev.-disabled(href="#")
+                span.a-icon.-cheveron.o-cartNavResponsive__icon
+            p.o-cartNavResponsive__title 1/4 Nákupní košík
+            a.o-cartNavResponsive__link.-next(onclick="$('#cart-form-submit').trigger('click');")
+                span.a-icon.-cheveron.o-cartNavResponsive__icon
+
+        .a-cartNavResponsivePush
+
+        main
+            .container
+                form(method="post" action="" name="cart_form")
+                    .m-cartItemTop
+                        .m-cartItemTop__item.-img Produkt
+                        .m-cartItemTop__col
+                            .m-cartItemTop__item.-name
+                            .m-cartItemTop__wrap
+                                .m-cartItemTop__item.-qty Množství
+                                .m-cartItemTop__item.-price Cena za kus
+                                .m-cartItemTop__item.-sum Cena celkem
+                                .m-cartItemTop__item.-remove
+
+                    - for (var i=0; i<3; i++)
+                        .m-cartItemSingle
+                            .m-cartItemSingle__col-1  
+                                .m-cartItemSingle__thumb-wrap
+                                    .m-cartItemSingle__thumb
+                                        img.m-cartItemSingle__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+
+
+                            .m-cartItemSingle__col-2   
+                                .m-cartItemSingle__name-wrap
+                                    a.m-cartItemSingle__name(href="#") #{ProductName}
+                                    p.m-cartItemSingle__tags #[span Rozměr: 80/200 cm] #[span Varianta: grey flex]
+                                    p.m-cartItemSingle__stock Dostupné skladem   
+
+                                .m-cartItemSingle__inner    
+                                    .m-cartItemSingle__qty-wrap 
+                                        .m-cartItemSingle__qty
+                                            .m-numberStepper.-dark
+                                                input.m-numberStepper__input(type="number" min="1" max="99" value="1" name="cart-item-single-qty")
+                                                .m-numberStepper__btnUp
+                                                    span.m-numberStepper__iconUp
+                                                .m-numberStepper__btnDown
+                                                    span.m-numberStepper__iconDown
+
+                                    .m-cartItemSingle__price-wrap
+                                        span.m-cartItemSingle__price-old 14 290 Kč
+                                        p.m-cartItemSingle__price 8 489 Kč
+                                    .m-cartItemSingle__sum-wrap
+                                        p.m-cartItemSingle__sum #[span 18 546] Kč
+                                    .m-cartItemSingle__delete-wrap
+                                        a.a-icon.-crossCircle.-red(href="#")
+
+                    .m-cartPriceOverview
+                        p.m-cartPriceOverview__text Celková cena s DPH:
+                        h3.m-cartPriceOverview__price #[span.m-cartPriceOverview__priceNumber 65 599] Kč
+
+                    .m-cartFreeShipping
+                        .progress.m-cartFreeShipping__progress
+                            .progress-bar.m-cartFreeShipping__progressBar(role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="8000" style="width: 25%")       
+                        p.m-cartFreeShipping__text Nakupte ještě za #[span.m-cartFreeShipping__price 5 100 Kč] a máte dopravu zdarma
+
+
+                    .m-cartButtons
+                        a.btn.-dark(href="#") #[span.a-btnIcon.-rotate180 #[span.a-icon.-cheveron.-white]] Zpět do obchodu
+                        button.btn(type="submit" id="cart-form-submit") Doprava a platba #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+                               
+
+            .m-cartBarResponsive
+                .m-cartBarResponsive__priceWrap
+                    p.m-cartBarResponsive__text Celková cena s DPH
+                    h3.m-cartBarResponsive__price #[span 65 599] Kč
+                .m-cartBarResponsive__btnWrap
+                    button.btn.m-cartBarResponsive__btn(onclick="$('#cart-form-submit').trigger('click');") Doprava a platba #[span.a-btnIcon #[span.a-icon.-cheveron.-white]] 
+
+
+        include partials/_footer.pug 
+
+        include partials/_js-include.pug

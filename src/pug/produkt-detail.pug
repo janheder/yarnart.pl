@@ -1,0 +1,296 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug  
+    body
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
+
+        include partials/_modal-add-to-cart.pug
+        include partials/_modal-contact.pug
+        include partials/_breadcrumb.pug
+
+        section.o-productDetail
+            .container
+                .row
+                    .col-12.col-lg-7.o-productDetail__col
+                        .o-productDetail__carousel.m-productDetailCarousel
+
+                            .m-productDetailCarousel__tags
+                                .m-productDetailCarousel__tagSingle
+                                    .a-tag.-sale Akce
+                                .m-productDetailCarousel__tagSingle    
+                                    .a-tag.-new Novinka
+                                .m-productDetailCarousel__tagSingle 
+                                    .a-tag.-recommended Doporučené
+                                .m-productDetailCarousel__tagSingle 
+                                    .a-tag.-top Top
+
+
+                        
+                            .m-productDetailCarousel__gallery(itemscope itemtype="http://schema.org/ImageGallery")
+                                .swiper-container-horizontal.m-productDetailCarousel__content
+                                    .swiper-wrapper.m-productDetailCarousel__wrap
+
+                                        - for (var i=0; i<8; i++)
+                                            .swiper-slide.m-productDetailCarousel__slide
+
+                                                figure.m-productDetailCarousel__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                    a.m-productDetailCarousel__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                        img.swiper-lazy.m-productDetailCarousel__img(data-src=URLbase+"img/product-thumb-large.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        .swiper-lazy-preloader.m-productDetailCarousel__preloader
+                                                    figcaption.m-productDetailCarousel__figcaption(itemprop="caption description") Popis obrázku 1
+
+                                    .swiper-pagination.swiper-pagination-white.m-productDetailCarousel__swiperNav
+                                    .swiper-button-prev.m-productDetailCarousel__swiperButton.-prev
+                                    .swiper-button-next.m-productDetailCarousel__swiperButton.-next
+
+
+
+                        .o-productDetail__thumbs.m-productDetailThumbs
+                            .swiper-container-horizontal.m-productDetailThumbs__content                                  
+                                .swiper-wrapper.m-productDetailThumbs__wrap
+                                
+                                    - for (var i=0; i<8; i++)
+                                        .swiper-slide.m-productDetailThumbs__slide
+                                            .m-productDetailThumbs__paddingWrap
+                                                figure.m-productDetailThumbs__figure
+                                                    img.swiper-lazy.m-productDetailThumbs__img(data-src=URLbase+"img/product-thumb-small.jpg" alt="#")
+                                                    .swiper-lazy-preloader.m-productDetailThumbs__preloader
+                                                figcaption.m-productDetailThumbs__figcaption(itemprop="caption description") Popis obrázku 1
+
+
+                    .col-12.col-lg-5.o-productDetail__col
+                        .o-productDetail__main.m-productDetailMain
+
+                            h1.m-productDetailMain__title Postel Angelika 160/200 cm masiv borovice
+
+                            .m-productDetailMain__misc
+                                .m-productDetailMain__social.m-socialShare
+                                    .m-socialShare__title Sdílet:
+                                    a.m-socialShare__link(href="https://www.facebook.com/share.php?u=[URL]&title=[TITLE]" target="_blank") #[span.a-icon.-facebook.m-socialShare__icon]
+                                    a.m-socialShare__link(href="http://twitter.com/home?status=[TITLE]+[URL]" target="_blank") #[span.a-icon.-twitter.m-socialShare__icon]
+
+                            .m-productDetailMain__tags
+                                span.m-productDetailMain__tagSingle Výrobce: Visby
+
+
+                            .m-productDetailMain__description
+                                p.m-productDetailMain__descriptionTitle Popis produktu
+                                p.m-productDetailMain__descriptionText Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. #[a(href="#anchor-product-detail-description") Celý popis produktu]
+                            
+
+                            .m-productDetailMain__stock 
+                                span.a-icon.-box.-green.m-productDetailMain__stockIcon
+                                span.m-productDetailMain__stockText Dostupné skladem
+
+                            form.m-productDetailMain__form(method="post" name="product_detail_form" id="product_detail_form")
+
+                                .dropdown.m-productDetailMain__sizes.m-selectBox
+                                    input.m-selectBox__honeypot(type="radio" name="productSize" id="productSizeId" required)
+                                    .dropdown-toggle.m-selectBox__dropdown(id="productSizeDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") 
+                                        .m-selectBox__dropdownText Provedení
+                                        span.a-icon.-cheveron.m-selectBox__icon
+                                    .dropdown-menu.m-selectBox__dropdownMenu(aria-labelledby="productSizeDrop")
+
+                                        label.m-selectBox__label
+                                            input.m-selectBox__input(type="radio" name="productSize" id="productSizeId" required checked)
+                                            .m-selectBox__content
+                                                .m-selectBox__name medium
+                                                .m-selectBox__price 
+                                                    .m-selectBox__priceOld 5 000 Kč
+                                                    .m-selectBox__priceNew 2 000 Kč
+                                                .m-selectBox__stock Dostupné skladem
+
+
+                                        - for (var i=0; i<8; i++)
+                                            
+                                            label.m-selectBox__label
+                                                input.m-selectBox__input(type="radio" name="productSize" id="productSizeId" required)
+                                                .m-selectBox__content
+                                                    .m-selectBox__name largo
+                                                    .m-selectBox__price 
+                                                        .m-selectBox__priceOld 9 000 Kč
+                                                        .m-selectBox__priceNew 5 000 Kč
+                                                    .m-selectBox__stock 21 dní
+
+
+
+                                .m-productDetailMain__priceWrap
+                                    span.m-productDetailMain__priceOld 22 999 Kč
+                                    h2.m-productDetailMain__priceMain 18 546 Kč
+                                    span.m-productDetailMain__priceDPH 16 800 Kč bez DPH
+
+
+                                .m-productDetailMain__cta
+
+                                    .m-productDetailMain__qty
+                                        .m-numberStepper
+                                            input.m-numberStepper__input(type="number" min="1" max="99" value="1" name="cart-item-single-qty")
+                                            .m-numberStepper__btnUp
+                                                span.m-numberStepper__iconUp
+                                            .m-numberStepper__btnDown
+                                                span.m-numberStepper__iconDown
+
+                                    button.btn.m-productDetailMain__button(type="submit" name="buy-button") #[span.a-icon.-cart.-white.m-productDetailMain__icon] Do košíku
+
+                                .m-productDetailMain__info
+                                    span.m-productDetailMain__id Katalogové číslo: Angeli160
+                                    span.m-productDetailMain__id Záruka: 24 měsíců
+
+        section.o-productDetailVariants
+            .container
+                h2.o-productDetailVariants__title Další varianty produktu
+                .o-productDetailVariants__heading
+                    .o-productDetailVariants__headinsSingle Název
+                    .o-productDetailVariants__headinsSingle Dostupnost
+                    .o-productDetailVariants__headinsSingle Cena
+                    .o-productDetailVariants__headinsSingle
+
+                - for (var i=0; i<8; i++)
+                    .o-productDetailVariants__single
+                        .o-productDetailVariants__imgWrap
+                            img.o-productDetailVariants__img(src=URLbase+"img/product-thumb-small.jpg" alt="#")
+                        .o-productDetailVariants__text Laťkový rošt s textilií 180/200 cm
+                        .o-productDetailVariants__text.-stock Skladem
+                        .o-productDetailVariants__text.-price 426 Kč
+                        a.o-productDetailVariants__text.-link(href="#") Detail produktu #[span.a-icon.-cheveron.o-productDetailVariants__icon]
+
+        section.o-productDescription(id="anchor-product-detail-description")
+            .container  
+                p
+                    strong Popis
+                p Hydrance Optimale Riche je výživný hydratační krém, který je určen pro suchou až velmi suchou dehydratovanou citlivou pleť. Přináší okamžitou a intenzivní hydrataci pleti, která má dlouhotrvající účinek. Krém má vláčnou texturu, která dodává pleti pocit pohodlí. Díky unikátnímu složení se snižuje možnost vzniku alergií. Krém je vhodný jako podklad pod make-up.
+
+                p
+                    strong Dávkování a způsob užití
+                p Aplikujte krém ráno, anebo večer na dokonale čistou a osušenou pleť.
+
+                p
+                    strong Složení
+                p Přípravek obsahuje termální vodu Avene, bambucké máslo, meiboserin, lipomucin.
+
+
+
+        section.o-sectionSimilar
+            .container
+                h1.o-sectionSimilar__title Podobné produkty
+
+                .o-sectionSimilar.m-productCarousel(id="product_swiper")
+                    .m-productCarousel__content
+                        .swiper-wrapper.m-productCarousel__wrap
+
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                        
+                    .swiper-button-prev.m-productCarousel__swiperButton.-prev
+                    .swiper-button-next.m-productCarousel__swiperButton.-next
+
+
+
+        .productDetailResponsive
+            .productDetailResponsive__name
+                p.productDetailResponsive__title #{ProductName}
+                h3.productDetailResponsive__price #[span 16 989] Kč
+            .productDetailResponsive__btn-wrap
+                a.btn.productDetailResponsive__btn(onclick="$('#product_detail_form').submit();") Do košíku
+
+
+        include partials/_footer.pug
+
+        include partials/_js-include.pug
+
+        script.
+            $(function(){
+                $(".m-numberStepper__btnUp").click(function(){
+                    var SpinnerInput = $(this).closest('.m-numberStepper').find('.m-numberStepper__input');
+                    if ($(SpinnerInput).val() < 99){
+                        $(SpinnerInput).val( Number($(SpinnerInput).val()) + 1 );
+                    }
+                });
+                $(".m-numberStepper__btnDown").click(function(){
+                    var SpinnerInput = $(this).closest('.m-numberStepper').find('.m-numberStepper__input');
+                    if ($(SpinnerInput).val() > 1){
+                        $(SpinnerInput).val( Number($(SpinnerInput).val()) - 1 );
+                    }
+                });
+            }); 
+            //SWIPER PRODUCT
+            var carousel_product = new Swiper('.m-productDetailCarousel__content', {
+                lazy: true,
+                spaceBetween: 0,
+                grabCursor: true,
+                zoom: false,
+                loop: false,
+                pagination: {
+                    el: '.m-productDetailCarousel__swiperNav',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.m-productDetailCarousel__swiperButton.-next',
+                    prevEl: '.m-productDetailCarousel__swiperButton.-prev',
+                }
+            });
+
+            var galleryThumbs = new Swiper('.m-productDetailThumbs__content', {
+                spaceBetween: 10,
+                lazy: true,
+                centeredSlides: true,
+                slidesPerView: '6',
+                touchRatio: 0.2,
+                slideToClickedSlide: true,
+            });
+            carousel_product.controller.control = galleryThumbs;
+            galleryThumbs.controller.control = carousel_product;
+                
+            var carousel_variation = new Swiper('.m-productVariation__content', {
+                lazy: true,
+                spaceBetween: 10,
+                grabCursor: false,
+                slidesPerView: '4.5',
+                zoom: false,
+                loop: false,
+                navigation: {
+                    nextEl: '.m-productVariation__swiperButton.-next',
+                    prevEl: '.m-productVariation__swiperButton.-prev',
+                },
+                breakpointsInverse: true,
+                breakpoints: {
+                    991: {
+                    slidesPerView: '4.5',
+                    touchRatio: 0 
+                    },
+                    500: {
+                    slidesPerView: '3.5',
+                    touchRatio: 0 
+                    },
+                    400: {
+                    slidesPerView: '2.5',
+                    touchRatio: 0 
+                    },
+                    0: {
+                    slidesPerView: '2.5',
+                    touchRatio: 0 
+                    }
+                } 
+            });
+
+            initPhotoSwipeFromDOM('.m-productDetailCarousel__gallery');
+         
+             
+            $( ".pswp__button--arrow--left" ).click(function() {
+                $( ".m-productDetailCarousel__swiperButton.-prev" ).click();
+            });
+            $( ".pswp__button--arrow--right" ).click(function() {
+                $( ".m-productDetailCarousel__swiperButton.-next" ).click();
+            });

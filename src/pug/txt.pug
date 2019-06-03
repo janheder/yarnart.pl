@@ -1,0 +1,92 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug  
+    body
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
+
+        section.o-pageHeading
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Textová stránka
+        main
+            .container
+                .printArea
+                    article.post
+                        h1 Nadpis H1
+                        h2 Nadpis H2
+                        h3 Nadpis H3
+                        h4 Nadpis H4
+                        h5 Nadpis H5
+                        h6 Nadpis H6
+                        p Chcete nám sdělit ještě nějakou důležitou zprávu k vaší objednávce? Využijte prosím, tohoto formuláře. Napsat do něj můžete také upřesňující informace o místě, kam máme Vaše zboží doručit (nejbližší orientační bod apod.)
+                        strong Chcete nám sdělit ještě nějakou důležitou zprávu k vaší objednávce? Využijte prosím, tohoto formuláře.
+
+                        h4 Seznam
+                        ul
+                            li lorem
+                            li ipsum
+
+                        h4 Tabulky
+                        table.table
+                            tr
+                                th Po - Pá
+                                td 9:00 - 17:00
+                            tr
+                                th Po - Pá
+                                td 9:00 - 17:00
+
+                        a(href="#") Normální odkaz
+
+                        img(src=URLbase+"img/news-thumb-large.jpg" alt="#" title="#")
+
+                        .my-gallery.photogallery(itemscope itemtype="http://schema.org/ImageGallery")
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+                                    
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+
+        include partials/_news-section.pug
+        
+        include partials/_footer.pug
+
+        include partials/_js-include.pug
+
+        script.
+            initPhotoSwipeFromDOM('.my-gallery');
+   

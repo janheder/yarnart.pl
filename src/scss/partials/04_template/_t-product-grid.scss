@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    PRODUCT GRID
+\*------------------------------------*/
+
+    .single-product-cell{
+        position: relative;
+        float: left;
+
+        &::before{
+            content: "";
+            @include absolute-position(0,0,0,0);
+            background: $white;
+            z-index: -1;
+        }
+    }
+
+    @media screen and (min-width:992px){
+        .single-product-cell{
+            max-width: 25%;
+            width: 100%;
+
+            &::before{
+                border-top: 0;
+                border-right: 1px solid $border-primary;
+                border-bottom: 1px solid $border-primary;
+                border-left: 0;
+            }
+            &:nth-child(4n+1){
+                &::before{
+                    border-left: 1px solid $border-primary;
+                }
+            }
+            &:nth-child(-n+4){
+                &::before{
+                    border-top: 1px solid $border-primary;
+                }
+            }
+        }
+        .single-product-cell-small{
+            max-width: 20%;
+        } 
+        .swiper-slide .single-product-cell{
+            max-width: 100%;
+            height: 100%;
+        } 
+    }
+
+
+    @media (min-width:768px) and (max-width:991px){
+        .single-product-cell{
+            max-width: 33.333%;
+            width: 100%;
+
+            &::before{
+                border-top: 0;
+                border-right: 1px solid $border-primary;
+                border-bottom: 1px solid $border-primary;
+                border-left: 0;
+            }
+            &:nth-child(3n+1){
+                &::before{
+                    border-left: 1px solid $border-primary;
+                }
+            }
+            &:nth-child(-n+3){
+                &::before{
+                    border-top: 1px solid $border-primary;
+                }
+            }
+        }
+        .single-product-cell-small{
+            max-width: 25%;
+        } 
+        .swiper-slide .single-product-cell{
+            max-width: 100%;
+        } 
+    }
+
+    @media screen and (max-width:767px){
+        .single-product-cell{
+            max-width: 50%;
+            width: 100%;
+
+            &::before{
+                border-top: 0;
+                border-right: 1px solid $border-primary;
+                border-bottom: 1px solid $border-primary;
+                border-left: 0;
+            }
+            &:nth-child(2n+1){
+                &::before{
+                    border-left: 1px solid $border-primary;
+                }
+            }
+            &:nth-child(-n+2){
+                &::before{
+                    border-top: 1px solid $border-primary;
+                }
+            }
+        }
+        .single-product-cell-small{
+            max-width: 50%;
+        } 
+        .swiper-slide .single-product-cell{
+            max-width: 100%;
+        } 
+    }
+
+

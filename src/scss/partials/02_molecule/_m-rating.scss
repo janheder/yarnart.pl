@@ -1,0 +1,27 @@
+.m-rating{
+    display: flex;
+    flex-direction: row;
+}
+.m-rating__stars{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.m-rating__icon{
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+}
+.m-rating__text{
+    @include f-14-dark-regular;
+    margin-left: 6px;
+}
+@media screen and (max-width:350px){
+    .m-rating{
+        flex-direction: column;
+    }
+    .m-rating__text{
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+}

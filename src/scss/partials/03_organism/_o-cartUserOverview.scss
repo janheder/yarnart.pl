@@ -1,0 +1,18 @@
+.o-cartUserOverview{
+    padding: 6rem 0 2rem 0;
+}
+.o-cartUserOverview__col{
+    margin: 10px 0;
+}
+
+@media screen and (max-width:768px){
+    .o-cartUserOverview{
+        padding: 2rem 0 0rem 0;
+    }
+    .o-cartUserOverview__col{
+        margin: 10px 0 20px 0;
+        &:last-child{
+            margin: 10px 0;
+        }
+    }
+}

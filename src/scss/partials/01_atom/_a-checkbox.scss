@@ -1,0 +1,37 @@
+.a-checkbox{
+    height: 14px;
+    width: 14px;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    display: block;
+    flex-shrink: 0;
+    margin-top: 4px;
+    z-index: 1;
+
+    &::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: 2px solid $border-medium;
+        border-radius: 2px;
+
+    }
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: 0;
+        bottom: 0;
+        left: 5px;
+        width: 4px;
+        height: 8px;
+        border: solid $border-white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg); 
+        transition: 0s ease all;
+        opacity: 0;
+    }
+}

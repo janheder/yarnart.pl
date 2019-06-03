@@ -1,1 +1,1 @@
-# yarnart.pl
+# mojespani.cz

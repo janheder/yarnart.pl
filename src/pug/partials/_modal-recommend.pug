@@ -1,0 +1,24 @@
+.modal.fade(id="modal-recommend" tabindex="-1" role="dialog" aria-labelledby="modal-recommend" aria-hidden="true")
+    .modal-dialog(role="document")
+        .modal-content
+
+            .modal-header
+                h5.modal-title(id="modal-recommend-heading") Doporučit produkt známému
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span.cross-icon
+
+            .modal-body
+                form(method="post" action="" name="recommend_form")
+                    .form-group
+                        label(for="recommend_form_name") Vaše jméno
+                        input.form-control(type="text" name="recommend_form_name" id="recommend_form_name" required autocomplete="given-name")
+
+                    .form-group
+                        label(for="recommend_form_email") Email známého
+                        input.form-control(type="email" name="recommend_form_email" id="recommend_form_email" required autocomplete="email")
+
+                    .form-group
+                        button.form-control.btn(type="submit" name="recommend_form_submit" id="recommend_form_submit") Odeslat zprávu
+
+
+

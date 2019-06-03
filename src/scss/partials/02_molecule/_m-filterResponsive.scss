@@ -1,0 +1,32 @@
+.m-filterResponsive{
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    box-shadow: $box-shadow-primary;
+    background: $bg-white;
+    z-index: 3;
+    padding: 0;
+}
+.m-filterResponsive__sort, .m-filterResponsive__filter{
+    border-right: 1px solid $border-grey; 
+    @include f-16-primary-semibold;
+    padding: 15px 20px;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+}
+.m-filterResponsive__collapse{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+}
+
+@media screen and (max-width:991px){
+    .m-filterResponsive{
+        display: flex;
+    }
+}

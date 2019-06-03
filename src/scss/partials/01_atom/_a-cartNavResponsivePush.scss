@@ -1,0 +1,11 @@
+.a-cartNavResponsivePush{
+    height: 50px;
+    display: none;
+    position: relative;
+    width: 100%;
+}
+@media screen and (max-width: 991px){
+    .a-cartNavResponsivePush{
+        display: flex;
+    }
+}

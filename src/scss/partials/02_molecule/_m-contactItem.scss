@@ -1,0 +1,46 @@
+.m-contactItem{
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.m-contactItem__title{
+    background: $bg-dark;
+    @include f-18-white-semibold;
+    padding: 15px 20px;
+    margin: 0;
+    border-top-right-radius: $border-radius-primary;
+    border-top-left-radius: $border-radius-primary;
+}
+.m-contactItem_content{
+    padding: 20px;
+    background: $bg-white;
+    height: 100%;
+    border-bottom-right-radius: $border-radius-primary;
+    border-bottom-left-radius: $border-radius-primary;
+}
+.contactItem__subtitle{
+    @include f-16-primary-semibold; 
+    display: block;
+}
+.m-contactItem__phoneWrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0;
+}
+.m-contactItem__icon {
+    margin-right: 10px;
+    opacity: 0.75;
+}
+.m-contactItem__phone{
+    @include f-24-primary-semibold; 
+    color: $text-green;
+    margin: 0;
+}
+.m-contactItem__text{
+    @include f-14-dark-regular; 
+}
+.m-contactItem__button{
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,27 @@
+.m-cartButtons{
+    display: flex;
+    flex-direction: row;
+    margin: 4rem 0 0 0;
+
+    .btn{
+		margin-right: 10px;
+
+		&:last-child{
+			margin-left: auto;
+			margin-right: 0;
+			order: 2;
+		}
+	}
+}
+
+@media screen and (max-width: 575px){
+	.m-cartButtons{
+    display: flex;
+    flex-direction: row;
+		margin: 2rem 0 0 0;
+	}
+	.m-cartButtons .btn:first-child .a-btnIcon {
+		display: none;
+	}
+	
+}

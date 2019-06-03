@@ -1,0 +1,8 @@
+.a-cartResponsiveError{
+    background: $bg-brand;
+    padding: 10px 20px;
+    text-align: center;
+    @include f-16-white-semibold;
+    margin: 20px 0;
+    display: none;
+}

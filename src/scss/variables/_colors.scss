@@ -1,0 +1,86 @@
+/* ========================================================================== */
+/* Descriptive Colors */
+/* ========================================================================== */
+
+$white: #FFFFFF;
+$grey-light: #F5F5F5;
+$grey: #E5E5E5;
+$grey-medium: #8D8D8D;
+$grey-dark: #4E5055;
+$grey-deep: #06070E;
+$black: #000000;
+
+$red: #AC1511;
+$red-dark: #971410;
+
+$green: #64A820;
+$green-dark: #548D1B;
+
+$yellow: #F8B415;
+$yellow-dark: #E3A513;
+
+$blue: #3B5998;
+$blue-dark: #37538E;
+
+
+/* ========================================================================== */
+/* Variables */
+/* ========================================================================== */
+
+$box-shadow-primary: 0px 3px 8px 0px rgba(0,0,0,0.05);
+
+// Border radius
+$border-radius-primary: 4px;
+$border-radius-round: 50%;
+
+// Brand colors
+$brand-primary: $red;
+$brand-primary--dark: $red-dark;
+$brand-secondary: $green;
+
+// Border color
+$border-primary: $grey-deep;
+$border-brand: $red;
+$border-brand-dark: $red-dark;
+$border-brand-secondary: $green;
+$border-dark: $grey-dark;
+$border-medium: $grey-medium;
+$border-grey: $grey;
+$border-white: $white;
+$border-red: $red;
+$border-green: $green;
+$border-yellow: $yellow;
+$border-blue: $blue;
+$border-light: $grey-light;
+
+// Text colors
+$text-primary: $grey-deep;
+$text-brand: $red;
+$text-brand-dark: $red-dark;
+$text-brand-secondary: $green;
+$text-dark: $grey-dark;
+$text-medium: $grey-medium;
+$text-white: $white;
+$text-red: $red;
+$text-green: $green;
+$text-yellow: $yellow;
+$text-blue: $blue;
+
+// Backgorund colors
+$bg-primary: $grey-deep;
+$bg-brand: $red;
+$bg-brand-dark: $red-dark;
+$bg-brand-secondary: $green;
+$bg-brand-secondary-dark: $green-dark;
+$bg-grey: $grey;
+$bg-white: $white;
+$bg-light: $grey-light;
+$bg-medium: $grey-medium;
+$bg-dark: $grey-dark;
+$bg-black: $black;
+$bg-red: $red;
+$bg-green: $green;
+$bg-yellow: $yellow;
+$bg-blue: $blue;
+
+

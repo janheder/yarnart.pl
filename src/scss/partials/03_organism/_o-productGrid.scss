@@ -1,0 +1,36 @@
+.o-productGrid{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.o-productGrid .m-productCell{
+    width: 25%;
+    padding: 10px;
+}
+@media screen and (max-width:991px){
+    .o-productGrid{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .o-productGrid .m-productCell{
+        width: 25%;
+        padding: 5px;
+    }
+}
+@media screen and (max-width:768px){
+    .o-productGrid{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .o-productGrid .m-productCell{
+        width: 50%;
+        padding: 5px;
+    }
+}
+@media screen and (max-width:500px){
+    .o-productGrid{
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+}

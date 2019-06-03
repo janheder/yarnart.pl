@@ -1,0 +1,67 @@
+head
+	meta(charset="utf-8")
+	meta(content="IE=edge" http-equiv="X-UA-Compatible")
+	meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
+	title #{title}
+	meta(content="index,follow,snippet,archive" name="robots")
+	meta(content=metaDescription name="description")
+	meta(content=metaKeywords lang="cs" name="keywords")
+	meta(content=metaAuthor name="author")
+
+	link(rel="canonical" href=metaURL)
+	meta(property="og:locale" content="cs_CZ")
+	meta(property="og:type" content="website")
+	meta(property="og:title" content=title)
+	meta(property="og:description" content=metaDescription)
+	meta(property="og:url" content=metaURL)
+	meta(property="og:site_name" content=metaSitename)
+	meta(property="og:image" content=metaTwitterImg)
+	meta(property="og:image:secure_url" content=metaTwitterImg)
+	meta(name="twitter:card" content="summary")
+	meta(name="twitter:site" content=metaTwitterName)
+	meta(name="twitter:title" content=title)
+	meta(name="twitter:description" content=metaDescription)
+	meta(name="twitter:image" content=metaTwitterImg)
+
+	link(rel="apple-touch-icon" sizes="57x57" href=URLbase+"images/favicons/apple-icon-57x57.png")
+	link(rel="apple-touch-icon" sizes="60x60" href=URLbase+"images/favicons/apple-icon-60x60.png")
+	link(rel="apple-touch-icon" sizes="72x72" href=URLbase+"images/favicons/apple-icon-72x72.png")
+	link(rel="apple-touch-icon" sizes="76x76" href=URLbase+"images/favicons/apple-icon-76x76.png")
+	link(rel="apple-touch-icon" sizes="114x114" href=URLbase+"images/favicons/apple-icon-114x114.png")
+	link(rel="apple-touch-icon" sizes="120x120" href=URLbase+"images/favicons/apple-icon-120x120.png")
+	link(rel="apple-touch-icon" sizes="144x144" href=URLbase+"images/favicons/apple-icon-144x144.png")
+	link(rel="apple-touch-icon" sizes="152x152" href=URLbase+"images/favicons/apple-icon-152x152.png")
+	link(rel="apple-touch-icon" sizes="180x180" href=URLbase+"images/favicons/apple-icon-180x180.png")
+	link(rel="icon" type="image/png" sizes="192x192" href=URLbase+"images/favicons/android-icon-192x192.png")
+	link(rel="icon" type="image/png" sizes="32x32" href=URLbase+"images/favicons/favicon-32x32.png")
+	link(rel="icon" type="image/png" sizes="96x96" href=URLbase+"images/favicons/favicon-96x96.png")
+	link(rel="icon" type="image/png" sizes="16x16" href=URLbase+"images/favicons/favicon-16x16.png")
+	link(rel="manifest" href=URLbase+"images/favicons/manifest.json")
+	meta(name="msapplication-TileColor" content="#24272D")
+	meta(name="msapplication-TileImage" content=URLbase+"images/favicons/ms-icon-144x144.png")
+
+	meta(name="theme-color" content="#ffffff")
+
+	// Bootstrap
+	link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" onerror="loadBootstrap()" id="loadBootstrap")
+	script.
+		function loadBootstrap() {
+			$( "#loadBootstrap" ).append('<link href="#{URLbase}css/plugins/bootstrap.min.css" rel="stylesheet">');
+		}
+
+
+	// Plugins CSS
+	link(href=URLbase+"css/plugins/easy-autocomplete.min.css" rel="stylesheet")
+	link(href=URLbase+"css/plugins/jquery.cookiebar.min.css" rel="stylesheet")
+	link(href=URLbase+"css/plugins/swiper.min.css" rel="stylesheet")
+	link(href=URLbase+"css/plugins/photoswipe.min.css" rel="stylesheet")
+	link(href=URLbase+"css/plugins/default-skin.min.css" rel="stylesheet")
+
+	// Custom CSS
+	link(href=URLbase+"css/style.min.css" rel="stylesheet")
+
+	// jQuery
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+	script.
+		window.jQuery || document.write('<script src="#{URLbase}js/jquery.min.js">\x3C/script>')
+

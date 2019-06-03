@@ -1,0 +1,217 @@
+/* ========================================================================== */
+/* SINGLE PRODUCT CELL */
+/* ========================================================================== */
+
+.m-productCell{
+    padding: 0px;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+}
+.m-productCell__link{
+    padding: 0px 0px 20px 0px;
+    z-index: 2;
+    position: relative;
+    background: $bg-white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: $text-primary;
+    text-align: left;
+    transition: 0.3s ease all;
+    height: 100%;
+    border-radius: $border-radius-primary;
+    border-bottom: 1px solid $border-grey;
+
+    &:hover, &:active, &:focus{
+        z-index: 3;
+        text-decoration: none;
+        box-shadow: none;
+    }
+}
+.m-productCell__top{
+    width: 100%;
+    position: relative;
+
+    &:hover, &:active, &:focus{
+        text-decoration: none;
+    }
+}
+.m-productCell__thumb{
+    position: relative;
+    padding-bottom: 100%;
+}
+.m-productCell__imgWrap{
+    @include absolute-position(0,0,0,0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.m-productCell__img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.m-productCell__title{
+    @include f-16-primary-regular;
+    text-align: left;
+    margin: 0;
+    padding: 1rem 0 1.5rem 0;
+}
+.m-productCell__tags{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    z-index: 1;
+}
+.m-productCell__tagSingle{
+    display: block;
+}
+.m-productCell__bottom{
+    width:100%;
+}
+.m-productCell__priceWrap{
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%; 
+}
+.m-productCell__price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 10px;
+    flex-shrink: 0;
+}
+.m-productCell__priceOld{
+    text-decoration: line-through;
+    @include f-14-semibold-regular;
+    margin-right: 10px;
+    line-height: 1;
+}
+.m-productCell__priceMain{
+    @include f-20-primary-semibold;
+    color: $text-red;
+    line-height: 1;
+}
+.m-productCell__delivery{
+    flex-grow: 1;
+    line-height: 1.2;
+}   
+.m-productCell__deliveryText{
+    margin: 0;
+    color: $text-green;
+    font-weight: 400;
+    text-align: left;
+    font-size: 13px;
+}
+
+.m-productCell__hover{
+    display: none;
+    padding: 20px;
+    padding-top: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: $bg-white;
+    transform: translateY(100%);
+    z-index: -1;
+}
+.m-productCell{
+    &:hover, &:active, &:focus{
+        z-index: 4;
+
+        .m-productCell__hover{
+            display: block;
+            box-shadow: $box-shadow-primary;
+            z-index: 2;
+        }
+    }
+}
+.m-productCell__text{
+    @include f-14-dark-semibold;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+.m-productCell__btn{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+
+@media screen and (max-width:500px){
+     .m-productCell{
+        padding: 0px;
+    }
+}
+
+/* ========================================================================== */
+/* SMALL SINGLE PRODUCT CELL */
+/* ========================================================================== */
+
+.m-productCell.-small{
+
+    .m-productCell__link{
+        padding: 15px;
+    }
+    .m-productCell__thumb{
+        padding-bottom: 60%;
+    }
+    .m-productCell__title{
+        margin: 10px 0;
+        padding: 0;
+        height: 48px;
+        overflow: hidden;
+    }
+    .m-productCell__priceWrap{
+        justify-content: center;
+    }
+    .m-productCell__price{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* ========================================================================== */
+/* LAZY LOAD ANIMATION */
+/* ========================================================================== */
+
+.m-productCell__preloader{
+    height: 100%;
+    width: 120px;
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 60%,rgba(255,255,255,0) 100%); 
+    animation-name: lazy-product;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes lazy-product {
+    from{
+        left: -120px;
+        right: 100%;
+    }
+    to{
+        left: 100%;
+        right: 0;
+    }
+}
+.m-productCell__img.loaded + .m-productCell__preloader{
+    display: none;
+    animation-name: none;
+}

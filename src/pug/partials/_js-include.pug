@@ -1,0 +1,74 @@
+// Popper for Bootstrap support
+script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js")
+script.
+	if(typeof(Popper) === 'undefined') {
+	document.write('<script src="#{URLbase}js/popper.min.js">\x3C/script>')}
+
+// Bootstrap core JavaScript
+script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js")
+script.
+	if(typeof($.fn.modal) === 'undefined') {
+	document.write('<script src="#{URLbase}js/bootstrap.min.js">\x3C/script>')}
+
+
+// Custom js plugins and scripts
+script(src=URLbase+"js/plugins/jquery.cookiebar.min.js")
+script(src=URLbase+"js/plugins/jquery.easy-autocomplete.min.js")
+script(src=URLbase+"js/plugins/lazyload.min.js")
+script(src=URLbase+"js/plugins/photoswipe.min.js")
+script(src=URLbase+"js/plugins/photoswipe-ui-default.min.js")
+script(src=URLbase+"js/plugins/swiper.min.js")
+
+script(src=URLbase+"js/scripts.min.js")
+
+// Search autocomplete test
+script.
+	var options = {
+		data: ["blue", "green", "pink", "red", "yellow"]
+	};
+	$("#searchbox").easyAutocomplete(options);
+
+// Photo swiper HTML setup
+.pswp(tabindex="-1" role="dialog" aria-hidden="true")
+
+	.pswp__bg
+
+	.pswp__scroll-wrap
+       
+		.pswp__container
+			.pswp__item
+			.pswp__item
+			.pswp__item
+
+		.pswp__ui.pswp__ui--hidden
+
+			.pswp__top-bar
+
+				.pswp__counter
+
+				button.pswp__button.pswp__button--close(title="Zavřít (Esc)")
+
+				button.pswp__button.pswp__button--share(title="Sdílet")
+
+				button.pswp__button.pswp__button--fs(title="Celá obrazovka")
+
+				button.pswp__button.pswp__button--zoom(title="Přiblížit/Oddálit")
+
+				.pswp__preloader
+					.pswp__preloader__icn
+						.pswp__preloader__cut
+							.pswp__preloader__donut
+
+
+			.pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+				.pswp__share-tooltip
+       
+
+			button.pswp__button.pswp__button--arrow--left(title="Předchozí")
+         
+
+			button.pswp__button.pswp__button--arrow--right(title="Další")
+       
+
+			.pswp__caption
+				.pswp__caption__center

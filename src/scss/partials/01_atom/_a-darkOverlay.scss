@@ -1,0 +1,15 @@
+@media screen and (max-width: 991px){
+    .a-darkOverlay{
+        display: none;
+        background: rgba(0,0,0,0.8);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 7;
+        top: 0;
+    }
+    .a-darkOverlay.-active{
+        display: block;
+    }
+}
+

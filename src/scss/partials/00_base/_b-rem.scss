@@ -1,0 +1,13 @@
+html {
+    font-size: 10px;
+}
+@media screen and (max-width: 1400px) {
+    html {
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 8.5px;
+    }
+}

@@ -1,0 +1,42 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug  
+    body
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
+                
+        section.o-pageHeading
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Zapomenuté heslo
+                p.o-pageHeading__text Pokud jste zapomněli své heslo, pošleme Vám nové na email, který jste uvedli při registraci.
+               
+        main
+            .container
+                .row
+                    .col-12.col-sm-12.col-md-12.col-lg-3
+
+                    .col-12.col-sm-12.col-md-12.col-lg-6
+
+                        form.o-form(method="post" action="" class="login-form" name="login_form")
+
+                            .o-form__group.m-formGroup
+                                input.m-formGroup__input(type="email" name="login_form_email" id="login_form_email" autocomplete="email" required placeholder=" ")
+                                label.m-formGroup__label(for="login_form_email") Emailová adresa
+                                span.m-formGroup__error Neplatný email
+                                span.m-formGroup__success
+
+
+                            button.btn.-fullWidth(type="submit" id="login_form_submit") Poslat nové heslo #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+
+     
+
+                    .col-12.col-sm-12.col-md-12.col-lg-3
+
+
+        include partials/_footer.pug
+
+        include partials/_js-include.pug

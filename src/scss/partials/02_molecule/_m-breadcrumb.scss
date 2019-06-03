@@ -1,0 +1,82 @@
+.m-breadcrumb{
+    margin:0;
+    background: transparent;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.m-breadcrumb__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    min-height: 50px;
+}
+.m-breadcrumb__item{     
+    @include f-14-dark-regular;
+    padding-left: 26px;
+    position: relative;
+    padding: 1rem 1.5rem 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    + .m-breadcrumb__item::before{
+        content: "";
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3LjIwNyAxMiI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6IzI0MjcyZDt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik05LjM0NSw5LjA1OWExLjIyNCwxLjIyNCwwLDAsMSwxLjcxNC0xLjcxNGw0LjksNC45YTEuMjI0LDEuMjI0LDAsMCwxLDAsMS43MTRsLTQuOSw0LjlhMS4yMjQsMS4yMjQsMCwwLDEtMS43MTQtMS43MTRMMTMuMzczLDEzLjEsOS4zMzMsOS4wNTlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOS4xIC03LjEpIi8+PC9zdmc+"); 
+        height: 8px;
+        width: 8px;
+        position: absolute;
+        left: 0;
+    }
+    &.active{
+        color: $text-medium;
+        font-weight: 400;
+    }
+}
+
+.m-breadcrumb.-transparent{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    .m-breadcrumb__item{
+        color: $text-primary;
+        
+        &.active{
+            color: $text-medium;
+            font-weight: 400;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .m-breadcrumb__item{
+        display: none;
+
+        &:nth-last-child(2){
+            display: flex;
+            font-size: 1.6rem;
+            font-weight: 500;
+            padding-left: 3rem;
+            left: 1rem;
+
+            &::before{
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.m-alert{
+    @include f-16-white-regular;
+    background: $bg-primary;
+    padding: 2rem;
+    display: block;
+    margin: 2rem 0;
+    border-radius: $border-radius-primary;
+    border: 0;
+    text-align: center;
+
+    &.-success{
+        background: $bg-green;
+    }
+    &.-info{
+        background: $bg-dark;
+    }
+    &.-warning{
+        background: $bg-yellow;
+    }
+    &.-danger{
+        background: $bg-red;
+    }
+}

@@ -1,0 +1,84 @@
+.m-numberStepper{
+    position: relative;
+    z-index: 1;
+    border-radius: $border-radius-primary;
+    background: $bg-light;
+    color: $text-dark;
+    max-width: 140px;
+}
+.m-numberStepper__input{
+    border: 0;
+    width: 100%;
+    height: 5.4rem;
+    font-size: 1.4rem;
+    text-align: center;
+    background: transparent;
+    font-weight: 600;
+    min-width: 140px;
+    max-width: 100%;
+}
+.m-numberStepper__btnUp, .m-numberStepper__btnDown{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 46px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.m-numberStepper__btnUp{
+    right: 0;
+    left: auto;
+    border-top-right-radius: $border-radius-primary;
+    border-bottom-right-radius: $border-radius-primary;
+}
+.m-numberStepper__btnDown{
+    border-top-left-radius: $border-radius-primary;
+    border-bottom-left-radius: $border-radius-primary;
+}
+.m-numberStepper__iconUp, .m-numberStepper__iconDown{
+    width: 10px;
+    height: 2px;
+    background: $bg-dark;
+    @include center(both);
+}
+.m-numberStepper__iconUp::after{
+    content: "";
+    width: 2px;
+    height: 10px;
+    background: $bg-dark;
+    @include center(both);
+}
+
+
+.m-numberStepper.-dark{
+    background: $bg-light;
+}
+
+
+.m-numberStepper.-small{
+    min-width: 100px;
+
+    .m-numberStepper__input{
+        border: 0;
+        width: 100%;
+        height: 42px;
+        font-size: 1.4rem;
+        text-align: center;
+        background: transparent;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .m-numberStepper__input{
+        min-width: 100px;
+    }
+    .m-numberStepper{
+        max-width: 100%;
+    }
+}

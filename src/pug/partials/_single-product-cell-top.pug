@@ -1,0 +1,25 @@
+a.single-product-cell.single-product-cell--small(href="#")
+    .single-product-cell__top
+    
+        .product-tags
+            .product-tags__single
+                .product-tags__text.top.circle 1
+
+        .product-tags--right
+            .product-tags__single
+                .product-tags__text.sale.circle -30%
+
+        .single-product-cell__img-container
+            .single-product-cell__img-wrap
+                img.lazy.single-product-cell__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-medium.jpg" alt="#")
+        h4.single-product-cell__title #{ProductName}
+
+    .single-product-cell__bottom
+        .single-product-cell__price-wrap
+            .single-product-cell__price
+                .single-product-cell__price-old 1 099 Kč 
+                .single-product-cell__price-main 899 Kč
+                
+        .single-product-cell__delivery-wrap
+            .single-product-cell__delivery
+                p.single-product-cell__delivery-text #[span Skladem více jak] 5 kusů

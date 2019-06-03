@@ -1,0 +1,115 @@
+.m-navSearch{
+    flex-grow: 1;
+    padding: 0 6vw;
+}
+.m-navSearch__form{
+    position: relative;
+}
+.easy-autocomplete{
+    width: auto !important;
+}
+.m-navSearch__input{
+    border: 0;
+    border-radius: $border-radius-primary;
+    height: 48px;
+    padding: 0 20px;
+    width: 100%;
+    background: $bg-light;
+}
+.m-navSearch__button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 48px;
+    width: 60px;
+    background: transparent;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.m-navSearch__icon{
+    height: 18px;
+    width: 18px;
+}
+.easy-autocomplete-container{
+    box-shadow: $box-shadow-primary;
+    border-radius: $border-radius-primary;
+    overflow: hidden;
+}
+.easy-autocomplete-container ul{
+    margin: 0;
+    border: 0;
+}
+.easy-autocomplete-container ul li{
+    margin: 0;
+    padding: 10px 20px;
+    border: 0;
+    @include f-14-primary-regular;
+
+    &::before{
+        content: none;
+    }
+    &.selected{
+        background: $bg-light;
+        border: 0;
+    }
+}
+.m-navSearch__close{
+    position: absolute;
+    left: 0;
+    top: 0; 
+    width: 46px;
+    height: 100%;
+    opacity: 0.5;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+.m-navSearch__closeIcon{
+    height: 12px;
+}
+
+@media screen and (max-width:1200px){
+    .m-navSearch{
+        flex-grow: 1;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width:991px){
+    .m-navSearch{
+        padding: 5px;
+        display: none;
+        position: absolute;
+        background: $bg-white;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        transition: 0.3s ease all;
+        z-index: 1;
+        box-shadow: $box-shadow-primary;
+
+        &.-active{
+            display: block;
+        }
+    }
+    .m-navSearch__close{
+        display: none;
+    }
+    .m-navSearch__input{
+        height: 56px;
+        border-radius: 0;
+        padding-left: 10px;
+    }
+    .m-navSearch__button{
+        height: 56px;
+    }
+    .m-navSearch__icon{
+        height: 16px;
+    }
+}

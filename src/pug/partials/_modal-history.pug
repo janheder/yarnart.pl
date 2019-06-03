@@ -1,0 +1,35 @@
+.modal.fade.o-modal.-wide(id="modal-history" tabindex="-1" role="dialog" aria-labelledby="modal-history-heading" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.o-modal__dialog(role="document")
+        .modal-content.o-modal__content
+
+            .modal-header.o-modal__header
+                h5.modal-title.o-modal__title(id="modal-history-heading") Detail objednávky
+
+                button.o-modal__close(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span.a-icon.-cross.-red.o-modal__closeIcon
+
+            .modal-body.o-modal__body
+                - for (var i=0; i<1; i++)
+                    .m-cartItemSingle
+                        .m-cartItemSingle__col-1  
+                            .m-cartItemSingle__thumb-wrap
+                                .m-cartItemSingle__thumb
+                                    img.m-cartItemSingle__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+
+                        .m-cartItemSingle__col-2   
+                            .m-cartItemSingle__name-wrap
+                                p.m-cartItemSingle__name #{ProductName}
+                                p.m-cartItemSingle__tags #[span Rozměr: 80/200 cm] #[span Varianta: grey flex]
+                                p.m-cartItemSingle__stock Dostupné skladem   
+
+                            .m-cartItemSingle__inner    
+                                .m-cartItemSingle__qty-wrap  
+                                    p.m-cartItemSingle__qty-text 1 kus/ů
+                                .m-cartItemSingle__price-wrap
+                                    span.m-cartItemSingle__price-old 14 290 Kč
+                                    p.m-cartItemSingle__price 8 489 Kč
+                                .m-cartItemSingle__sum-wrap.text-right
+                                    p.m-cartItemSingle__sum #[span 8 489] Kč
+
+            .modal-footer.o-modal__footer
+                button.btn.-dark(type="button" data-dismiss="modal") Zavřít

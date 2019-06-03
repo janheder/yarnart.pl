@@ -1,0 +1,44 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug  
+    body
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
+
+        section.o-pageHeading
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Výsledky vyhledávání pro výraz: "postel"
+
+        
+        main
+            .container
+
+
+                .o-productPagination
+                    .o-productPagination__resultNumber 1 - 30 z 322 produktů
+                    .o-productPagination__resultLimit 
+                        span.o-productPagination__resultLimitText Produktů na stránku
+                        a.o-productPagination__resultLimitButton.-active(href="#") 20
+                        a.o-productPagination__resultLimitButton(href="#") 60
+
+                    include partials/_pagination.pug
+
+
+                .o-productGrid
+                    - for (var i=0; i<20; i++)
+                        include partials/_single-product-cell.pug
+
+
+                .o-productBottomButton
+                    a.btn.o-productBottomButton__btn(href="#") Dalších 20 produktů
+                    include partials/_pagination.pug
+
+ 
+
+        include partials/_footer.pug
+
+        include partials/_js-include.pug

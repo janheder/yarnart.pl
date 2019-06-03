@@ -1,0 +1,77 @@
+.o-userHistory{
+    padding: 2rem 0;
+    background: $bg-white;
+}
+.o-userHistory__title{
+    @include f-24-primary-semibold;   
+    text-align: center;
+    margin: 0;
+    padding: 2rem 0 2rem 0;
+}
+.o-userHistory__table{
+    width: 100%;
+}
+.o-userHistory__th{
+    border-bottom: 1px solid $border-grey;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    @include f-14-dark-regular;   
+}
+.o-userHistory__tr{
+    padding: 0;
+}
+.o-userHistory__id{
+    @include f-14-semibold-semibold;   
+}
+.o-userHistory__date{
+    @include f-14-primary-regular;   
+}
+.o-userHistory__price{
+    @include f-14-primary-semibold; 
+    color: $text-red;
+}
+.o-userHistory__status{
+    @include f-14-primary-semibold; 
+    padding: 5px 15px;
+    border-radius: $border-radius-primary;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 0;
+
+    &::after{
+        content: "";
+        background: $bg-dark;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.15;
+    }
+    &.-success{
+        color: $text-green;
+
+        &::after{
+            background: $bg-green;
+        }
+    }
+    &.-info{
+        color: $text-yellow;
+
+        &::after{
+            background: $bg-yellow;
+        }   
+    }
+    &.-danger{
+        color: $text-red;
+
+        &::after{
+            background: $bg-red;
+        }   
+    }
+}
+.o-userHistory__info{
+    cursor: pointer;
+}

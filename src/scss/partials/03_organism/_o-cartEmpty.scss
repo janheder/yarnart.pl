@@ -1,0 +1,35 @@
+.o-cartEmpty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+}
+.o-cartEmpty__img{
+    height: 120px;
+}
+.o-cartEmpty__title{
+    @include f-24-primary-semibold;
+    margin: 0;
+    margin-top: 4rem;
+}
+.o-cartEmpty__text{
+    @include f-16-dark-regular; 
+    max-width: 360px;
+    margin: 2rem 0 3rem 0;
+    text-align: center;
+}
+.o-cartEmpty__text.-small{
+    @include f-14-primary-regular; 
+    max-width: 500px;
+    margin: 4rem 0 0rem 0;
+}
+.o-cartEmpty__link{
+
+}
+
+.o-cartEmpty.-success{
+    .o-cartEmpty__title{
+        color: $text-green;
+    }
+}
