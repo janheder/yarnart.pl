@@ -6,23 +6,7 @@ html(lang=lang)
         include partials/_modal-login.pug
         header.o-header.-cart
             include partials/_navMain.pug
-        section.o-cartNav
-            .container.o-cartNav__container
-                .o-cartNav__single.-active
-                    .o-cartNav__number 1
-                    .o-cartNav__title Nákupní košík
-                    
-                .o-cartNav__single
-                    .o-cartNav__number 2
-                    .o-cartNav__title Doprava a platba
-                    
-                .o-cartNav__single
-                    .o-cartNav__number 3
-                    .o-cartNav__title Osobní údaje
-                    
-                .o-cartNav__single
-                    .o-cartNav__number 4
-                    .o-cartNav__title Shrnutí objednávky
+
                     
 
         section.o-cartNavResponsive
@@ -34,72 +18,148 @@ html(lang=lang)
 
         .a-cartNavResponsivePush
 
-        main
+        main.-cart
             .container
-                form(method="post" action="" name="cart_form")
-                    .m-cartItemTop
-                        .m-cartItemTop__item.-img Produkt
-                        .m-cartItemTop__col
-                            .m-cartItemTop__item.-name
-                            .m-cartItemTop__wrap
-                                .m-cartItemTop__item.-qty Množství
-                                .m-cartItemTop__item.-price Cena za kus
-                                .m-cartItemTop__item.-sum Cena celkem
-                                .m-cartItemTop__item.-remove
+                .row.cart__row
+                    .col-12.col-lg-3.cart__col
+                        section.o-cartNav
+                            .o-cartNav__single.-active
+                                .o-cartNav__heading
+                                    .o-cartNav__number 1
+                                    .o-cartNav__title Koszyk na zakupy
+                                .o-cartNav__content
+                                    .o-cartNav__text 1x Lorem ipsum product #[span 99 zł]
+                                    .o-cartNav__text 1x Lorem ipsum product #[span 99 zł]
+                                    a.o-cartNav__link(href="#") Edytuj
+                                
+                            .o-cartNav__single
+                                .o-cartNav__heading
+                                    .o-cartNav__number 2
+                                    .o-cartNav__title Dane osobowe
+                                .o-cartNav__content
+                                    .o-cartNav__text.-empty Niepubliczny
+                                
+                            .o-cartNav__single
+                                .o-cartNav__heading
+                                    .o-cartNav__number 3
+                                    .o-cartNav__title Podsumowanie
+                                .o-cartNav__content
+                                    .o-cartNav__text.-empty Niepubliczny
 
-                    - for (var i=0; i<3; i++)
-                        .m-cartItemSingle
-                            .m-cartItemSingle__col-1  
-                                .m-cartItemSingle__thumb-wrap
-                                    .m-cartItemSingle__thumb
-                                        img.m-cartItemSingle__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
-
-
-                            .m-cartItemSingle__col-2   
-                                .m-cartItemSingle__name-wrap
-                                    a.m-cartItemSingle__name(href="#") #{ProductName}
-                                    p.m-cartItemSingle__tags #[span Rozměr: 80/200 cm] #[span Varianta: grey flex]
-                                    p.m-cartItemSingle__stock Dostupné skladem   
-
-                                .m-cartItemSingle__inner    
-                                    .m-cartItemSingle__qty-wrap 
-                                        .m-cartItemSingle__qty
-                                            .m-numberStepper.-dark
-                                                input.m-numberStepper__input(type="number" min="1" max="99" value="1" name="cart-item-single-qty")
-                                                .m-numberStepper__btnUp
-                                                    span.m-numberStepper__iconUp
-                                                .m-numberStepper__btnDown
-                                                    span.m-numberStepper__iconDown
-
-                                    .m-cartItemSingle__price-wrap
-                                        span.m-cartItemSingle__price-old 14 290 Kč
-                                        p.m-cartItemSingle__price 8 489 Kč
-                                    .m-cartItemSingle__sum-wrap
-                                        p.m-cartItemSingle__sum #[span 18 546] Kč
-                                    .m-cartItemSingle__delete-wrap
-                                        a.a-icon.-crossCircle.-red(href="#")
-
-                    .m-cartPriceOverview
-                        p.m-cartPriceOverview__text Celková cena s DPH:
-                        h3.m-cartPriceOverview__price #[span.m-cartPriceOverview__priceNumber 65 599] Kč
-
-                    .m-cartFreeShipping
-                        .progress.m-cartFreeShipping__progress
-                            .progress-bar.m-cartFreeShipping__progressBar(role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="8000" style="width: 25%")       
-                        p.m-cartFreeShipping__text Nakupte ještě za #[span.m-cartFreeShipping__price 5 100 Kč] a máte dopravu zdarma
+                            .o-cartNav__single
+                                .o-cartNav__heading
+                                    .o-cartNav__number 4
+                                    .o-cartNav__title Wykończenie
 
 
-                    .m-cartButtons
-                        a.btn.-dark(href="#") #[span.a-btnIcon.-rotate180 #[span.a-icon.-cheveron.-white]] Zpět do obchodu
-                        button.btn(type="submit" id="cart-form-submit") Doprava a platba #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+
+                    .col-12.col-lg-9.cart__col
+                        form(method="post" action="" name="cart_form")
+                            .m-cartItemTop
+                                .m-cartItemTop__item.-img Produkt
+                                .m-cartItemTop__col
+                                    .m-cartItemTop__item.-name
+                                    .m-cartItemTop__wrap
+                                        .m-cartItemTop__item.-qty Liczba sztuk
+                                        .m-cartItemTop__item.-price Cena za sztukę
+                                        .m-cartItemTop__item.-sum Całkowita cena
+                                        .m-cartItemTop__item.-remove
+
+                            - for (var i=0; i<3; i++)
+                                .m-cartItemSingle
+                                    .m-cartItemSingle__col-1  
+                                        .m-cartItemSingle__thumb-wrap
+                                            .m-cartItemSingle__thumb
+                                                img.m-cartItemSingle__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+
+
+                                    .m-cartItemSingle__col-2   
+                                        .m-cartItemSingle__name-wrap
+                                            a.m-cartItemSingle__name(href="#") #{ProductName}
+                                            p.m-cartItemSingle__tags #[span Wariant: Suede 341]
+                                            p.m-cartItemSingle__stock W magazynie
+
+                                        .m-cartItemSingle__inner    
+                                            .m-cartItemSingle__qty-wrap 
+                                                .m-cartItemSingle__qty
+                                                    .m-numberStepper.-small
+                                                        input.m-numberStepper__input(type="number" min="1" max="99" value="1" name="cart-item-single-qty")
+                                                        .m-numberStepper__btnUp
+                                                            span.m-numberStepper__iconUp
+                                                        .m-numberStepper__btnDown
+                                                            span.m-numberStepper__iconDown
+
+                                            .m-cartItemSingle__price-wrap
+                                                p.m-cartItemSingle__price 99 zł
+                                                span.m-cartItemSingle__vat w tym VAT
+                                            .m-cartItemSingle__sum-wrap
+                                                p.m-cartItemSingle__sum #[span 99] zł
+                                                span.m-cartItemSingle__vat w tym VAT
+                                            .m-cartItemSingle__delete-wrap
+                                                a.a-icon.-crossCircle.-red(href="#")
+
+                            .m-cartPriceOverview
+                                .m-cartFreeShipping  
+                                    p.m-cartFreeShipping__text Przy zamówieniu powyżej #[span.m-cartFreeShipping__price 99 zł] masz bezpłatną wysyłkę
+                                p.m-cartPriceOverview__text Całkowita cena z VAT:
+                                h3.m-cartPriceOverview__price #[span.m-cartPriceOverview__priceNumber 297] zł
+
+
+                            .o-cartDeliveryForm
+                                h2.o-cartDeliveryForm__title Wybór transportu
+
+                                .o-cartDeliveryForm__item
+                                    .o-form__group.m-formGroup.-radiobutton
+                                        input.m-formGroup__input(type="radio" name="doprava" id="delivery_form_delivery-1" required)
+                                        span.m-formGroup__radiobutton.a-radiobutton
+                                        label.m-formGroup__label.-bold(for="delivery_form_delivery-1") Odbiór osobisty
+                                        label.m-formGroup__price(for="delivery_form_delivery-1") 99 zł
+
+                                .o-cartDeliveryForm__item
+                                    .o-form__group.m-formGroup.-radiobutton
+                                        input.m-formGroup__input(type="radio" name="doprava" id="delivery_form_delivery-2" required checked)
+                                        span.m-formGroup__radiobutton.a-radiobutton
+                                        label.m-formGroup__label.-bold(for="delivery_form_delivery-2") Odbiór osobisty
+                                        label.m-formGroup__price(for="delivery_form_delivery-2") 99 zł
+
+
+
+                                h2.o-cartDeliveryForm__title Wybór płatności
+
+                                .o-cartDeliveryForm__item
+                                    .o-form__group.m-formGroup.-radiobutton
+                                        input.m-formGroup__input(type="radio" name="platba" id="delivery_form_payment-1" required checked)
+                                        span.m-formGroup__radiobutton.a-radiobutton
+                                        label.m-formGroup__label.-bold(for="delivery_form_payment-1") Odbiór osobisty
+                                        label.m-formGroup__price(for="delivery_form_payment-1") 99 zł
+
+                                .o-cartDeliveryForm__item
+                                    .o-form__group.m-formGroup.-radiobutton
+                                        input.m-formGroup__input(type="radio" name="platba" id="delivery_form_payment-2" required disabled)
+                                        span.m-formGroup__radiobutton.a-radiobutton
+                                        label.m-formGroup__label.-bold(for="delivery_form_payment-2") Odbiór osobisty
+                                        label.m-formGroup__price(for="delivery_form_payment-2") 99 zł
+
+                                .o-cartDeliveryForm__item
+                                    .o-form__group.m-formGroup.-radiobutton
+                                        input.m-formGroup__input(type="radio" name="platba" id="delivery_form_payment-3" required)
+                                        span.m-formGroup__radiobutton.a-radiobutton
+                                        label.m-formGroup__label.-bold(for="delivery_form_payment-3") Odbiór osobisty
+                                        label.m-formGroup__price(for="delivery_form_payment-3") 99 zł
+
+
+                            .m-cartButtons
+                                a.btn.-dark(href="#") #[span.a-btnIcon.-rotate180 #[span.a-icon.-cheveron.-white]] Powrót do sklepu
+                                a.btn.-transparent(href="#") Opróżnij kosz
+                                button.btn.-secondary(type="submit" id="cart-form-submit") Dane osobowe #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
                                
 
             .m-cartBarResponsive
                 .m-cartBarResponsive__priceWrap
-                    p.m-cartBarResponsive__text Celková cena s DPH
-                    h3.m-cartBarResponsive__price #[span 65 599] Kč
+                    p.m-cartBarResponsive__text Całkowita cena z VAT
+                    h3.m-cartBarResponsive__price #[span 297] zł
                 .m-cartBarResponsive__btnWrap
-                    button.btn.m-cartBarResponsive__btn(onclick="$('#cart-form-submit').trigger('click');") Doprava a platba #[span.a-btnIcon #[span.a-icon.-cheveron.-white]] 
+                    button.btn.-secondary.m-cartBarResponsive__btn(onclick="$('#cart-form-submit').trigger('click');") Dane osobowe #[span.a-btnIcon #[span.a-icon.-cheveron.-white]] 
 
 
         include partials/_footer.pug 

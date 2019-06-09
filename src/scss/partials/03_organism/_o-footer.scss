@@ -1,5 +1,5 @@
 .o-footer{
-    background: $bg-primary;
+    background: $bg-brand-dark;
 }
 
 /* ========================================================================== */
@@ -8,20 +8,42 @@
 
 .o-footerContacts{
     padding: 6rem 0;
-    background: #0D0F17;
+    background: $bg-brand;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0px;
+        height: 12px;
+        background-image: radial-gradient(circle at 50% 15%, $bg-white 50%, transparent 51%);
+        background-position: center;
+        background-size: 12px 12px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        height: 12px;
+        background-image: radial-gradient(circle at 50% 15%, $bg-brand 50%, transparent 51%);
+        background-position: center;
+        background-size: 12px 12px;
+    }
 }
 .o-footerContacts__col:last-child{
-    border-left: 1px solid rgba(255,255,255,0.1);
-    padding-left: 6rem;
     justify-content: center;
     display: flex;
     flex-direction: column;
 }
 .o-footerContacts__title{
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.8rem;
+    font-weight: 00;
     color: $text-white;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     margin-top: 0rem;
 }
 .o-footerContacts__wrap{
@@ -32,10 +54,10 @@
     font-size: 1.6rem;
     font-weight: 400;
     color: $text-white;
-    margin: 1rem 2rem 1rem 0;
+    margin: 0rem 2rem 2rem 0;
     padding: 1.5rem 3rem;
     border: 1px solid rgba(255,255,255,0.1);
-    border-radius: $border-radius-primary;
+    background: $bg-brand-dark;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -69,9 +91,7 @@
     .o-footerContacts__col{
         padding: 0 10px 10px 10px;
     }
-    .o-footerContacts__col:last-child{
-        padding: 20px 10px 0 10px;
-    }
+
 }
 
 @media screen and (max-width:500px){
@@ -104,14 +124,24 @@
     padding-top: 2rem;
 }
 .o-footerMain__title{
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     color: $text-white;
     margin-bottom: 1rem;
     margin-top: 4rem;
     padding-bottom: 1rem;
     position: relative;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: inline-flex;
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        width: 100%;
+        height: 12px;
+        background: rgba(255,255,255,0.2);
+    }
 }
 .o-footerMain__link{
     color: $text-white;

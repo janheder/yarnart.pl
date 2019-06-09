@@ -1,21 +1,26 @@
 .m-cartPriceOverview{
     background: $bg-white;
-    padding: 20px 0;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 0px;
+    align-items: baseline;
+    margin-top: -1px;
     border-radius: $border-radius-primary;
+    border: 1px solid $border-grey;
 }
 .m-cartPriceOverview__text{
-    @include f-16-primary-regular;
+    @include f-18-primary-regular;
     margin: 0;
     margin-right: 10px;
-    padding-bottom: 3px;
+    font-weight: 700;
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
 }
 .m-cartPriceOverview__price{
     @include f-24-primary-semibold;
+    font-weight: 700;
     color: $text-red;
     margin: 0;
 }

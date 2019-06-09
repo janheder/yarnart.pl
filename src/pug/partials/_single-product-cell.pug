@@ -7,20 +7,15 @@
 
                 .m-productCell__tags
                     .m-productCell__tagSingle
-                        .a-tag.-sale Akce
+                        .a-tag.-sale Oferta specjalna
                     .m-productCell__tagSingle    
-                        .a-tag.-new Novinka
+                        .a-tag.-new Aktualności
                     .m-productCell__tagSingle 
-                        .a-tag.-recommended Doporučené
-                    .m-productCell__tagSingle 
-                        .a-tag.-top Top
+                        .a-tag.-recommended Najbardziej sprzedane
 
                 .m-productCell__imgWrap
                     img.lazy.m-productCell__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" alt="#")
                     span.lazy.m-productCell__preloader
-
-            .m-productCell__delivery
-                p.m-productCell__deliveryText Dostupné skladem
                 
             h4.m-productCell__title #{ProductName}
 
@@ -30,7 +25,12 @@
             .m-productCell__priceWrap
 
                 .m-productCell__price
-                    .m-productCell__priceOld 999 Kč
-                    .m-productCell__priceMain 899 Kč
+                    .m-productCell__priceOld 90 zł
+                    .m-productCell__priceMain #[span od] 60.50 zł
+
+            .m-productCell__cta
+                span.btn.-transparent.m-productCell__btn Szczegóły produktu
+                .m-productCell__stock W magazynie
+            
 
 

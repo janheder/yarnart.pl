@@ -14,7 +14,7 @@
     "pug": "^2.0.0-rc.4",
     "pump": "^2.0.1"
   },
-  "name": "mojespani.cz",
+  "name": "yarnart.pl",
   "version": "1.0.0",
   "main": "index.html",
   "dependencies": {

@@ -1,5 +1,11 @@
 .m-cartFreeShipping{
-    margin-top: 10px;
+    background: rgba(37,158,27,0.1);
+    height: 100%;
+    min-height: 62px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .m-cartFreeShipping__progress{
     background: $bg-light;
@@ -8,12 +14,12 @@
     background: $bg-brand;
 }
 .m-cartFreeShipping__text{
-    @include f-14-primary-regular;
+    @include f-16-primary-regular;
     text-align: right;
     margin: 0;
-    margin-top: 5px;
+    color: $text-green;
+    font-weight: 600;
 }
 .m-cartFreeShipping__price{
-    color: $text-brand;
-    font-weight: 500;
+    color: $text-green;
 }

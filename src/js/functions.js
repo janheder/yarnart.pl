@@ -485,7 +485,7 @@ $('.o-cartDeliveryForm .m-formGroup__input[name="doprava"], .o-cartDeliveryForm 
 });
 
 
-$(".o-cartDeliveryForm__item input[name='platba']").prop("disabled", true);
+$(".o-cartDeliveryForm .o-cartDeliveryForm__item input[name='platba']").prop("disabled", true);
 
 $(".o-cartDeliveryForm__item input[name='doprava']").click(function () {
     $(".o-cartDeliveryForm__item input[name='platba']").load(location.href +".o-cartDeliveryForm__item input[name='platba']>*","");

@@ -1,38 +1,18 @@
 section.m-filterResponsive
-    .m-filterResponsive__sort(id="headingFilterSort" data-toggle="collapse" data-target="#collapseFilterSort" aria-expanded="false" aria-controls="collapseFilterSort") Řadit produkty
-    .collapse.m-filterResponsive__collapse(id="collapseFilterSort" aria-labelledby="hcollapseFilterSort")
-        .m-filterResponsive__sortContent
 
-            .o-filter__item
-                .o-filter__formGroup.m-formGroup.-radiobutton.-noMargin
-                    input.m-formGroup__input(type="radio" name="filter-sort-responsive" id="filter-sort-responsive-1" required)
-                    span.m-formGroup__radiobutton.a-radiobutton
-                    label.m-formGroup__label(for="filter-sort-responsive-1") Od nejlevnějšího
-            .o-filter__item
-                .o-filter__formGroup.m-formGroup.-radiobutton.-noMargin
-                    input.m-formGroup__input(type="radio" name="filter-sort-responsive" id="filter-sort-responsive-2" required)
-                    span.m-formGroup__radiobutton.a-radiobutton
-                    label.m-formGroup__label(for="filter-sort-responsive-2") Podle názvu A - Z
-            .o-filter__item
-                .o-filter__formGroup.m-formGroup.-radiobutton.-noMargin
-                    input.m-formGroup__input(type="radio" name="filter-sort-responsive" id="filter-sort-responsive-3" required)
-                    span.m-formGroup__radiobutton.a-radiobutton
-                    label.m-formGroup__label(for="filter-sort-responsive-3") Podle data zveřejnění
-
-
-    .m-filterResponsive__filter(id="js-filterToggler") Filtr produktů
+    .m-filterResponsive__filter(id="js-filterToggler") Filtr produktu
 
 form.o-filter(id="js-filter" method="post" name="filter-form" action="")
 
     .o-filter__responsive(id="js-filterTogglerResponsive")
-        .o-filter__responsiveText Filtr Produktů
+        .o-filter__responsiveText Filtr Produktu
         span.a-icon.-cross.-white.o-filter__responsiveIcon 
 
     .container.o-filter__container
         .accordion.o-filter__accordion(id="accordionFilter")
 
             .o-filter__single
-                .o-filter__link(id="headingFilter-1" data-toggle="collapse" data-target="#collapseFilter-1" aria-expanded="false" aria-controls="collapseFilter-1") Výrobce #[span.a-icon.-cheveron.o-filter__icon]
+                .o-filter__link(id="headingFilter-1" data-toggle="collapse" data-target="#collapseFilter-1" aria-expanded="false" aria-controls="collapseFilter-1") Producent #[span.a-icon.-cheveron.o-filter__icon]
                 .collapse.o-filter__collapse(id="collapseFilter-1" aria-labelledby="headingFilter-1" data-parent="#accordionFilter")
                     .container.o-filter__content
                         .row.o-filter__row
@@ -40,90 +20,27 @@ form.o-filter(id="js-filter" method="post" name="filter-form" action="")
                             - for (var i=0; i<5; i++)
                                 .o-filter__item
                                     .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
-                                        input.m-formGroup__input(type="checkbox" name="filter-brand-1" id="filter-brand-1" required)
+                                        input.m-formGroup__input(type="checkbox" name="filter-brand" id=i required)
                                         span.m-formGroup__checkbox.a-checkbox
-                                        label.m-formGroup__label(for="filter-brand-1") Abart
-
-
-            .o-filter__single
-                .o-filter__link(id="headingFilter-2" data-toggle="collapse" data-target="#collapseFilter-2" aria-expanded="false" aria-controls="collapseFilter-2") Cena #[span.a-icon.-cheveron.o-filter__icon]
-                .collapse.o-filter__collapse(id="collapseFilter-2" aria-labelledby="headingFilter-2" data-parent="#accordionFilter")
-                    .container.o-filter__content
-                        .o-filter__formGroup.m-formGroup.-range
-                            .m-formGroup__rangewWrap
-                                input.m-formGroup__input(type="range" name="filter-range-input-1" id="filter-range-input-1" min="50" max="250" step="1" value="50")
-                                input.m-formGroup__input(type="range" name="filter-range-input-2" id="filter-range-input-2" min="50" max="250" step="1" value="250")
-                            span.m-formGroup__range.a-range
-                            label.m-formGroup__label(for="filter-range-input-1" id="filter-range-value-1") #[span 0] Kč
-                            label.m-formGroup__label(for="filter-range-input-2" id="filter-range-value-2") #[span 1000] Kč
-
-
-            .o-filter__single
-                .o-filter__link(id="headingFilter-3" data-toggle="collapse" data-target="#collapseFilter-3" aria-expanded="false" aria-controls="collapseFilter-2") Štítek #[span.a-icon.-cheveron.o-filter__icon]
-                .collapse.o-filter__collapse(id="collapseFilter-3" aria-labelledby="headingFilter-3" data-parent="#accordionFilter")
-                    .container.o-filter__content
-                        .row.o-filter__row
-
-                            .o-filter__item
-                                .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
-                                    input.m-formGroup__input(type="checkbox" name="filter-tag-1" id="filter-tag-1" required)
-                                    span.m-formGroup__checkbox.a-checkbox
-                                    label.m-formGroup__label(for="filter-tag-1") Akce
-                            .o-filter__item
-                                .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
-                                    input.m-formGroup__input(type="checkbox" name="filter-tag-2" id="filter-tag-2" required)
-                                    span.m-formGroup__checkbox.a-checkbox
-                                    label.m-formGroup__label(for="filter-tag-2") Novinka
-                            .o-filter__item
-                                .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
-                                    input.m-formGroup__input(type="checkbox" name="filter-tag-3" id="filter-tag-3" required)
-                                    span.m-formGroup__checkbox.a-checkbox
-                                    label.m-formGroup__label(for="filter-tag-3") Doporučeno
-                            .o-filter__item
-                                .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
-                                    input.m-formGroup__input(type="checkbox" name="filter-tag-4" id="filter-tag-4" required)
-                                    span.m-formGroup__checkbox.a-checkbox
-                                    label.m-formGroup__label(for="filter-tag-4") Top
-
-
-            .o-filter__single
-                .o-filter__link(id="headingFilter-4" data-toggle="collapse" data-target="#collapseFilter-4" aria-expanded="false" aria-controls="collapseFilter-4") Dostupnost #[span.a-icon.-cheveron.o-filter__icon]
-                .collapse.o-filter__collapse(id="collapseFilter-4" aria-labelledby="headingFilter-4" data-parent="#accordionFilter")
-                    .container.o-filter__content
-                        .row.o-filter__row
-
-                            .o-filter__item
-                                .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
-                                    input.m-formGroup__input(type="checkbox" name="filter-stock-1" id="filter-stock-1" required)
-                                    span.m-formGroup__checkbox.a-checkbox
-                                    label.m-formGroup__label(for="filter-stock-1") Skladem
-                            .o-filter__item
-                                .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
-                                    input.m-formGroup__input(type="checkbox" name="filter-stock-2" id="filter-stock-2" required)
-                                    span.m-formGroup__checkbox.a-checkbox
-                                    label.m-formGroup__label(for="filter-stock-2") Do 2 týdnů
+                                        label.m-formGroup__label(for=i) Yarnart
 
             .w-100
             .o-filter__single
-                .o-filter__link(id="headingFilter-5" data-toggle="collapse" data-target="#collapseFilter-5" aria-expanded="false" aria-controls="collapseFilter-5") Řazení #[span.a-icon.-cheveron.o-filter__icon]
-                .collapse.o-filter__collapse(id="collapseFilter-5" aria-labelledby="headingFilter-5" data-parent="#accordionFilter")
-                    .container.o-filter__content
-                        .row.o-filter__row
+                .o-productPagination
+                    nav(aria-label="Stránkování produktů")
+                        ul.pagination.m-pagination.-noPadding
 
-                            .o-filter__item
-                                .o-filter__formGroup.m-formGroup.-radiobutton.-noMargin
-                                    input.m-formGroup__input(type="radio" name="filter-sort" id="filter-sort-1" required)
-                                    span.m-formGroup__radiobutton.a-radiobutton
-                                    label.m-formGroup__label(for="filter-sort-1") Od nejlevnějšího
-                            .o-filter__item
-                                .o-filter__formGroup.m-formGroup.-radiobutton.-noMargin
-                                    input.m-formGroup__input(type="radio" name="filter-sort" id="filter-sort-2" required)
-                                    span.m-formGroup__radiobutton.a-radiobutton
-                                    label.m-formGroup__label(for="filter-sort-2") Podle názvu A - Z
-                            .o-filter__item
-                                .o-filter__formGroup.m-formGroup.-radiobutton.-noMargin
-                                    input.m-formGroup__input(type="radio" name="filter-sort" id="filter-sort-3" required)
-                                    span.m-formGroup__radiobutton.a-radiobutton
-                                    label.m-formGroup__label(for="filter-sort-3") Podle data zveřejnění
+                            li.page-item.m-pagination__item.-active
+                                a.page-link.m-pagination__link(href="#") 1
+                            li.page-item.m-pagination__item
+                                a.page-link.m-pagination__link(href="#") 2
+                            li.page-item.m-pagination__item
+                                a.page-link.m-pagination__link(href="#") 3
+                            li.page-item.m-pagination__item
+                                span.a-icon.-dots.m-pagination__icon
+                            li.page-item.m-pagination__item
+                                a.page-link.m-pagination__link(href="#") 12
 
-    .o-filter__responsiveBottom(id="js-filterTogglerResponsive2") Potvrdit filtr
+
+
+    .o-filter__responsiveBottom(id="js-filterTogglerResponsive2") Potwierdź filtr

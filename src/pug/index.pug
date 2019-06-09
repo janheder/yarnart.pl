@@ -23,8 +23,8 @@ html(lang=lang)
                                         img.swiper-lazy.m-heroCarousel__img.b-bgCover__img(data-src=URLbase+"img/carousel/1.jpg" alt="#")
                                     .swiper-lazy-preloader.m-heroCarousel__preloader.-light
                                     figcaption.m-heroCarousel__caption
-                                        h2.m-heroCarousel__title Velké povánoční slevy na všechny matrace
-                                        a.btn.-white(href="#") Více informací #[span.a-btnIcon #[span.a-icon.-cheveron]]
+                                        h2.m-heroCarousel__title Lorem ipsum dolor sit amet
+                                        a.btn.-white(href="#") Pokaż menu #[span.a-btnIcon #[span.a-icon.-cheveron]]
 
 
 
@@ -38,8 +38,8 @@ html(lang=lang)
                                         img.swiper-lazy.m-heroCarousel__img.b-bgCover__img(data-src=URLbase+"img/carousel/2.jpg" alt="#")
                                     .swiper-lazy-preloader.m-heroCarousel__preloader.-light
                                     figcaption.m-heroCarousel__caption
-                                        h2.m-heroCarousel__title Nová kolekce lorem ipsum
-                                        a.btn.-white(href="#") Více informací #[span.a-btnIcon #[span.a-icon.-cheveron]]
+                                        h2.m-heroCarousel__title Lorem ipsum dolor sit amet
+                                        a.btn.-white(href="#") Pokaż menu #[span.a-btnIcon #[span.a-icon.-cheveron]]
 
 
                         .swiper-slide.m-heroCarousel__slide.b-bgCover__wrap
@@ -52,8 +52,8 @@ html(lang=lang)
                                         img.swiper-lazy.m-heroCarousel__img.b-bgCover__img(data-src=URLbase+"img/carousel/3.jpg" alt="#")
                                     .swiper-lazy-preloader.m-heroCarousel__preloader.-light
                                     figcaption.m-heroCarousel__caption
-                                        h2.m-heroCarousel__title Nová kolekce lorem ipsum
-                                        a.btn.-white(href="#") Více informací #[span.a-btnIcon #[span.a-icon.-cheveron]]
+                                        h2.m-heroCarousel__title Lorem ipsum dolor sit amet
+                                        a.btn.-white(href="#") Pokaż menu #[span.a-btnIcon #[span.a-icon.-cheveron]]
 
 
                     .swiper-pagination.swiper-pagination-white.swiper-pagination-clickable.swiper-pagination-bullets.m-heroCarousel__pagination
@@ -61,61 +61,16 @@ html(lang=lang)
 
         section.o-sectionCategories
             .container
-                h1.o-sectionCategories__title Populární kategorie
-                .o-sectionCategories__carousel.m-productCarousel(id="product_swiper")
-                    .m-productCarousel__content
-                        .swiper-wrapper.m-productCarousel__wrap
+                h1.o-sectionCategories__title Popularne kategorie
+                .row
+                    - for (var i=0; i<3; i++)
+                        .col-12.col-md-4
+                            a.o-sectionCategories__single.m-categoryCell(href="#")
+                                img.m-categoryCell__img(src=URLbase+"img/product-thumb-medium.jpg" alt="#" title="#")
+                                h3.m-categoryCell__title Bawełna
+                                p.m-categoryCell__text W tej kategorii znajdziesz przędze w 100% z bawełny lub bawełny i domieszki. Większość naszych przędz posiada certyfikat TZU. Wyłącznie z AXland.cz s.r.o.
+                                span.m-categoryCell__link Zobacz produkty
 
-                            .swiper-slide.m-productCarousel__slide
-                                a.o-sectionCategories__single.m-categoryCell(href="#")
-                                    img.m-categoryCell__img(src=URLbase+"img/product-thumb-medium.jpg" alt="#" title="#")
-                                    p.m-categoryCell__title Postele
-                            .swiper-slide.m-productCarousel__slide
-                                a.o-sectionCategories__single.m-categoryCell(href="#")
-                                    img.m-categoryCell__img(src=URLbase+"img/product-thumb-medium.jpg" alt="#" title="#")
-                                    p.m-categoryCell__title Postele
-                            .swiper-slide.m-productCarousel__slide
-                                a.o-sectionCategories__single.m-categoryCell(href="#")
-                                    img.m-categoryCell__img(src=URLbase+"img/product-thumb-medium.jpg" alt="#" title="#")
-                                    p.m-categoryCell__title Postele
-                            .swiper-slide.m-productCarousel__slide
-                                a.o-sectionCategories__single.m-categoryCell(href="#")
-                                    img.m-categoryCell__img(src=URLbase+"img/product-thumb-medium.jpg" alt="#" title="#")
-                                    p.m-categoryCell__title Postele
-                            .swiper-slide.m-productCarousel__slide
-                                a.o-sectionCategories__single.m-categoryCell(href="#")
-                                    img.m-categoryCell__img(src=URLbase+"img/product-thumb-medium.jpg" alt="#" title="#")
-                                    p.m-categoryCell__title Postele
-                            .swiper-slide.m-productCarousel__slide
-                                a.o-sectionCategories__single.m-categoryCell(href="#")
-                                    img.m-categoryCell__img(src=URLbase+"img/product-thumb-medium.jpg" alt="#" title="#")
-                                    p.m-categoryCell__title Postele
-
-                    .swiper-button-prev.m-productCarousel__swiperButton.-prev
-                    .swiper-button-next.m-productCarousel__swiperButton.-next
-
-
-        section.o-sectionSale
-            .container
-                h1.o-sectionSale__title Akční nabídka
-
-                .o-sectionSale.m-productCarousel(id="product_swiper")
-                    .m-productCarousel__content
-                        .swiper-wrapper.m-productCarousel__wrap
-
-                            .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell.pug
-                            .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell.pug
-                            .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell.pug
-                            .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell.pug
-                            .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell.pug
-                        
-                    .swiper-button-prev.m-productCarousel__swiperButton.-prev
-                    .swiper-button-next.m-productCarousel__swiperButton.-next
 
         section.o-sectionProducts.o-tabs
 
@@ -123,55 +78,42 @@ html(lang=lang)
                 .container  
                     .nav.nav-tabs.m-tabsNav__nav(role="tablist")
                 
-                        a.m-tabsNav__link.active(id="index-1-tab" data-toggle="tab" href="#index-1" role="tab" aria-controls="index-1" aria-selected="true") Doporučené
+                        a.m-tabsNav__link.active(id="index-1-tab" data-toggle="tab" href="#index-1" role="tab" aria-controls="index-1" aria-selected="true") Oferta specjalna
                 
-                        a.m-tabsNav__link(id="index-2-tab" data-toggle="tab" href="#index-2" role="tab" aria-controls="index-2" aria-selected="false") Novinky
+                        a.m-tabsNav__link(id="index-2-tab" data-toggle="tab" href="#index-2" role="tab" aria-controls="index-2" aria-selected="false") Aktualności
             
-                        a.m-tabsNav__link(id="index-3-tab" data-toggle="tab" href="#index-3" role="tab" aria-controls="index-3" aria-selected="false") Nejprodávanější
+                        a.m-tabsNav__link(id="index-3-tab" data-toggle="tab" href="#index-3" role="tab" aria-controls="index-3" aria-selected="false") Najbardziej sprzedane
 
             .tab-content.o-tabs__content.m-tabsContent
 
                 .tab-pane.fade.m-tabsContent__pane.show.active(id="index-1" role="tabpanel" aria-labelledby="index-1-tab")  
-                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseIndexTab-1" aria-expanded="false" aria-controls="#collapseIndexTab-1") Doporučené
+                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseIndexTab-1" aria-expanded="false" aria-controls="#collapseIndexTab-1") Oferta specjalna
                     .collapse.m-tabsContent__collapse.show(id="collapseIndexTab-1" aria-labelledby="collapseIndexTab-1")
                         .container  
                             .o-sectionSale.m-productCarousel
                                 .m-productCarousel__content
                                     .swiper-wrapper.m-productCarousel__wrap
 
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
+                                        - for (var i=0; i<5; i++)
+                                            .swiper-slide.m-productCarousel__slide
+                                                include partials/_single-product-cell.pug
+
                                     
                                 .swiper-button-prev.m-productCarousel__swiperButton.-prev
                                 .swiper-button-next.m-productCarousel__swiperButton.-next
 
 
                 .tab-pane.fade.m-tabsContent__pane(id="index-2" role="tabpanel" aria-labelledby="index-2-tab")    
-                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseIndexTab-2" aria-expanded="false" aria-controls="#collapseIndexTab-2") Novinky
+                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseIndexTab-2" aria-expanded="false" aria-controls="#collapseIndexTab-2") Aktualności
                     .collapse.m-tabsContent__collapse(id="collapseIndexTab-2" aria-labelledby="collapseIndexTab-2")
                         .container  
                             .o-sectionSale.m-productCarousel
                                 .m-productCarousel__content
                                     .swiper-wrapper.m-productCarousel__wrap
 
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
+                                        - for (var i=0; i<6; i++)
+                                            .swiper-slide.m-productCarousel__slide
+                                                include partials/_single-product-cell.pug
                                     
                                 .swiper-button-prev.m-productCarousel__swiperButton.-prev
                                 .swiper-button-next.m-productCarousel__swiperButton.-next
@@ -179,23 +121,16 @@ html(lang=lang)
 
 
                 .tab-pane.fade.m-tabsContent__pane(id="index-3" role="tabpanel" aria-labelledby="index-3-tab")   
-                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseIndexTab-3" aria-expanded="false" aria-controls="#collapseIndexTab-3") Nejprodávanější
+                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseIndexTab-3" aria-expanded="false" aria-controls="#collapseIndexTab-3") Najbardziej sprzedane
                     .collapse.m-tabsContent__collapse(id="collapseIndexTab-3" aria-labelledby="collapseIndexTab-3")
                         .container  
                             .o-sectionSale.m-productCarousel
                                 .m-productCarousel__content
                                     .swiper-wrapper.m-productCarousel__wrap
 
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
-                                        .swiper-slide.m-productCarousel__slide
-                                            include partials/_single-product-cell.pug
+                                        - for (var i=0; i<6; i++)
+                                            .swiper-slide.m-productCarousel__slide
+                                                include partials/_single-product-cell.pug
                                     
                                 .swiper-button-prev.m-productCarousel__swiperButton.-prev
                                 .swiper-button-next.m-productCarousel__swiperButton.-next

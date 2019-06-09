@@ -1,9 +1,17 @@
 .o-productDetail{
     background: $bg-white;
     padding: 4rem 0;
+    border-bottom: 1px solid $border-grey;
 }
 .o-productDetail__main{
     padding-left: 0px;
+}
+.o-productDetail__row{
+    margin-right: -30px;
+    margin-left: -30px;
+}
+.o-productDetail__col{
+    padding: 0 30px;
 }
 @media screen and (max-width:991px){
     .o-productDetail{

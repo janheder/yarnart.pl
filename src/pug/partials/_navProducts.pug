@@ -1,67 +1,63 @@
+
 nav.o-navProducts(id="js-navProducts")
 
+	.container.container-full
+	
+		.o-navProducts__user.m-navUserMenu
+			.m-navUserMenu__heading(data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapseUser")
+				span.a-icon.-user.-white.m-navUserMenu__img
+				.m-navUserMenu__username Petr Novák
+				span.a-icon.-cheveron.-white.m-navUserMenu__cheveron
 
-	.o-navProducts__user.m-navUserMenu
-		.m-navUserMenu__heading(data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapseUser")
-			span.a-icon.-user.-white.m-navUserMenu__img
-			.m-navUserMenu__username Petr Novák
-			span.a-icon.-cheveron.-white.m-navUserMenu__cheveron 
-
-		.collapse.m-navUserMenu__content(id="collapseUser")
-			a.m-navUserMenu__link(href="#") #[span.a-icon.-personalInfo.m-navUserMenu__icon] Změna osobních údajů
-			a.m-navUserMenu__link(href="#") #[span.a-icon.-calendar.m-navUserMenu__icon] Historie objednávek
-			a.m-navUserMenu__link(href="#") #[span.a-icon.-logOut.m-navUserMenu__icon] Odhlásit
-
-
-	//
-		<div class="o-navProducts__user m-navUserMenu">
-			<a class="m-navUserMenu__heading" data-toggle="modal" data-target="#modal-login">
-				<span class="a-icon -user -white m-navUserMenu__img"></span>
-				<div class="m-navUserMenu__username">Přihlášení</div>
-			</a>
-		</div>
-
-		
-	.accordion.o-navProducts__accordion(id="accordionProducts")
-
-		.o-navProducts__item
-			.o-navProducts__link(id="headingProducts-1" data-toggle="collapse" data-target="#collapseProducts-1" aria-expanded="false" aria-controls="collapseProducts-1") Akční nabídka
-			a.o-navProducts__linkDesktop(href="#") Akční nabídka
-			.collapse.o-navProducts__collapse(id="collapseProducts-1" aria-labelledby="headingProducts-1" data-parent="#accordionProducts")
-
-				.o-navProducts__subCategoryWrap
-					- for (var i=0; i<12; i++)
-						a.o-navProducts__subCategory(href="#")
-							img.o-navProducts__subCategoryImg(src=URLbase+"img/product-thumb-small.jpg")
-							span.o-navProducts__subCategoryText(href="#") Postele
+			.collapse.m-navUserMenu__content(id="collapseUser")
+				a.m-navUserMenu__link(href="#") #[span.a-icon.-personalInfo.m-navUserMenu__icon] Změna osobních údajů
+				a.m-navUserMenu__link(href="#") #[span.a-icon.-calendar.m-navUserMenu__icon] Historie objednávek
+				a.m-navUserMenu__link(href="#") #[span.a-icon.-logOut.m-navUserMenu__icon] Odhlásit
 
 
-		.o-navProducts__item
-			.o-navProducts__link(id="headingProducts-2" data-toggle="collapse" data-target="#collapseProducts-2" aria-expanded="false" aria-controls="collapseProducts-2") Matrace 
-			a.o-navProducts__linkDesktop(href="#") Postele
-			.collapse.o-navProducts__collapse(id="collapseProducts-2" aria-labelledby="headingProducts-2" data-parent="#accordionProducts")
+		//
+			<div class="o-navProducts__user m-navUserMenu">
+				<a class="m-navUserMenu__heading" data-toggle="modal" data-target="#modal-login">
+					<span class="a-icon -user -white m-navUserMenu__img"></span>
+					<div class="m-navUserMenu__username">Přihlášení</div>
+				</a>
+			</div>
 
-				.o-navProducts__subCategoryWrap
-					- for (var i=0; i<8; i++)
-						a.o-navProducts__subCategory(href="#")
-							img.o-navProducts__subCategoryImg(src=URLbase+"img/product-thumb-small.jpg")
-							span.o-navProducts__subCategoryText(href="#") Postele
+			
+		.accordion.o-navProducts__accordion(id="accordionProducts")
 
-		.o-navProducts__item
-			.o-navProducts__link(id="headingProducts-3" data-toggle="collapse" data-target="#collapseProducts-3" aria-expanded="false" aria-controls="collapseProducts-3") Postele
-			a.o-navProducts__linkDesktop(href="#") Postele
-			.collapse.o-navProducts__collapse(id="collapseProducts-3" aria-labelledby="headingProducts-3" data-parent="#accordionProducts")
 
-				.o-navProducts__subCategoryWrap
-					- for (var i=0; i<12; i++)
-						a.o-navProducts__subCategory(href="#")
-							img.o-navProducts__subCategoryImg(src=URLbase+"img/product-thumb-small.jpg")
-							span.o-navProducts__subCategoryText(href="#") Postele
+			.o-navProducts__item
+				a.o-navProducts__link(href="#") Oferta specjalna
+				a.o-navProducts__linkDesktop(href="#") Oferta specjalna
 
-		.o-navProducts__item
-			a.o-navProducts__link(href="#") Postele
-			a.o-navProducts__linkDesktop(href="#") Postele
+			.o-navProducts__item
+				a.o-navProducts__link(href="#") Merino i wełna
+				a.o-navProducts__linkDesktop(href="#") Merino i wełna
 
+			.o-navProducts__item
+				a.o-navProducts__link(href="#") Bawełna
+				a.o-navProducts__linkDesktop(href="#") Bawełna
+
+			.o-navProducts__item
+				a.o-navProducts__link(href="#") Akryl
+				a.o-navProducts__linkDesktop(href="#") Akryl
+
+			.o-navProducts__item
+				a.o-navProducts__link(href="#") Wstążka i sznurek
+				a.o-navProducts__linkDesktop(href="#") Wstążka i sznurek
+
+			.o-navProducts__item
+				a.o-navProducts__link(href="#") Poliamid
+				a.o-navProducts__linkDesktop(href="#") Poliamid
+
+			.o-navProducts__item
+				a.o-navProducts__link(href="#") Mikro/Poliester
+				a.o-navProducts__linkDesktop(href="#") Mikro/Poliester
+
+			.o-navProducts__item
+				a.o-navProducts__link(href="#") Inne
+				a.o-navProducts__linkDesktop(href="#") Inne
 
 .m-navProductsClose(id="js-navProductsClose")
 	span.a-icon.-cross.-white

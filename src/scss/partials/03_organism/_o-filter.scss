@@ -48,7 +48,11 @@
     }
 }
 .o-filter__single{
-
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
 }
 .o-filter__link{
     display: flex;
@@ -94,6 +98,8 @@
     border-top: 0;
     z-index: 3;
     box-shadow: $box-shadow-primary;
+    bottom: 0;
+    transform: translateY(100%);
 }
 .o-filter__content{
     padding: 10px 20px;

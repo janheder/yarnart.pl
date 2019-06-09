@@ -1,16 +1,20 @@
 .o-navProducts{
     position: relative;
     z-index: 4;
-    max-width: 1920px;
     margin: 0 auto;
+    background: $bg-brand-dark;
+
+    .container-full{
+        padding: 0;
+    }
 }
 .o-navProducts__accordion{
-    background: $bg-white;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 52px;
+    height: 60px;
+    padding-top: 5px;
 }
 .o-navProducts__item{
     height: 100%;
@@ -44,6 +48,8 @@
     }
     &:hover, &:active, &:focus{
         text-decoration: none;
+        color: $text-white;
+        opacity: 0.8;
 
         &::after{
             width: 100%;
@@ -52,13 +58,15 @@
 }
 .o-navProducts__linkDesktop{
     @include f-16-primary-semibold;
-    padding: 0 3rem;
+    color: $text-white;
+    padding: 0 2rem;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: $bg-white;
+    opacity: 1;
+    transition: 0.2s ease opacity;
 }
 .o-navProducts__collapse{
     background: $bg-white;
@@ -152,6 +160,11 @@
         flex-direction: column;
         overflow-y: auto;
         background: $bg-white;
+
+        .container-full{
+            padding: 0;
+            flex-direction: column;
+        }
     }
     .o-navProducts.-active{
         transform: translateX(0%);
@@ -208,6 +221,9 @@
                 } 
             }
         }
+    }
+    .o-navProducts__item:first-child .o-navProducts__link[data-toggle="collapse"][aria-expanded="true"]::after{
+        content: none;
     }
     .o-navProducts__linkDesktop{
         display: none;

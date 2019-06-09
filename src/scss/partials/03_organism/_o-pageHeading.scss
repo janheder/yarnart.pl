@@ -14,7 +14,9 @@
     max-width: 1920px;
 }
 .o-pageHeading__title{
-    @include f-30-primary-semibold;
+    font-size: 3rem;
+    color: $text-primary;
+    font-weight: 700;
     margin: 0;
     display: inline-block;
 
@@ -22,6 +24,9 @@
         font-size: 3.6rem;
         background: $bg-brand;
         padding: 10px 20px;
+    }
+    &::after{
+        content: none;
     }
 }
 .o-pageHeading__text{

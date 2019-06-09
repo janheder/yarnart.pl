@@ -3,7 +3,7 @@
 /* ========================================================================== */
 
 .m-productCell{
-    padding: 0px;
+    padding: 10px;
     z-index: 2;
     position: relative;
     width: 100%;
@@ -40,7 +40,7 @@
 }
 .m-productCell__thumb{
     position: relative;
-    padding-bottom: 100%;
+    padding-bottom: 80%;
 }
 .m-productCell__imgWrap{
     @include absolute-position(0,0,0,0);
@@ -56,14 +56,14 @@
     max-height: 100%;
 }
 .m-productCell__title{
-    @include f-16-primary-regular;
+    @include f-18-primary-regular;
     text-align: left;
     margin: 0;
     padding: 1rem 0 1.5rem 0;
 }
 .m-productCell__tags{
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 0px;
     z-index: 1;
 }
@@ -87,7 +87,7 @@
 .m-productCell__price{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     flex-wrap: wrap;
     padding-right: 10px;
@@ -103,40 +103,11 @@
     @include f-20-primary-semibold;
     color: $text-red;
     line-height: 1;
-}
-.m-productCell__delivery{
-    flex-grow: 1;
-    line-height: 1.2;
-}   
-.m-productCell__deliveryText{
-    margin: 0;
-    color: $text-green;
-    font-weight: 400;
-    text-align: left;
-    font-size: 13px;
-}
+    white-space: nowrap;
 
-.m-productCell__hover{
-    display: none;
-    padding: 20px;
-    padding-top: 0;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: $bg-white;
-    transform: translateY(100%);
-    z-index: -1;
-}
-.m-productCell{
-    &:hover, &:active, &:focus{
-        z-index: 4;
-
-        .m-productCell__hover{
-            display: block;
-            box-shadow: $box-shadow-primary;
-            z-index: 2;
-        }
+    span{
+        color: $text-primary;
+        font-size: 1.6rem;
     }
 }
 .m-productCell__text{
@@ -144,9 +115,24 @@
     margin: 0;
     margin-bottom: 0.5rem;
 }
+.m-productCell__cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
 .m-productCell__btn{
-    width: 100%;
-    margin-top: 1.5rem;
+    width: auto;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+}
+.m-productCell__stock{
+    flex-grow: 1;
+    color: $text-brand-secondary;
+    font-weight: 600;
+    padding-left: 2rem;
+    text-align: right;
+    font-size: 1.4rem;
 }
 
 

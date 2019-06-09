@@ -11,16 +11,20 @@
 .m-navSearch__input{
     border: 0;
     border-radius: $border-radius-primary;
-    height: 48px;
+    height: 52px;
     padding: 0 20px;
     width: 100%;
     background: $bg-light;
+
+    &:focus, &:active{
+        outline: none;
+    }
 }
 .m-navSearch__button{
     position: absolute;
     right: 0;
     top: 0;
-    height: 48px;
+    height: 52px;
     width: 60px;
     background: transparent;
     border: 0;
@@ -91,7 +95,7 @@
         left: 0;
         width: 100%;
         transition: 0.3s ease all;
-        z-index: 1;
+        z-index: -1;
         box-shadow: $box-shadow-primary;
 
         &.-active{
@@ -112,4 +116,9 @@
     .m-navSearch__icon{
         height: 16px;
     }
+}
+
+.easy-autocomplete-container ul li b{
+    font-weight: normal;
+    color: $brand-primary;
 }

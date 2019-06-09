@@ -54,9 +54,12 @@
     position: relative;
 }
 .m-navCart__icoNumber{
-    @include f-12-dark-regular;
+    font-weight: 600;
+    font-size: 12px;
     line-height: 1;
-    background: $bg-brand;
+    background: $bg-white;
+    color: $text-brand;
+    border: 2px solid $border-brand;
     border-radius: 50%;
     height: 18px;
     width: 18px;
@@ -79,23 +82,24 @@
     padding-left: 15px;
 }
 .m-navCart__text{
-    font-size: 1.3rem;
-    color: $text-medium;
+    font-size: 1.4rem;
+    color: $text-white;
     font-weight: 400;
     line-height: 1.25;
 }
 .m-navCart__title{
     font-size: 1.6rem;
-    color: $text-brand;
+    color: $text-white;
     font-weight: 600;
     line-height: 1.25;
+    white-space: nowrap;
 }
 
 .m-navCart.-active{
     background: transparent;
 
     .m-navCart__icoNumber{
-        color: $text-white;
+        color: $text-brand;
     }
     &:hover, &:active, &:focus{
         text-decoration: none;
@@ -220,7 +224,7 @@
     }
     .m-navCart__collapse{
         transform: translateX(100%);
-        transition: 0.3s ease all;
+        transition: 0.3s ease transform;
         width: 100%;
         height: 100vh;
         z-index: 8;

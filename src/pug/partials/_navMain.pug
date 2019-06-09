@@ -1,84 +1,93 @@
+nav.o-navTop
+	a.o-navTop__link(href="#") Warunki
+	a.o-navTop__link(href="#") Darmowa wysyłka
+	a.o-navTop__link(href="#") Kontakty
+	.o-navTop__content
+		span.o-navTop__text W razie jakichkolwiek pytań prosimy o kontakt pod adresem:
+		.o-navTop__contact #[span.a-icon.-phone.-white] +420 702 010 909
+		.o-navTop__contact #[span.a-icon.-envelope.-white] info@yarnart.pl
+
 nav.o-navMain
-
-	.o-navMain__navToggler.m-navToggler(id="js-navToggler")
-		.a-icon.-hamburger.m-navToggler__icon
-
-
-	.o-navMain__logo.m-navLogo
-		a.m-navLogo__link(href="#")
-			img.m-navLogo__img(src=URLbase+"img/logo.svg" alt="" title="")
+	.container.container-full
+		.o-navMain__navToggler.m-navToggler(id="js-navToggler")
+			.a-icon.-hamburger.-white.m-navToggler__icon
 
 
-	.o-navMain__search.m-navSearch(id="js-navSearch")
-		form.m-navSearch__form(method="POST" id="search-form")
-			.m-navSearch__close(id="js-navSearchTogglerClose")
-				.a-icon.-cross.m-navSearch__closeIcon
-			input.m-navSearch__input(type="text" name="searchbox" id="searchbox" placeholder="Hledejte název produktu, značku nebo typ" required)
-			button.m-navSearch__button #[span.a-icon.-search.m-navSearch__icon]
-		
-	.o-navMain__navSearchToggler.m-navSearchToggler(id="js-navSearchToggler")
-		.a-icon.-search.m-navSearchToggler__icon
-		
-	//
-		<a class="o-navMain__user m-navUser" href="#" data-toggle="modal" data-target="#modal-login">
-			<div class="a-icon -user -grey m-navUser__icon"></div>
-			<div class="m-navUser__info"><span class="m-navUser__title">Přihlášení</span></div>
-		</a>
+		.o-navMain__logo.m-navLogo
+			a.m-navLogo__link(href="#")
+				img.m-navLogo__img(src=URLbase+"img/logo.svg" alt="" title="")
 
-	.o-navMain__user.m-navUser(data-toggle="collapse" data-target="#collapseNavUser" aria-expanded="false" aria-controls="collapseNavUser")
-		.a-icon.-user.-grey.m-navUser__icon
-		.m-navUser__info
-			span.m-navUser__text Přihlášen jako
-			span.m-navUser__title Petr Novák
-		.collapse.m-navUser__collapse(id="collapseNavUser" aria-labelledby="collapseNavUser")
-			a.m-navUser__collapseLink(href="#") Změna osobních údajů
-			a.m-navUser__collapseLink(href="#") Historie objednávek
-			a.m-navUser__collapseLink(href="#") Odhlásit
 
-	//
-		<a class="o-navMain__cart m-navCart" href="#">
-			<div class="m-navCart__iconWrap">
-				<div class="a-icon -cart -grey m-navCart__icon"></div>
-			</div>
-			<div class="m-navCart__info"><span class="m-navCart__title">Nákupní košík</span></div>
-		</a>
+		.o-navMain__search.m-navSearch(id="js-navSearch")
+			form.m-navSearch__form(method="POST" id="search-form")
+				.m-navSearch__close(id="js-navSearchTogglerClose")
+					.a-icon.-cross.m-navSearch__closeIcon
+				input.m-navSearch__input(type="text" name="searchbox" id="searchbox" placeholder="Wyszukaj nazwę, kategorię, typ produktu ..." required)
+				button.m-navSearch__button #[span.a-icon.-search.m-navSearch__icon]
+			
+		.o-navMain__navSearchToggler.m-navSearchToggler(id="js-navSearchToggler")
+			.a-icon.-search.-white.m-navSearchToggler__icon
+			
+		//
+			<a class="o-navMain__user m-navUser" href="#" data-toggle="modal" data-target="#modal-login">
+				<div class="a-icon -user -white m-navUser__icon"></div>
+				<div class="m-navUser__info"><span class="m-navUser__title">Zaloguj się</span></div>
+			</a>
 
-	.o-navMain__cart.m-navCart.-active
-		a.m-navCart__desktopLink(href="#")
-		.m-navCart__toggle(data-toggle="collapse" data-target="#collapseNavCart" aria-expanded="false" aria-controls="collapseNavCart")
-			.m-navCart__iconWrap
-				.a-icon.-cart.-red.m-navCart__icon
-					.m-navCart__icoNumber 2
-			.m-navCart__info
-				span.m-navCart__text Nákupní košík
-				span.m-navCart__title 859 Kč
-			.collapse.m-navCart__collapse(id="collapseNavCart" aria-labelledby="collapseNavCart")
-				.m-navCart__collapseItem
-					.m-navCart__collapseThumb
-						img.m-navCart__collapseImg.lazy(src=URLbase+"img/placeholder-60x60.png" data-src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-					.m-navCart__collapseInfo
-						.m-navCart__collapseName Postel Angelika 160/200 cm masiv borovice
-						.m-navCart__collapsePrice 2 000 Kč
-						.m-navCart__collapseStock Skladem
+		.o-navMain__user.m-navUser(data-toggle="collapse" data-target="#collapseNavUser" aria-expanded="false" aria-controls="collapseNavUser")
+			.a-icon.-user.-white.m-navUser__icon
+			.m-navUser__info
+				span.m-navUser__text Zalogowany jako
+				span.m-navUser__title Petr Novák
+			.collapse.m-navUser__collapse(id="collapseNavUser" aria-labelledby="collapseNavUser")
+				a.m-navUser__collapseLink(href="#") Zmiana danych osobowych
+				a.m-navUser__collapseLink(href="#") Historia zamówień
+				a.m-navUser__collapseLink(href="#") Wyloguj się
 
-				.m-navCart__collapseItem
-					.m-navCart__collapseThumb
-						img.m-navCart__collapseImg.lazy(src=URLbase+"img/placeholder-60x60.png" data-src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-					.m-navCart__collapseInfo
-						.m-navCart__collapseName Postel Angelika 160/200 cm masiv borovice
-						.m-navCart__collapsePrice 2 000 Kč
-						.m-navCart__collapseStock Skladem
+		//
+			<a class="o-navMain__cart m-navCart" href="#">
+				<div class="m-navCart__iconWrap">
+					<div class="a-icon -cart -white m-navCart__icon"></div>
+				</div>
+				<div class="m-navCart__info"><span class="m-navCart__title">Koszyk na zakupy</span></div>
+			</a>
 
-				.m-navCart__collapseOverview
-					.m-navCart__collapsePriceWrap
-						.m-navCart__collapseTitle Celková cena
-						.m-navCart__collapseText Včetně DPH
-					.m-navCart__collapseSum 2 000 Kč
+		.o-navMain__cart.m-navCart.-active
+			a.m-navCart__desktopLink(href="#")
+			.m-navCart__toggle(data-toggle="collapse" data-target="#collapseNavCart" aria-expanded="false" aria-controls="collapseNavCart")
+				.m-navCart__iconWrap
+					.a-icon.-cart.-white.m-navCart__icon
+						.m-navCart__icoNumber 2
+				.m-navCart__info
+					span.m-navCart__text Koszyk na zakupy
+					span.m-navCart__title 60.50 zł
+				.collapse.m-navCart__collapse(id="collapseNavCart" aria-labelledby="collapseNavCart")
+					.m-navCart__collapseItem
+						.m-navCart__collapseThumb
+							img.m-navCart__collapseImg.lazy(src=URLbase+"img/placeholder-60x60.png" data-src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
+						.m-navCart__collapseInfo
+							.m-navCart__collapseName #{ProductName}
+							.m-navCart__collapsePrice 20 zł
+							.m-navCart__collapseStock W magazynie
 
-				.m-navCart__collapseShipping Nakupte ještě za 1077 Kč a máte Dopravu zdarma	
+					.m-navCart__collapseItem
+						.m-navCart__collapseThumb
+							img.m-navCart__collapseImg.lazy(src=URLbase+"img/placeholder-60x60.png" data-src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
+						.m-navCart__collapseInfo
+							.m-navCart__collapseName #{ProductName}
+							.m-navCart__collapsePrice 20 zł
+							.m-navCart__collapseStock W magazynie
 
-				.m-navCart__collapseBtn
-					a.btn.-small.-fullWidth(href="#") Objednat zboží
+					.m-navCart__collapseOverview
+						.m-navCart__collapsePriceWrap
+							.m-navCart__collapseTitle Całkowita cena
+							.m-navCart__collapseText VAT wliczony w cenę
+						.m-navCart__collapseSum 40 zł
+
+					.m-navCart__collapseShipping Kup za 40 zł i masz bezpłatną wysyłkę
+
+					.m-navCart__collapseBtn
+						a.btn.-small.-fullWidth(href="#") Zamów towary
 
 .a-darkOverlay(id="js-darkOverlay")
 

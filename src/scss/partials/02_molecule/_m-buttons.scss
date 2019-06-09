@@ -3,8 +3,10 @@
 /* ========================================================================== */
 
 .btn{
-    @include f-16-white-regular;
+    color: $text-white;
+    font-size: 1.6rem;
     min-height: 5.4rem;
+    font-weight: 600;
     height: 100%;
     padding: 0rem 3rem 0rem 3rem;
     background: $bg-brand;
@@ -96,12 +98,14 @@
 .btn.-transparent{
     background: transparent;
     overflow: hidden;
+    color: $text-brand;
 
     &::after{
         content: "";
         @include absolute-position(0,0,0,0);
         opacity: 0.15;
         transition: 0.3s ease all;
+        background: $bg-brand;
     }
     &:hover, &:active, &:focus {
         &::after{

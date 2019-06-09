@@ -2,14 +2,11 @@ section.o-sectionNews
     .container
         h1.o-sectionNews__title Poslední aktuality 
         .row
-            .col-12.col-sm-12.col-md-4
-                include _news-single.pug
+            - for (var i=0; i<2; i++)
+                .col-12.col-sm-12.col-md-6
+                    include _news-single.pug
 
-            .col-12.col-sm-12.col-md-4
-                include _news-single.pug
 
-            .col-12.col-sm-12.col-md-4
-                include _news-single.pug
                 
         .o-sectionNews__btnWrap  
             a.btn.-dark(href="#") Starší aktuality #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]

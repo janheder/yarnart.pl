@@ -131,11 +131,12 @@ input{
     border-radius: $border-radius-primary;
 
     &.-radiobutton, &.-checkbox, &.-switch{
-        background: $bg-light;
+        background: $bg-white;
         min-height: 5.4rem;
         display: flex;
         flex-direction: row;
         padding: 1.5rem 2rem;
+        border: 1px solid $border-grey;
 
         .m-formGroup__input{
             opacity: 0;
@@ -208,6 +209,7 @@ input{
             flex-grow: 1;
             text-align: right;
             white-space: nowrap;
+            margin: 0;
         }
     }
     
@@ -309,9 +311,10 @@ input{
     @include f-16-primary-semibold;
     padding: 0 2rem;
     border: 0;
-    background: $bg-light;
+    background: $bg-white;
     border-radius: $border-radius-primary;
     width: 100%;
+    border: 1px solid $border-grey;
 
     &:disabled{
         background: $bg-white;

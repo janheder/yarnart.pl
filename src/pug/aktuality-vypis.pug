@@ -11,14 +11,19 @@ html(lang=lang)
         section.o-pageHeading
             include partials/_breadcrumb-transparent.pug
             .container.o-pageHeading__container
-                h1.o-pageHeading__title Aktuality
+                h1.o-pageHeading__title Aktualności
 
         main
             .container
                 .row                                       
                     - for (var i=0; i<10; i++)
-                        .col-12.col-sm-12.col-md-4
-                            include partials/_news-single.pug
+                        a.m-newsSingle.-vertical(href="#")
+                            .m-newsSingle__top.b-bgCover__wrap
+                                img.lazy.m-newsSingle__img.b-bgCover__img(src=URLbase+"img/lazy/lazy-news-thumb-small.jpg" data-src=URLbase+"img/news-thumb-small.jpg" alt="#" title="#")
+                            .m-newsSingle__bottom
+                                h4.m-newsSingle__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                span.m-newsSingle__date #[span.a-icon.-calendar] 1. 1. 1972
+                                p.m-newsSingle__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Fusce tellus. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Maecenas sollicitudin. Sed ac dolor sit amet purus malesuada congue.
 
 
                 include partials/_pagination.pug

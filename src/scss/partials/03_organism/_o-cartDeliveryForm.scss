@@ -1,19 +1,23 @@
 .o-cartDeliveryForm{
-    margin-top: -4rem;
-    padding-right: 4rem;
+    margin: 0;
 }
 .o-cartDeliveryForm__title{
     @include f-24-primary-semibold;
-    margin: 4rem 0 2rem 0;
+    font-weight: 700;
+    margin: 0;
+    padding: 4rem 0 2rem 0;
 }
 .o-cartDeliveryForm__col{
     margin: 4rem 0;
 }
 
 .o-cartDeliveryForm__item{
-    padding-bottom: 1px;
     margin: 0;
-    margin-bottom: -20px;
+    margin-bottom: -21px;
+
+    & .m-formGroup.-radiobutton{
+        padding: 3rem 20px;
+    }
 }
 @media screen and (max-width: 768px){
     .o-cartDeliveryForm__title{
