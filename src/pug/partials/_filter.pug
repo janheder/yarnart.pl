@@ -10,6 +10,24 @@ form.o-filter(id="js-filter" method="post" name="filter-form" action="")
 
     .container.o-filter__container
         .accordion.o-filter__accordion(id="accordionFilter")
+            .o-filter__single.-checkbox
+                .o-filter__item
+                    .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
+                        input.m-formGroup__input(type="checkbox" name="filter-1" id="filter-1" required)
+                        span.m-formGroup__checkbox.a-checkbox
+                        label.m-formGroup__label(for="filter-1") Oferta specjalna
+            .o-filter__single.-checkbox
+                .o-filter__item
+                    .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
+                        input.m-formGroup__input(type="checkbox" name="filter-2" id="filter-2" required)
+                        span.m-formGroup__checkbox.a-checkbox
+                        label.m-formGroup__label(for="filter-2") Aktualności
+            .o-filter__single.-checkbox
+                .o-filter__item
+                    .o-filter__formGroup.m-formGroup.-checkbox.-noMargin
+                        input.m-formGroup__input(type="checkbox" name="filter-3" id="filter-3" required)
+                        span.m-formGroup__checkbox.a-checkbox
+                        label.m-formGroup__label(for="filter-3") Najbardziej sprzedane
 
             .o-filter__single
                 .o-filter__link(id="headingFilter-1" data-toggle="collapse" data-target="#collapseFilter-1" aria-expanded="false" aria-controls="collapseFilter-1") Producent #[span.a-icon.-cheveron.o-filter__icon]

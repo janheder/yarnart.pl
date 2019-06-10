@@ -3,7 +3,7 @@
         .modal-content.o-modal__content
 
             .modal-header.o-modal__header
-                h5.modal-title.o-modal__title(id="modal-add-to-cart-heading") Zboží bylo přidáno do košíku
+                h5.modal-title.o-modal__title(id="modal-add-to-cart-heading") Przedmiot został dodany do koszyka
 
                 button.o-modal__close(type="button" class="close" data-dismiss="modal" aria-label="Close")
                     span.a-icon.-cross.-red.o-modal__closeIcon
@@ -19,18 +19,18 @@
                         .m-cartItemSingle__col-2   
                             .m-cartItemSingle__name-wrap
                                 p.m-cartItemSingle__name #{ProductName}
-                                p.m-cartItemSingle__tags #[span Rozměr: 80/200 cm] #[span Varianta: grey flex]
-                                p.m-cartItemSingle__stock Dostupné skladem   
+                                p.m-cartItemSingle__tags #[span Varianta: abc]
+                                p.m-cartItemSingle__stock Dostępne w magazynie
 
                             .m-cartItemSingle__inner    
                                 .m-cartItemSingle__qty-wrap  
-                                    p.m-cartItemSingle__qty-text 1 kus/ů
+                                    p.m-cartItemSingle__qty-text 1 sztuka
                                 .m-cartItemSingle__price-wrap
-                                    span.m-cartItemSingle__price-old 14 290 Kč
-                                    p.m-cartItemSingle__price 8 489 Kč
+                                    span.m-cartItemSingle__price-old 99 zł
+                                    p.m-cartItemSingle__price 99 zł
                                 .m-cartItemSingle__sum-wrap.text-right
-                                    p.m-cartItemSingle__sum #[span 8 489] Kč
+                                    p.m-cartItemSingle__sum #[span 99] zł
 
             .modal-footer.o-modal__footer
-                button.btn.-dark(type="button" data-dismiss="modal") Zpět do obchodu
-                a.btn(href="#") Dokončit objednávku #[span.a-btnIcon #[span.a-icon.-cheveron.-white]] 
+                button.btn.-dark(type="button" data-dismiss="modal") Wróć do sklepu
+                a.btn(href="#") Zakończ zamówienie #[span.a-btnIcon #[span.a-icon.-cheveron.-white]] 

@@ -3,7 +3,7 @@
         .modal-content.o-modal__content
 
             .modal-header.o-modal__header
-                h5.modal-title.o-modal__title(id="modal-login-heading") Přihlášení
+                h5.modal-title.o-modal__title(id="modal-login-heading") Zaloguj się
 
                 button.o-modal__close(type="button" class="close" data-dismiss="modal" aria-label="Close")
                     span.a-icon.-cross.-red.o-modal__closeIcon
@@ -12,22 +12,22 @@
                 form.o-form(method="post" action="" name="login_form")
 
                     .o-form__group.m-formGroup
-                        input.m-formGroup__input(type="text" name="login_form_name" id="login_form_name" autocomplete="username" required placeholder=" ")
-                        label.m-formGroup__label(for="login_form_name") Uživatelské jméno
-                        span.m-formGroup__error Uživatelské jméno
+                        input.m-formGroup__input(type="email" name="login_form_name" id="login_form_name" autocomplete="emial" required placeholder=" ")
+                        label.m-formGroup__label(for="login_form_name") Adres e-mail
+                        span.m-formGroup__error Nieprawidłowy Adres e-mail
                         span.m-formGroup__success
 
 
                     .o-form__group.m-formGroup
                         input.m-formGroup__input(type="password" name="login_form_pass" id="login_form_pass" autocomplete="password" required placeholder=" ")
-                        label.m-formGroup__label(for="login_form_name") Heslo
-                        span.m-formGroup__error Neplatné heslo
+                        label.m-formGroup__label(for="login_form_name") Hasło
+                        span.m-formGroup__error Nieprawidłowy hasło
                         span.m-formGroup__success
 
                     .o-form__group.m-formGroup
-                        a.o-form__link.-alignRight(href="#") Obnovit zapomenuté heslo
+                        a.o-form__link.-alignRight(href="#") Zresetuj zapomniane hasło
 
                     .o-form__group.m-formGroup
-                        button.btn.-fullWidth(type="submit" name="login_form_submit" id="login_form_submit") Přihlásit
+                        button.btn.-fullWidth(type="submit" name="login_form_submit" id="login_form_submit") Zaloguj się
                     
-                    span.o-form__text Nemáte u nás účet? #[a.o-form__link(href="#") Zaregistrujte se]
+                    span.o-form__text Nie masz u nas konta? #[a.o-form__link(href="#") Zarejestruj się teraz]

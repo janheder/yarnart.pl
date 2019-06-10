@@ -12,8 +12,7 @@ html(lang=lang)
         section.o-pageHeading
             include partials/_breadcrumb-transparent.pug
             .container.o-pageHeading__container
-                h1.o-pageHeading__title Přihlášení
-                p.o-pageHeading__text Jako registrovaný uživatel získává slevu ve výši 1% na veškeré zboží, které není aktuálně ve slevě.
+                h1.o-pageHeading__title Zaloguj się
 
 
         main
@@ -25,27 +24,27 @@ html(lang=lang)
 
                         form.o-form(method="post" action="" class="login-form" name="login_form")
 
-                            .m-alert.-danger Zadali jste špatné údaje
+                            .m-alert.-danger Wprowadziłeś nieprawidłowe dane
 
                             .o-form__group.m-formGroup
                                 input.m-formGroup__input(type="email" name="login_form_email" id="login_form_email" autocomplete="email" required placeholder=" ")
-                                label.m-formGroup__label(for="login_form_email") Emailová adresa
-                                span.m-formGroup__error Neplatný email
+                                label.m-formGroup__label(for="login_form_email") Adres e-mail
+                                span.m-formGroup__error Nieprawidłowy Adres e-mail
                                 span.m-formGroup__success
 
                             .o-form__group.m-formGroup
                                 input.m-formGroup__input(type="password" name="login_form_password" id="login_form_password" autocomplete="password" required placeholder=" ")
-                                label.m-formGroup__label(for="login_form_password") Heslo
-                                span.m-formGroup__error Neplatné heslo
+                                label.m-formGroup__label(for="login_form_password") Hasło
+                                span.m-formGroup__error Nieprawidłowy hasło
                                 span.m-formGroup__success
 
                             .o-form__group.m-formGroup
-                                a.o-form__link.-alignRight(href="#") Obnovit zapomenuté heslo
+                                a.o-form__link.-alignRight(href="#") Zresetuj zapomniane hasło
 
                             .o-form__group.m-formGroup
-                                button.btn.-fullWidth(type="submit" id="login_form_submit") Přihlásit se #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+                                button.btn.-fullWidth(type="submit" id="login_form_submit") Zaloguj się #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
 
-                            span.o-form__text Nemáte u nás účet? #[a.o-form__link(href="#") Zaregistrujte se]
+                            span.o-form__text Nie masz u nas konta? #[a.o-form__link(href="#") Rejestracja]
 
                     .col-12.col-sm-12.col-md-12.col-lg-3
 

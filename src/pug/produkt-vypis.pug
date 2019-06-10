@@ -21,17 +21,6 @@ html(lang=lang)
         main
             .container
 
-                .m-filterBadges
-                    .m-filterBadges__single 
-                        .m-filterBadges__wrap
-                            .m-filterBadges__title Filtrowany element
-                            a.m-filterBadges__remove(href="#")
-                                span.a-icon.-cross.m-filterBadges__Icon 
-
-
-
-
-
                 .o-productGrid
                     - for (var i=0; i<20; i++)
                         include partials/_single-product-cell.pug

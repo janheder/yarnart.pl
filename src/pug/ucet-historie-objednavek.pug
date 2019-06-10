@@ -12,7 +12,7 @@ html(lang=lang)
         section.o-pageHeading
             include partials/_breadcrumb-transparent.pug
             .container.o-pageHeading__container
-                h1.o-pageHeading__title Uživatelský účet
+                h1.o-pageHeading__title Konto użytkownika
 
         main
             .container
@@ -26,12 +26,12 @@ html(lang=lang)
 
                           
                             .nav.nav-tabs.m-tabsNav__nav(role="tablist")
+
+                                a.m-tabsNav__link.active(href="#") Zmiana danych osobowych
                         
-                                a.m-tabsNav__link(href="#") Změna osobních údajů
-                        
-                                a.m-tabsNav__link.active(href="#") Historie objednávek
+                                a.m-tabsNav__link(href="#") Historia zamówień
                     
-                                a.m-tabsNav__link(href="#") Odhlásit
+                                a.m-tabsNav__link(href="#") Wyloguj się
 
 
 
@@ -39,16 +39,16 @@ html(lang=lang)
                
                             table.o-userHistory__table
                                 tr.o-userHistory__tr
-                                    th.o-userHistory__th Číslo nákupu
-                                    th.o-userHistory__th Datum
+                                    th.o-userHistory__th Numer zakupu
+                                    th.o-userHistory__th Data
                                     th.o-userHistory__th Cena
-                                    th.o-userHistory__th Stav objednávky
+                                    th.o-userHistory__th Status zamówienia
                                     th.o-userHistory__th
                                     
                                 tr.o-userHistory__tr
                                     td.o-userHistory__id 1598879
                                     td.o-userHistory__date 1. 1. 1970
-                                    td.o-userHistory__price 16 999 Kč
+                                    td.o-userHistory__price 99 zł
                                     td
                                         .o-userHistory__status.-success Dokončeno
                                     td.o-userHistory__info
@@ -57,18 +57,18 @@ html(lang=lang)
                                 tr.o-userHistory__tr
                                     td.o-userHistory__id 1598879
                                     td.o-userHistory__date 1. 1. 1970
-                                    td.o-userHistory__price 16 999 Kč
+                                    td.o-userHistory__price 99 zł
                                     td
-                                        .o-userHistory__status.-info Odesláno poštou
+                                        .o-userHistory__status.-info Wysłane pocztą
                                     td.o-userHistory__info
                                         span.a-icon.-info(data-toggle="modal" data-target="#modal-history")
 
                                 tr.o-userHistory__tr
                                     td.o-userHistory__id 1598879
                                     td.o-userHistory__date 1. 1. 1970
-                                    td.o-userHistory__price 16 999 Kč
+                                    td.o-userHistory__price 99 zł
                                     td
-                                        .o-userHistory__status.-danger Vráceno
+                                        .o-userHistory__status.-danger Wrócił
                                     td.o-userHistory__info
                                         span.a-icon.-info(data-toggle="modal" data-target="#modal-history")                 
 

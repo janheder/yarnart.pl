@@ -12,7 +12,7 @@ html(lang=lang)
         section.o-pageHeading
             include partials/_breadcrumb-transparent.pug
             .container.o-pageHeading__container
-                h1.o-pageHeading__title Uživatelský účet
+                h1.o-pageHeading__title Konto użytkownika
 
         main
             .container
@@ -27,254 +27,229 @@ html(lang=lang)
                           
                             .nav.nav-tabs.m-tabsNav__nav(role="tablist")
                         
-                                a.m-tabsNav__link.active(href="#") Změna osobních údajů
+                                a.m-tabsNav__link.active(href="#") Zmiana danych osobowych
                         
-                                a.m-tabsNav__link(href="#") Historie objednávek
+                                a.m-tabsNav__link(href="#") Historia zamówień
                     
-                                a.m-tabsNav__link(href="#") Odhlásit
+                                a.m-tabsNav__link(href="#") Wyloguj się
                     
 
                         form.o-form(method="post" action="" name="register_form" id="register_form")
-                            .o-form__divider.m-formDivider Osobní údaje
+                            .o-form__divider.m-formDivider Dane osobowe
 
                             .row
                                 .col-12.col-md-6
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="text" name="register_form_name" id="register_form_name" autocomplete="given-name" required placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_name") Jméno
-                                        span.m-formGroup__error Neplatné jméno
+                                        label.m-formGroup__label(for="register_form_name") Imię
+                                        span.m-formGroup__error Nieprawidłowy Imię
                                         span.m-formGroup__success
                                         
                                 .col-12.col-md-6
                                     .o-form__group.m-formGroup       
                                         input.m-formGroup__input(type="text" name="register_form_surname" id="register_form_surname" autocomplete="family-name" required placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_surname") Příjmení
-                                        span.m-formGroup__error Neplatné příjmení
-                                        span.m-formGroup__success
-
-                                .col-12.col-md-6
-                                    .o-form__group.m-formGroup       
-                                        input.m-formGroup__input(type="text" name="register_form_username" id="register_form_username" autocomplete="username" required placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_username") Uživatelské jméno
-                                        span.m-formGroup__error Neplatné uživatelské jméno
+                                        label.m-formGroup__label(for="register_form_surname") Nazwisko
+                                        span.m-formGroup__error Nieprawidłowy Nazwisko
                                         span.m-formGroup__success
 
                                 .col-12.col-md-6
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="email" name="register_form_email" id="register_form_email" autocomplete="email" required placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_email") Emailová adresa
-                                        span.m-formGroup__error Neplatný email
+                                        label.m-formGroup__label(for="register_form_email") Adres e-mail
+                                        span.m-formGroup__error Nieprawidłowy Adres e-mail
                                         span.m-formGroup__success
                                         
                                 .col-12.col-md-6
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel" required placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_tel") Telefonní číslo
-                                        span.m-formGroup__error Neplatné číslo
+                                        label.m-formGroup__label(for="register_form_tel") Numer telefonu
+                                        span.m-formGroup__error Nieprawidłowy Numer telefonu
                                         span.m-formGroup__success
-                                
-                                .col-12.col-md-12
                                 
                                 .col-12.col-md-6
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="password" name="register_form_password" id="register_form_password" autocomplete="password" placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_password") Staré heslo
-                                        span.m-formGroup__error Neplatné heslo
+                                        label.m-formGroup__label(for="register_form_password") Stare hasło
+                                        span.m-formGroup__error Nieprawidłowy hasło
                                         span.m-formGroup__success
 
                                 .col-12.col-md-6
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="password" name="register_form_password-2" id="register_form_password-2" autocomplete="password" placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_password-2") Nové heslo
-                                        span.m-formGroup__error Neplatné heslo
+                                        label.m-formGroup__label(for="register_form_password-2") Nowe hasło
+                                        span.m-formGroup__error Nieprawidłowy hasło
                                         span.m-formGroup__success
 
-                            .o-form__divider.m-formDivider Adresa
+                            .o-form__divider.m-formDivider Adres
 
                             .row
                                 .col-12.col-md-9
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="text" name="register_form_address" id="register_form_address" autocomplete="street-address" required placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_address") Ulice
-                                        span.m-formGroup__error Neplatné jméno ulice
+                                        label.m-formGroup__label(for="register_form_address") Ulica
+                                        span.m-formGroup__error Nieprawidłowy Ulica
                                         span.m-formGroup__success
 
                                 .col-12.col-md-3
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="number" name="register_form_descriptive" id="register_form_descriptive" autocomplete="descriptive-address" required placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_descriptive") Číslo popisné
-                                        span.m-formGroup__error Neplatné číslo popisné
+                                        label.m-formGroup__label(for="register_form_descriptive") Numer domu
+                                        span.m-formGroup__error Nieprawidłowy Numer domu
                                         span.m-formGroup__success
 
                                 .col-12.col-md-9
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="text" name="register_form_locality" id="register_form_locality" autocomplete="address-level2" required placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_locality") Město
-                                        span.m-formGroup__error Neplatné jméno města
+                                        label.m-formGroup__label(for="register_form_locality") Miasto / gmina
+                                        span.m-formGroup__error Nieprawidłowy Miasto / gmina
                                         span.m-formGroup__success
 
                                 .col-12.col-md-3
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="text" name="register_form_postal_code" id="register_form_postal_code" autocomplete="postal-code" required placeholder=" ")
-                                        label.m-formGroup__label(for="register_form_postal_code") PSČ
-                                        span.m-formGroup__error Neplatné PSČ
+                                        label.m-formGroup__label(for="register_form_postal_code") Kod pocztowy
+                                        span.m-formGroup__error Nieprawidłowy Kod pocztowy
                                         span.m-formGroup__success
 
-                                .col-12.col-md-6
-                                    .o-form__group.m-formGroup.-radiobutton
-                                        input.m-formGroup__input(type="radio" name="register_form_country" id="register_form_country_cz" required checked)
-                                        span.m-formGroup__radiobutton.a-radiobutton
-                                        label.m-formGroup__label(for="register_form_country_cz") Česká republika
+                                .col-12.col-md-12
+                                    .o-form__group.m-formGroup
+                                        select.m-formGroup__input(name="register_form_country" id="register_form_country" required)
+                                            option(value="pl") Polsko
+                                            option(value="cz") Česká republika
+                                            option(value="sk") Slovensko
 
-                                .col-12.col-md-6
-                                    .o-form__group.m-formGroup.-radiobutton
-                                        input.m-formGroup__input(type="radio" name="register_form_country" id="register_form_country_sk" required)
-                                        span.m-formGroup__radiobutton.a-radiobutton
-                                        label.m-formGroup__label(for="register_form_country_sk") Slovensko
 
                             .row
                                 .col-12.col-md-6
-
                                     .o-form__groupToggler(data-toggle="collapse" href="#formBillingCollapse" aria-expanded="false" aria-controls="formBillingCollapse")
                                         .o-form__group.m-formGroup.-switch
                                             input.m-formGroup__input(type="checkbox" name="register_form_billing_toggler" id="register_form_billing_toggler" )
                                             span.m-formGroup__switch.a-switch
-                                            label.m-formGroup__label(for="register_form_billing_toggler") Vyplnit fakturační adresu   
+                                            label.m-formGroup__label(for="register_form_billing_toggler") Wypełnij adres rozliczeniowy
 
                                     .collapse.o-form__groupCollapse(id="formBillingCollapse")
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_billing_name" id="register_form_billing_name" autocomplete="name" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_billing_name") Jméno a příjmení #[span.m-formGroup__muted (nepovinné)]
-                                            span.m-formGroup__error Neplatné jméno a příjmení
+                                            label.m-formGroup__label(for="register_form_billing_name") Imię a Nazwisko #[span.m-formGroup__muted (opcjonalnie)]
+                                            span.m-formGroup__error Nieprawidłowy Imię a Nazwisko
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_billing_company" id="register_form_billing_company" autocomplete="org" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_billing_company") Název firmy 
-                                            span.m-formGroup__error Neplatný název firmy
+                                            label.m-formGroup__label(for="register_form_billing_company") Nazwa firmy
+                                            span.m-formGroup__error Nieprawidłowy Nazwa firmy
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_billing_ico" id="register_form_billing_ico" autocomplete="ico" placeholder=" ")
                                             label.m-formGroup__label(for="register_form_billing_ico") IČO
-                                            span.m-formGroup__error Neplatné IČO
+                                            span.m-formGroup__error Nieprawidłowy IČO
                                             span.m-formGroup__success
                                             
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_billing_dic" id="register_form_billing_dic" autocomplete="dic" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_billing_dic") DIČ #[span.m-formGroup__muted (nepovinné)]
-                                            span.m-formGroup__error Neplatné DIČ
+                                            label.m-formGroup__label(for="register_form_billing_dic") DIČ #[span.m-formGroup__muted (opcjonalnie)]
+                                            span.m-formGroup__error Nieprawidłowy DIČ
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_billing_address" id="register_form_billing_address" autocomplete="street-address" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_billing_address") Ulice
-                                            span.m-formGroup__error Neplatná ulice
+                                            label.m-formGroup__label(for="register_form_billing_address") Ulica
+                                            span.m-formGroup__error Nieprawidłowy Ulica
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_billing_descriptive" id="register_form_billing_descriptive" autocomplete="descriptive-address" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_billing_descriptive") Číslo popisné
-                                            span.m-formGroup__error Neplatné číslo popisné
+                                            label.m-formGroup__label(for="register_form_billing_descriptive") Numer domu
+                                            span.m-formGroup__error Nieprawidłowy Numer domu
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_billing_localitye" id="register_form_billing_locality" autocomplete="address-level2" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_billing_locality") Město
-                                            span.m-formGroup__error Neplatné město
+                                            label.m-formGroup__label(for="register_form_billing_locality") Miasto / gmina
+                                            span.m-formGroup__error Nieprawidłowy Miasto / gmina
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_billing_postal_code" id="register_form_billing_postal_code" autocomplete="postal-code" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_billing_postal_code") PSČ
-                                            span.m-formGroup__error Neplatné PSČ
+                                            label.m-formGroup__label(for="register_form_billing_postal_code") Kod pocztowy
+                                            span.m-formGroup__error Nieprawidłowy Kod pocztowy
                                             span.m-formGroup__success
                 
-                                        .o-form__group.m-formGroup.-radiobutton
-                                            input.m-formGroup__input(type="radio" name="register_form_billing_postal_country" id="register_form_billing_postal_country_cz" checked)
-                                            span.m-formGroup__radiobutton.a-radiobutton
-                                            label.m-formGroup__label(for="register_form_billing_postal_country_cz") Česká republika
-
-                                        .o-form__group.m-formGroup.-radiobutton
-                                            input.m-formGroup__input(type="radio" name="register_form_billing_postal_country" id="register_form_billing_postal_country_sk" )
-                                            span.m-formGroup__radiobutton.a-radiobutton
-                                            label.m-formGroup__label(for="register_form_billing_postal_country_sk") Slovensko
+                                        select.m-formGroup__input(name="register_form_billing_postal_country" id="register_form_billing_postal_country" required)
+                                            option(value="pl") Polsko
+                                            option(value="cz") Česká republika
+                                            option(value="sk") Slovensko
 
 
                                 .col-12.col-md-6
-
                                     .o-form__groupToggler(data-toggle="collapse" href="#formShippingCollapse" aria-expanded="false" aria-controls="formShippingCollapse")
                                         .o-form__group.m-formGroup.-switch
                                             input.m-formGroup__input(type="checkbox" name="register_form_shipping_toggler" id="register_form_shipping_toggler")
                                             span.m-formGroup__switch.a-switch
-                                            label.m-formGroup__label(for="register_form_shipping_toggler") Vyplnit jinou dodací adresu   
+                                            label.m-formGroup__label(for="register_form_shipping_toggler") Wpisz inny adres wysyłki
 
                                     .collapse.o-form__groupCollapse(id="formShippingCollapse")
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_shipping_name" id="register_form_shipping_name" autocomplete="name" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_shipping_name") Jméno a příjmení
-                                            span.m-formGroup__error Neplatné jméno a příjmení
+                                            label.m-formGroup__label(for="register_form_shipping_name") Imię a Nazwisko
+                                            span.m-formGroup__error Nieprawidłowy Imię a Nazwisko
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_shipping_company" id="register_form_shipping_company" autocomplete="org" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_shipping_company") Název firmy #[span.m-formGroup__muted (nepovinné)]
-                                            span.m-formGroup__error Neplatný název firmy
+                                            label.m-formGroup__label(for="register_form_shipping_company") Nazwa firmy #[span.m-formGroup__muted (opcjonalnie)]
+                                            span.m-formGroup__error Nieprawidłowy Nazwa firmy
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_shipping_address" id="register_form_shipping_address" autocomplete="street-address" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_shipping_address") Ulice
-                                            span.m-formGroup__error Neplatná ulice
+                                            label.m-formGroup__label(for="register_form_shipping_address") Ulica
+                                            span.m-formGroup__error Nieprawidłowy Ulica
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_shipping_descriptive" id="register_form_shipping_descriptive" autocomplete="descriptive-address" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_shipping_descriptive") Číslo popisné
-                                            span.m-formGroup__error Neplatné číslo popisné
+                                            label.m-formGroup__label(for="register_form_shipping_descriptive") Numer domu
+                                            span.m-formGroup__error Nieprawidłowy Numer domu
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_shipping_locality" id="register_form_shipping_locality" autocomplete="address-level2" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_shipping_locality") Město
-                                            span.m-formGroup__error Neplatné město
+                                            label.m-formGroup__label(for="register_form_shipping_locality") Miasto / gmina
+                                            span.m-formGroup__error Nieprawidłowy Miasto / gmina
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
                                             input.m-formGroup__input(type="text" name="register_form_shipping_postal_code" id="register_form_shipping_postal_code" autocomplete="postal-code" placeholder=" ")
-                                            label.m-formGroup__label(for="register_form_shipping_postal_code") PSČ
-                                            span.m-formGroup__error Neplatné PSČ
+                                            label.m-formGroup__label(for="register_form_shipping_postal_code") Kod pocztowy
+                                            span.m-formGroup__error Nieprawidłowy Kod pocztowy
                                             span.m-formGroup__success
 
-                                        .o-form__group.m-formGroup.-radiobutton
-                                            input.m-formGroup__input(type="radio" name="register_form_shipping_postal_country" id="register_form_shipping_postal_country_cz" checked)
-                                            span.m-formGroup__radiobutton.a-radiobutton
-                                            label.m-formGroup__label(for="register_form_shipping_postal_country_cz") Česká republika
-
-                                        .o-form__group.m-formGroup.-radiobutton
-                                            input.m-formGroup__input(type="radio" name="register_form_shipping_postal_country" id="register_form_shipping_postal_country_sk" )
-                                            span.m-formGroup__radiobutton.a-radiobutton
-                                            label.m-formGroup__label(for="register_form_shipping_postal_country_sk") Slovensko
+                                        select.m-formGroup__input(name="register_form_shipping_postal_country" id="register_form_shipping_postal_country" required)
+                                            option(value="pl") Polsko
+                                            option(value="cz") Česká republika
+                                            option(value="sk") Slovensko
 
 
-                            .o-form__divider.m-formDivider Ostatní
+                            .o-form__divider.m-formDivider Inne
 
 
                             .o-form__group.m-formGroup.-checkbox
                                 input.m-formGroup__input(type="checkbox" name="register_form_newsletter" id="register_form_newsletter")
                                 span.m-formGroup__checkbox.a-checkbox
-                                label.m-formGroup__label(for="register_form_newsletter") Chci odebírat newsletter a souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.            
+                                label.m-formGroup__label(for="register_form_newsletter") Chcę subskrybować biuletyn i wyrazić zgodę na przetwarzanie moich #[a(href="#") danych osobowych] w celu otrzymywania wiadomości i rabatów.             
 
                             .o-form__group.m-formGroup.-checkbox
                                 input.m-formGroup__input(type="checkbox" name="register_form_legal" id="register_form_legal" required)
                                 span.m-formGroup__checkbox.a-checkbox
-                                label.m-formGroup__label(for="register_form_legal") Souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem registrace .            
+                                label.m-formGroup__label(for="register_form_legal") Wprowadzając dane, rozumiem #[a(href="#") przetwarzanie danych osobowych]             
                 
                             .m-cartButtons
-                                a.btn.-remove.-transparent(href="#" data-toggle="modal" data-target="#modal-question") Smazat účet
-                                button.btn.-fullWidth(type="submit" id="register_form_submit") Potvrdit úpravy #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+                                a.btn.-remove.-transparent(href="#" data-toggle="modal" data-target="#modal-question") Usuń konto
+                                button.btn.-fullWidth(type="submit" id="register_form_submit") Potwierdź zmiany #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
 
                
                                 

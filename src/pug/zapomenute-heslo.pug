@@ -11,8 +11,8 @@ html(lang=lang)
         section.o-pageHeading
             include partials/_breadcrumb-transparent.pug
             .container.o-pageHeading__container
-                h1.o-pageHeading__title Zapomenuté heslo
-                p.o-pageHeading__text Pokud jste zapomněli své heslo, pošleme Vám nové na email, který jste uvedli při registraci.
+                h1.o-pageHeading__title Zapomniałeś hasła
+                p.o-pageHeading__text Jeśli zapomniałeś hasła, wyślemy ci nowe hasło na e-mail, który podałeś podczas rejestracji.
                
         main
             .container
@@ -25,12 +25,12 @@ html(lang=lang)
 
                             .o-form__group.m-formGroup
                                 input.m-formGroup__input(type="email" name="login_form_email" id="login_form_email" autocomplete="email" required placeholder=" ")
-                                label.m-formGroup__label(for="login_form_email") Emailová adresa
-                                span.m-formGroup__error Neplatný email
+                                label.m-formGroup__label(for="login_form_email") Adres e-mail
+                                span.m-formGroup__error Nieprawidłowy e-mail
                                 span.m-formGroup__success
 
 
-                            button.btn.-fullWidth(type="submit" id="login_form_submit") Poslat nové heslo #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+                            button.btn.-fullWidth(type="submit" id="login_form_submit") Wyślij nowe hasło #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
 
      
 

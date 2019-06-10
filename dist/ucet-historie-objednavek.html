@@ -37,9 +37,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
     <link rel="manifest" href="images/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#24272D">
+    <meta name="msapplication-TileColor" content="#D00109">
     <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#D00109">
     <!-- Bootstrap-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" onerror="loadBootstrap()" id="loadBootstrap">
     <script>
@@ -66,23 +66,23 @@
       <div class="modal-dialog modal-dialog-centered o-modal__dialog" role="document">
         <div class="modal-content o-modal__content">
           <div class="modal-header o-modal__header">
-            <h5 class="modal-title o-modal__title" id="modal-login-heading">Přihlášení</h5>
+            <h5 class="modal-title o-modal__title" id="modal-login-heading">Zaloguj się</h5>
             <button class="o-modal__close close" type="button" data-dismiss="modal" aria-label="Close"><span class="a-icon -cross -red o-modal__closeIcon"></span></button>
           </div>
           <div class="modal-body o-modal__body">
             <form class="o-form" method="post" action="" name="login_form">
               <div class="o-form__group m-formGroup">
-                <input class="m-formGroup__input" type="text" name="login_form_name" id="login_form_name" autocomplete="username" required placeholder=" ">
-                <label class="m-formGroup__label" for="login_form_name">Uživatelské jméno</label><span class="m-formGroup__error">Uživatelské jméno</span><span class="m-formGroup__success"></span>
+                <input class="m-formGroup__input" type="email" name="login_form_name" id="login_form_name" autocomplete="emial" required placeholder=" ">
+                <label class="m-formGroup__label" for="login_form_name">Adres e-mail</label><span class="m-formGroup__error">Nieprawidłowy Adres e-mail</span><span class="m-formGroup__success"></span>
               </div>
               <div class="o-form__group m-formGroup">
                 <input class="m-formGroup__input" type="password" name="login_form_pass" id="login_form_pass" autocomplete="password" required placeholder=" ">
-                <label class="m-formGroup__label" for="login_form_name">Heslo</label><span class="m-formGroup__error">Neplatné heslo</span><span class="m-formGroup__success"></span>
+                <label class="m-formGroup__label" for="login_form_name">Hasło</label><span class="m-formGroup__error">Nieprawidłowy hasło</span><span class="m-formGroup__success"></span>
               </div>
-              <div class="o-form__group m-formGroup"><a class="o-form__link -alignRight" href="#">Obnovit zapomenuté heslo</a></div>
+              <div class="o-form__group m-formGroup"><a class="o-form__link -alignRight" href="#">Zresetuj zapomniane hasło</a></div>
               <div class="o-form__group m-formGroup">
-                <button class="btn -fullWidth" type="submit" name="login_form_submit" id="login_form_submit">Přihlásit</button>
-              </div><span class="o-form__text">Nemáte u nás účet? <a class="o-form__link" href="#">Zaregistrujte se</a></span>
+                <button class="btn -fullWidth" type="submit" name="login_form_submit" id="login_form_submit">Zaloguj się</button>
+              </div><span class="o-form__text">Nie masz u nas konta? <a class="o-form__link" href="#">Zarejestruj się teraz</a></span>
             </form>
           </div>
         </div>
@@ -211,7 +211,7 @@
       <div class="modal-dialog modal-dialog-centered o-modal__dialog" role="document">
         <div class="modal-content o-modal__content">
           <div class="modal-header o-modal__header">
-            <h5 class="modal-title o-modal__title" id="modal-history-heading">Detail objednávky</h5>
+            <h5 class="modal-title o-modal__title" id="modal-history-heading">Szczegóły zamówienia</h5>
             <button class="o-modal__close close" type="button" data-dismiss="modal" aria-label="Close"><span class="a-icon -cross -red o-modal__closeIcon"></span></button>
           </div>
           <div class="modal-body o-modal__body">
@@ -224,25 +224,25 @@
               <div class="m-cartItemSingle__col-2">  
                 <div class="m-cartItemSingle__name-wrap">
                   <p class="m-cartItemSingle__name">Salerno and other lorem ipsum dolor sit amet lorem ispum</p>
-                  <p class="m-cartItemSingle__tags"><span>Rozměr: 80/200 cm</span> <span>Varianta: grey flex</span></p>
-                  <p class="m-cartItemSingle__stock">Dostupné skladem   </p>
+                  <p class="m-cartItemSingle__tags"><span>Varianta: abc</span></p>
+                  <p class="m-cartItemSingle__stock">Dostępne w magazynie</p>
                 </div>
                 <div class="m-cartItemSingle__inner">   
                   <div class="m-cartItemSingle__qty-wrap"> 
-                    <p class="m-cartItemSingle__qty-text">1 kus/ů</p>
+                    <p class="m-cartItemSingle__qty-text">1 sztuka</p>
                   </div>
-                  <div class="m-cartItemSingle__price-wrap"><span class="m-cartItemSingle__price-old">14 290 Kč</span>
-                    <p class="m-cartItemSingle__price">8 489 Kč</p>
+                  <div class="m-cartItemSingle__price-wrap"><span class="m-cartItemSingle__price-old">99 zł</span>
+                    <p class="m-cartItemSingle__price">99 zł</p>
                   </div>
                   <div class="m-cartItemSingle__sum-wrap text-right">
-                    <p class="m-cartItemSingle__sum"><span>8 489</span> Kč</p>
+                    <p class="m-cartItemSingle__sum"><span>99</span> zł</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="modal-footer o-modal__footer">
-            <button class="btn -dark" type="button" data-dismiss="modal">Zavřít</button>
+            <button class="btn -dark" type="button" data-dismiss="modal">Zamknij</button>
           </div>
         </div>
       </div>
@@ -252,7 +252,7 @@
         <div class="container m-breadcrumb__container"><a class="m-breadcrumb__item" href="#">Lorem ipsum</a><a class="m-breadcrumb__item" href="#">Dolor sit amet</a><a class="m-breadcrumb__item" href="#">Lorem ipsum</a><a class="m-breadcrumb__item" href="#">Dolor sit amet</a><span class="m-breadcrumb__item active">Lorem ipsum</span></div>
       </nav>
       <div class="container o-pageHeading__container">
-        <h1 class="o-pageHeading__title">Uživatelský účet</h1>
+        <h1 class="o-pageHeading__title">Konto użytkownika</h1>
       </div>
     </section>
     <main>
@@ -261,21 +261,21 @@
           <div class="col-12 col-sm-12 col-md-12 col-lg-1"></div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-10">
             <nav class="o-tabs__nav m-tabsNav -paddingBottom">
-              <div class="nav nav-tabs m-tabsNav__nav" role="tablist"><a class="m-tabsNav__link" href="#">Změna osobních údajů</a><a class="m-tabsNav__link active" href="#">Historie objednávek</a><a class="m-tabsNav__link" href="#">Odhlásit</a></div>
+              <div class="nav nav-tabs m-tabsNav__nav" role="tablist"><a class="m-tabsNav__link active" href="#">Zmiana danych osobowych</a><a class="m-tabsNav__link" href="#">Historia zamówień</a><a class="m-tabsNav__link" href="#">Wyloguj się</a></div>
             </nav>
             <div class="o-userHistory">
               <table class="o-userHistory__table">
                 <tr class="o-userHistory__tr">
-                  <th class="o-userHistory__th">Číslo nákupu</th>
-                  <th class="o-userHistory__th">Datum</th>
+                  <th class="o-userHistory__th">Numer zakupu</th>
+                  <th class="o-userHistory__th">Data</th>
                   <th class="o-userHistory__th">Cena</th>
-                  <th class="o-userHistory__th">Stav objednávky</th>
+                  <th class="o-userHistory__th">Status zamówienia</th>
                   <th class="o-userHistory__th"></th>
                 </tr>
                 <tr class="o-userHistory__tr">
                   <td class="o-userHistory__id">1598879</td>
                   <td class="o-userHistory__date">1. 1. 1970</td>
-                  <td class="o-userHistory__price">16 999 Kč</td>
+                  <td class="o-userHistory__price">99 zł</td>
                   <td>
                     <div class="o-userHistory__status -success">Dokončeno</div>
                   </td>
@@ -284,18 +284,18 @@
                 <tr class="o-userHistory__tr">
                   <td class="o-userHistory__id">1598879</td>
                   <td class="o-userHistory__date">1. 1. 1970</td>
-                  <td class="o-userHistory__price">16 999 Kč</td>
+                  <td class="o-userHistory__price">99 zł</td>
                   <td>
-                    <div class="o-userHistory__status -info">Odesláno poštou</div>
+                    <div class="o-userHistory__status -info">Wysłane pocztą</div>
                   </td>
                   <td class="o-userHistory__info"><span class="a-icon -info" data-toggle="modal" data-target="#modal-history"></span></td>
                 </tr>
                 <tr class="o-userHistory__tr">
                   <td class="o-userHistory__id">1598879</td>
                   <td class="o-userHistory__date">1. 1. 1970</td>
-                  <td class="o-userHistory__price">16 999 Kč</td>
+                  <td class="o-userHistory__price">99 zł</td>
                   <td>
-                    <div class="o-userHistory__status -danger">Vráceno</div>
+                    <div class="o-userHistory__status -danger">Wrócił</div>
                   </td>
                   <td class="o-userHistory__info"><span class="a-icon -info" data-toggle="modal" data-target="#modal-history">                </span></td>
                 </tr>
@@ -361,7 +361,7 @@
     <section class="o-copyright">
       <div class="container o-copyright__container">
         <div class="o-copyright__wrap">
-          <h5 class="o-copyright__h5">Copyright © 2018 <a class="o-copyright__link" href="https://yarnart.pl">yarnart.pl</a></h5>
+          <h5 class="o-copyright__h5">Copyright © 2019 <a class="o-copyright__link" href="https://yarnart.pl">yarnart.pl</a></h5>
           <h5 class="o-copyright__pull">Stworzony w <a class="o-copyright__link" href="http://eline.cz">Eline.cz</a></h5>
         </div>
       </div>
