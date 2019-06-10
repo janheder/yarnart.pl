@@ -74,12 +74,12 @@ if ($(".printArea").length) {
 
 $(document).ready(function(){
     $.cookieBar({
-        message: 'Tato stránka používá cookies za účelem optimalizace efektivního poskytování služeb.',
-        acceptText: 'Rozumím',
+        message: 'Ta strona wykorzystuje pliki cookie w celu optymalizacji świadczenia usług.',
+        acceptText: 'Rozumiem',
         fixed: true,
         bottom: true,
         policyButton: true,
-        policyText: 'Více informací',
+        policyText: 'Więcej informacji',
         policyURL: 'http://www.google.com/intl/en/policies/technologies/cookies/',
     });
 });
