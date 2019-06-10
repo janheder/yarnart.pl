@@ -8,6 +8,7 @@
     margin-top: -1px;
     border-radius: $border-radius-primary;
     border: 1px solid $border-grey;
+    flex-wrap: wrap;
 }
 .m-cartPriceOverview__text{
     @include f-18-primary-regular;
@@ -25,5 +26,9 @@
     margin: 0;
 }
 .m-cartPriceOverview__priceNumber{
+    
+}
+
+@media (max-width: 768px){
     
 }

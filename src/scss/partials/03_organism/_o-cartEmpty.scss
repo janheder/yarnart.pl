@@ -10,6 +10,7 @@
 }
 .o-cartEmpty__title{
     @include f-24-primary-semibold;
+    font-weight: 600;
     margin: 0;
     margin-top: 4rem;
 }

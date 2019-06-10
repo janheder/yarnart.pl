@@ -5,14 +5,23 @@ footer.o-footer
             .row.o-footerContacts__row
 
                 .col-12.col-md-6.o-footerContacts__col
-                    h4.o-footerContacts__title Subskrybuj najnowsze wydarzenia i wiadomości e-mail
+
+                    .m-emailSubscribe
+                        h4.m-emailSubscribe__title Subskrybuj najnowsze wydarzenia i wiadomości e-mail
+
+                        form.m-emailSubscribe__form(method="post" action="")
+                            .m-emailSubscribe__inputWrap
+                                input.m-emailSubscribe__input(type="email" id="sub-email" name="sub-email" required placeholder="Wpisz swój adres e-mail" autocomplete="email")
+                                button.btn.m-emailSubscribe__btn(type="submit" id="sub-button" name="sub-button") Subskrybuj
+                            label.m-emailSubscribe__agree
+                                span.m-emailSubscribe__inlineText Przesyłając formularz, zgadzasz się na warunki przetwarzania #[a(href="#") swoich danych osobowych]
 
 
                 .col-12.col-md-6.o-footerContacts__col
                     h4.o-footerContacts__title Skontaktuj się z nami pod adresem
                     .o-footerContacts__wrap
-                        .o-footerContacts__single #[.a-icon.-phone.-white.o-footerContacts__icon] +420 727 877 380
-                        .o-footerContacts__single #[.a-icon.-envelope.-white.o-footerContacts__icon] info@mojespani.cz
+                        .o-footerContacts__single #[.a-icon.-phone.-white.o-footerContacts__icon] 656 985 734
+                        .o-footerContacts__single #[.a-icon.-envelope.-white.o-footerContacts__icon] info@yarnart.pl
 
                 
 

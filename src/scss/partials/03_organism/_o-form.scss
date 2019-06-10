@@ -70,6 +70,7 @@ input{
     text-align: left;
     margin: 0;
     padding: 0;
+    font-weight: 700;
 }
 .o-form__text{
     @include f-16-primary-regular;
@@ -114,6 +115,7 @@ input{
 
 .m-formDivider{
     @include f-14-dark-regular;
+    color: $text-medium;
     border-bottom: 1px solid $border-grey;
     margin: 2rem 0;
     padding-bottom: 5px;
@@ -476,4 +478,9 @@ input{
     .m-formGroup{
         margin-bottom: 10px;
     }
+}
+
+
+select.m-formGroup__input, select.m-formGroup__input:not(:placeholder-shown){
+    padding-top: 0;
 }

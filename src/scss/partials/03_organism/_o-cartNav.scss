@@ -69,6 +69,11 @@
     &.-empty{
         color: $text-medium;
     }
+    &.-small{
+        font-size: 1.4rem;
+        color: $text-medium;
+        font-weight: 400;
+    }
 }
 
 .o-cartNav__link{
@@ -84,26 +89,23 @@
     }
     .o-cartNav__number{
         color: $text-white;
-        background: $bg-green;
+        background: $bg-brand-secondary;
     }
     .o-cartNav__content::before{
-            background: $bg-green;
+        background: $bg-brand-secondary;
         
     }
 }
 .o-cartNav__single.-complete{
     .o-cartNav__title{
-        color: $text-brand-secondary;
+        color: $text-primary;
     }
     .o-cartNav__number{
         color: $text-white;
         background: $bg-brand-secondary;
     }
-    &:hover, &:active, &:focus{
-        text-decoration: none;
-        .o-cartNav__title{
-            color: $text-brand-secondary;
-        }
+    .o-cartNav__content::before{
+        background: $bg-brand-secondary;
     }
 }
 

@@ -176,265 +176,266 @@
       <div class="a-darkOverlay" id="js-darkOverlay"></div>
       <div class="a-navPush"></div>
     </header>
-    <section class="o-cartNav">
-      <div class="container o-cartNav__container">
-        <div class="o-cartNav__single -active">
-          <div class="o-cartNav__number">1</div>
-          <div class="o-cartNav__title">Nákupní košík</div>
-        </div>
-        <div class="o-cartNav__single">
-          <div class="o-cartNav__number">2</div>
-          <div class="o-cartNav__title">Doprava a platba</div>
-        </div>
-        <div class="o-cartNav__single">
-          <div class="o-cartNav__number">3</div>
-          <div class="o-cartNav__title">Osobní údaje</div>
-        </div>
-        <div class="o-cartNav__single">
-          <div class="o-cartNav__number">4</div>
-          <div class="o-cartNav__title">Shrnutí objednávky</div>
-        </div>
-      </div>
-    </section>
     <section class="o-cartNavResponsive"><a class="o-cartNavResponsive__link -prev -disabled" href="/kosik.html?krok=3"><span class="a-icon -cheveron o-cartNavResponsive__icon"></span></a>
       <p class="o-cartNavResponsive__title">4/4 Shrnutí objednávky</p><a class="o-cartNavResponsive__link -next" onclick="$('#cart_3_submit').click();"><span class="a-icon -cheveron o-cartNavResponsive__icon"></span></a>
     </section>
     <div class="a-cartNavResponsivePush"></div>
-    <main>
+    <main class="-cart">
       <div class="container">
-        <div class="m-alert -success">Všechny údaje pěčlivě zkontrolujte a následně objednávku potvrďte tlačítkem "Odeslat objednávku"</div>
-        <form method="post" action="" name="cart_form">
-          <div class="m-cartItemTop">
-            <div class="m-cartItemTop__item -img">Produkt</div>
-            <div class="m-cartItemTop__col">
-              <div class="m-cartItemTop__item -name"></div>
-              <div class="m-cartItemTop__wrap">
-                <div class="m-cartItemTop__item -qty">Množství</div>
-                <div class="m-cartItemTop__item -price">Cena za kus</div>
-                <div class="m-cartItemTop__item -sum -right">Cena celkem</div>
+        <div class="row cart__row">
+          <div class="col-12 col-lg-3 cart__col">
+            <section class="o-cartNav">
+              <div class="o-cartNav__single -complete">
+                <div class="o-cartNav__heading">
+                  <div class="o-cartNav__number">1</div>
+                  <div class="o-cartNav__title">Koszyk na zakupy</div>
+                </div>
+                <div class="o-cartNav__content">
+                  <div class="o-cartNav__text">1x Lorem ipsum product <span>99 zł</span></div>
+                  <div class="o-cartNav__text">1x Lorem ipsum product <span>99 zł</span></div><a class="o-cartNav__link" href="#">Edytuj</a>
+                </div>
               </div>
+              <div class="o-cartNav__single -complete">
+                <div class="o-cartNav__heading">
+                  <div class="o-cartNav__number">2</div>
+                  <div class="o-cartNav__title">Dane osobowe</div>
+                </div>
+                <div class="o-cartNav__content">
+                  <div class="o-cartNav__text">Petr Nowak</div>
+                  <div class="o-cartNav__text -small">info@info.pl</div>
+                  <div class="o-cartNav__text -small">765 698 698</div><br>
+                  <div class="o-cartNav__text -small">Nazwa adresu</div>
+                  <div class="o-cartNav__text -small">Nazwa lorem 159</div>
+                  <div class="o-cartNav__text -small">759 60</div><a class="o-cartNav__link" href="#">Edytuj</a>
+                </div>
+              </div>
+              <div class="o-cartNav__single -active">
+                <div class="o-cartNav__heading">
+                  <div class="o-cartNav__number">3</div>
+                  <div class="o-cartNav__title">Podsumowanie</div>
+                </div>
+                <div class="o-cartNav__content">
+                  <div class="o-cartNav__text -empty">Niepubliczny</div>
+                </div>
+              </div>
+              <div class="o-cartNav__single">
+                <div class="o-cartNav__heading">
+                  <div class="o-cartNav__number">4</div>
+                  <div class="o-cartNav__title">Wykończenie</div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-12 col-lg-9 cart__col">
+            <div class="m-cartItemSingle">
+              <div class="m-cartItemSingle__col-1"> 
+                <div class="m-cartItemSingle__thumb-wrap">
+                  <div class="m-cartItemSingle__thumb"><img class="m-cartItemSingle__img lazy" src="img/placeholder-200x200.png" data-src="img/product-thumb-small.jpg"></div>
+                </div>
+              </div>
+              <div class="m-cartItemSingle__col-2">  
+                <div class="m-cartItemSingle__name-wrap">
+                  <p class="m-cartItemSingle__name">Salerno and other lorem ipsum dolor sit amet lorem ispum</p>
+                  <p class="m-cartItemSingle__tags"><span>Wariant: Suede 341</span></p>
+                  <p class="m-cartItemSingle__stock">W magazynie</p>
+                </div>
+                <div class="m-cartItemSingle__inner">   
+                  <div class="m-cartItemSingle__qty-wrap"> 
+                    <p class="m-cartItemSingle__qty-text">1 sztuka/i</p>
+                  </div>
+                  <div class="m-cartItemSingle__price-wrap"><span class="m-cartItemSingle__price-old">199 zł</span>
+                    <p class="m-cartItemSingle__price">99 zł</p>
+                  </div>
+                  <div class="m-cartItemSingle__sum-wrap text-right">
+                    <p class="m-cartItemSingle__sum"><span>99</span> zł</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row m-cartItemSingle">
+              <div class="m-cartItemSingle__col-1"> 
+                <div class="m-cartItemSingle__thumb-wrap">
+                  <div class="m-cartItemSingle__thumb"><img class="m-cartItemSingle__img lazy" src="img/placeholder-200x200.png" data-src="img/product-thumb-small.jpg"></div>
+                </div>
+              </div>
+              <div class="m-cartItemSingle__col-2">  
+                <div class="m-cartItemSingle__name-wrap">
+                  <p class="m-cartItemSingle__name">Salerno and other lorem ipsum dolor sit amet lorem ispum</p>
+                  <p class="m-cartItemSingle__stock">W magazynie</p>
+                </div>
+                <div class="m-cartItemSingle__inner">   
+                  <div class="m-cartItemSingle__qty-wrap"> 
+                    <p class="m-cartItemSingle__qty-text">1 sztuka/i</p>
+                  </div>
+                  <div class="m-cartItemSingle__price-wrap"><span class="m-cartItemSingle__price-old">199 zł</span>
+                    <p class="m-cartItemSingle__price">99 zł</p>
+                  </div>
+                  <div class="m-cartItemSingle__sum-wrap text-right">
+                    <p class="m-cartItemSingle__sum"><span>99</span> zł</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m-cartDeliveryOverview">
+              <div class="o-cartDeliveryForm__item">
+                <div class="o-form__group m-formGroup -radiobutton">
+                  <input class="m-formGroup__input" type="radio" name="doprava" id="delivery_form_delivery-2" required checked><span class="m-formGroup__radiobutton a-radiobutton"></span>
+                  <label class="m-formGroup__label -bold" for="delivery_form_delivery-2">Odbiór osobisty</label>
+                  <label class="m-formGroup__price" for="delivery_form_delivery-2">99 zł</label>
+                </div>
+              </div>
+              <div class="o-cartDeliveryForm__item">
+                <div class="o-form__group m-formGroup -radiobutton">
+                  <input class="m-formGroup__input" type="radio" name="platba" id="delivery_form_payment-1" required checked><span class="m-formGroup__radiobutton a-radiobutton"></span>
+                  <label class="m-formGroup__label -bold" for="delivery_form_payment-1">Odbiór osobisty</label>
+                  <label class="m-formGroup__price" for="delivery_form_payment-1">99 zł</label>
+                </div>
+              </div>
+            </div>
+            <div class="m-cartPriceOverview">
+              <p class="m-cartPriceOverview__text">Całkowita cena z VAT:</p>
+              <h3 class="m-cartPriceOverview__price"><span class="m-cartPriceOverview__priceNumber">297</span> zł</h3>
+            </div>
+            <div class="o-cartUserOverview">
+              <div class="o-cartUserOverview__item m-cartUserItem">
+                <div class="m-cartUserItem__top">
+                  <div class="m-cartUserItem_title">Dane osobowe</div>
+                </div>
+                <div class="m-cartUserItem__bottom">
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Imię i nazwisko</div>
+                      <div class="m-cartUserItem__text">Petr Novák</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Adres e-mail</div>
+                      <div class="m-cartUserItem__text">petrnovak@email.cz</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Numer telefonu</div>
+                      <div class="m-cartUserItem__text">+420 765 986 987</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Ulica, numer domu</div>
+                      <div class="m-cartUserItem__text">Petra Bezruče, 18</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Miasto / gmina, stan, kod</div>
+                      <div class="m-cartUserItem__text">Praha 1, CZ, 123 45</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-cartUserOverview__item m-cartUserItem">
+                <div class="m-cartUserItem__top">
+                  <div class="m-cartUserItem_title">Adres rozliczeniowy</div>
+                </div>
+                <div class="m-cartUserItem__bottom">
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Imię i nazwisko</div>
+                      <div class="m-cartUserItem__text">Petr Novák</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Nazwa firmy</div>
+                      <div class="m-cartUserItem__text">abcd s.r.o.</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">IČO</div>
+                      <div class="m-cartUserItem__text">14803685</div>
+                    </div>
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">DIČ</div>
+                      <div class="m-cartUserItem__text">CZ14803685</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Ulica, numer domu</div>
+                      <div class="m-cartUserItem__text">Petra Bezruče, 18</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Miasto / gmina, stan, kod</div>
+                      <div class="m-cartUserItem__text">Praha 1, CZ, 123 45</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-cartUserOverview__item m-cartUserItem">
+                <div class="m-cartUserItem__top">
+                  <div class="m-cartUserItem_title">Adres dostawy</div>
+                </div>
+                <div class="m-cartUserItem__bottom">
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Imię i nazwisko</div>
+                      <div class="m-cartUserItem__text">Petr Novák</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Nazwa firmy</div>
+                      <div class="m-cartUserItem__text">abcd s.r.o.</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Ulica, numer domu</div>
+                      <div class="m-cartUserItem__text">Petra Bezruče, 18</div>
+                    </div>
+                  </div>
+                  <div class="m-cartUserItem__row">
+                    <div class="m-cartUserItem__single">
+                      <div class="m-cartUserItem__small">Miasto / gmina, stan, kod</div>
+                      <div class="m-cartUserItem__text">Praha 1, CZ, 123 45</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="o-cartUserNotes">
+              <h2 class="o-cartUserNotes__title">Nota zamówienia</h2>
+              <div class="o-form__group m-formGroup -textarea">
+                <textarea class="m-formGroup__input" name="question_form_text2" id="question_form_text2" rows="5" placeholder=" "></textarea>
+                <label class="m-formGroup__label" for="question_form_text2">Zanotuj tekst...<span class="m-formGroup__error">Nieprawidłowy tekst</span><span class="m-formGroup__success"></span></label>
+              </div>
+            </div>
+            <div class="o-cartUsefInfo">
+              <div class="o-form o-cartUsefInfo__form">
+                <div class="m-formGroup -checkbox">
+                  <input class="m-formGroup__input" type="checkbox" name="cart_form_heureka" id="cart_form_heureka"><span class="m-formGroup__checkbox a-checkbox"></span>
+                  <label class="m-formGroup__label" for="cart_form_heureka">Nie zgadzam się na przesłanie kwestionariusza ankiety dla zadowolonych klientów w celu poprawy usług.</label>
+                </div>
+                <div class="m-formGroup -checkbox">
+                  <input class="m-formGroup__input" type="checkbox" name="cart_form_termsa" id="cart_form_terms" required><span class="m-formGroup__checkbox a-checkbox"></span>
+                  <label class="m-formGroup__label" for="cart_form_terms">Zgadzam się z <a href="#">regulaminem</a> </label>
+                </div>
+              </div>
+            </div>
+            <div class="m-cartButtons"><a class="btn -dark" href="#">Cofnij się</a>
+              <button class="btn -secondary" type="submit" id="cart_3_submit">Wykończenie <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span></button>
             </div>
           </div>
-          <div class="m-cartItemSingle">
-            <div class="m-cartItemSingle__col-1"> 
-              <div class="m-cartItemSingle__thumb-wrap">
-                <div class="m-cartItemSingle__thumb"><img class="m-cartItemSingle__img lazy" src="img/placeholder-200x200.png" data-src="img/product-thumb-small.jpg"></div>
-              </div>
-            </div>
-            <div class="m-cartItemSingle__col-2">  
-              <div class="m-cartItemSingle__name-wrap">
-                <p class="m-cartItemSingle__name">Salerno and other lorem ipsum dolor sit amet lorem ispum</p>
-                <p class="m-cartItemSingle__tags"><span>Rozměr: 80/200 cm</span> <span>Varianta: grey flex</span></p>
-                <p class="m-cartItemSingle__stock">Dostupné skladem   </p>
-              </div>
-              <div class="m-cartItemSingle__inner">   
-                <div class="m-cartItemSingle__qty-wrap"> 
-                  <p class="m-cartItemSingle__qty-text">1 kus/ů</p>
-                </div>
-                <div class="m-cartItemSingle__price-wrap"><span class="m-cartItemSingle__price-old">14 290 Kč</span>
-                  <p class="m-cartItemSingle__price">8 489 Kč</p>
-                </div>
-                <div class="m-cartItemSingle__sum-wrap text-right">
-                  <p class="m-cartItemSingle__sum"><span>8 489</span> Kč</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row m-cartItemSingle">
-            <div class="m-cartItemSingle__col-1"> 
-              <div class="m-cartItemSingle__thumb-wrap">
-                <div class="m-cartItemSingle__thumb"><img class="m-cartItemSingle__img lazy" src="img/placeholder-200x200.png" data-src="img/product-thumb-small.jpg"></div>
-              </div>
-            </div>
-            <div class="m-cartItemSingle__col-2">  
-              <div class="m-cartItemSingle__name-wrap">
-                <p class="m-cartItemSingle__name">Salerno and other lorem ipsum dolor sit amet lorem ispum</p>
-                <p class="m-cartItemSingle__stock">Dostupné skladem   </p>
-              </div>
-              <div class="m-cartItemSingle__inner">   
-                <div class="m-cartItemSingle__qty-wrap"> 
-                  <p class="m-cartItemSingle__qty-text">1 kus/ů</p>
-                </div>
-                <div class="m-cartItemSingle__price-wrap"><span class="m-cartItemSingle__price-old">14 290 Kč</span>
-                  <p class="m-cartItemSingle__price">8 489 Kč</p>
-                </div>
-                <div class="m-cartItemSingle__sum-wrap text-right">
-                  <p class="m-cartItemSingle__sum"><span>8 489</span> Kč</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="m-cartDeliveryOverview">
-            <div class="o-cartDeliveryForm__item">
-              <div class="o-form__group m-formGroup -radiobutton">
-                <input class="m-formGroup__input" type="radio" name="doprava" id="delivery_form_delivery-2" required checked><span class="m-formGroup__radiobutton a-radiobutton"></span>
-                <label class="m-formGroup__label -bold" for="delivery_form_delivery-2">Odbiór osobisty</label>
-                <label class="m-formGroup__price" for="delivery_form_delivery-2">99 zł</label>
-              </div>
-            </div>
-            <div class="o-cartDeliveryForm__item">
-              <div class="o-form__group m-formGroup -radiobutton">
-                <input class="m-formGroup__input" type="radio" name="platba" id="delivery_form_payment-1" required checked><span class="m-formGroup__radiobutton a-radiobutton"></span>
-                <label class="m-formGroup__label -bold" for="delivery_form_payment-1">Odbiór osobisty</label>
-                <label class="m-formGroup__price" for="delivery_form_payment-1">99 zł</label>
-              </div>
-            </div>
-          </div>
-          <div class="m-cartPriceOverview">
-            <p class="m-cartPriceOverview__text">Całkowita cena z VAT:</p>
-            <h3 class="m-cartPriceOverview__price"><span class="m-cartPriceOverview__priceNumber">297</span> zł</h3>
-          </div>
-          <div class="o-cartUserOverview">
-            <div class="o-cartUserOverview__item m-cartUserItem">
-              <div class="m-cartUserItem__top">
-                <div class="m-cartUserItem_title">Dane osobowe</div>
-              </div>
-              <div class="m-cartUserItem__bottom">
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Jméno a příjmení</div>
-                    <div class="m-cartUserItem__text">Petr Novák</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Email</div>
-                    <div class="m-cartUserItem__text">petrnovak@email.cz</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Telefon</div>
-                    <div class="m-cartUserItem__text">+420 765 986 987</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Ulice, číslo popisné</div>
-                    <div class="m-cartUserItem__text">Petra Bezruče, 18</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Město/obec</div>
-                    <div class="m-cartUserItem__text">Praha 1</div>
-                  </div>
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">PSČ</div>
-                    <div class="m-cartUserItem__text">187 98</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="o-cartUserOverview__item m-cartUserItem">
-              <div class="m-cartUserItem__top">
-                <div class="m-cartUserItem_title">Fakturační adresa</div>
-              </div>
-              <div class="m-cartUserItem__bottom">
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Jméno a příjmení</div>
-                    <div class="m-cartUserItem__text">Petr Novák</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Název firmy</div>
-                    <div class="m-cartUserItem__text">abcd s.r.o.</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">IČO</div>
-                    <div class="m-cartUserItem__text">14803685</div>
-                  </div>
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">DIČ</div>
-                    <div class="m-cartUserItem__text">CZ14803685</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Ulice, číslo popisné</div>
-                    <div class="m-cartUserItem__text">Petra Bezruče, 18</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Město/obec</div>
-                    <div class="m-cartUserItem__text">Praha 1</div>
-                  </div>
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">PSČ</div>
-                    <div class="m-cartUserItem__text">187 98           </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="o-cartUserOverview__item m-cartUserItem">
-              <div class="m-cartUserItem__top">
-                <div class="m-cartUserItem_title">Dodací adresa</div>
-              </div>
-              <div class="m-cartUserItem__bottom">
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Jméno a příjmení</div>
-                    <div class="m-cartUserItem__text">Petr Novák</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Název firmy</div>
-                    <div class="m-cartUserItem__text">abcd s.r.o.</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Ulice, číslo popisné</div>
-                    <div class="m-cartUserItem__text">Petra Bezruče, 18</div>
-                  </div>
-                </div>
-                <div class="m-cartUserItem__row">
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">Město/obec</div>
-                    <div class="m-cartUserItem__text">Praha 1</div>
-                  </div>
-                  <div class="m-cartUserItem__single">
-                    <div class="m-cartUserItem__small">PSČ</div>
-                    <div class="m-cartUserItem__text">187 98   </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="o-cartUserNotes">
-            <h2 class="o-cartUserNotes__title">Nota zamówienia</h2>
-            <div class="o-form__group m-formGroup -textarea">
-              <textarea class="m-formGroup__input" name="question_form_text2" id="question_form_text2" rows="5" placeholder=" "></textarea>
-              <label class="m-formGroup__label" for="question_form_text2">Zanotuj tekst...<span class="m-formGroup__error">Nieprawidłowy tekst</span><span class="m-formGroup__success"></span></label>
-            </div>
-          </div>
-          <div class="o-cartUsefInfo">
-            <div class="o-form o-cartUsefInfo__form">
-              <div class="m-formGroup -checkbox">
-                <input class="m-formGroup__input" type="checkbox" name="cart_form_heureka" id="cart_form_heureka"><span class="m-formGroup__checkbox a-checkbox"></span>
-                <label class="m-formGroup__label" for="cart_form_heureka">Nie zgadzam się na przesłanie kwestionariusza ankiety dla zadowolonych klientów w celu poprawy usług.</label>
-              </div>
-              <div class="m-formGroup -checkbox">
-                <input class="m-formGroup__input" type="checkbox" name="cart_form_termsa" id="cart_form_terms" required><span class="m-formGroup__checkbox a-checkbox"></span>
-                <label class="m-formGroup__label" for="cart_form_terms">Zgadzam się z <a href="#">regulaminem</a> </label>
-              </div>
-            </div>
-          </div>
-          <div class="m-cartButtons"><a class="btn -dark" href="#">Cofnij się</a>
-            <button class="btn -secondary" type="submit" id="cart_3_submit">Wykończenie <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span></button>
-          </div>
-        </form>
+        </div>
       </div>
       <div class="m-cartBarResponsive">
         <div class="m-cartBarResponsive__priceWrap">
-          <p class="m-cartBarResponsive__text">Celková cena s DPH</p>
-          <h3 class="m-cartBarResponsive__price"><span>65 599</span> Kč</h3>
+          <p class="m-cartBarResponsive__text">Całkowita cena z VAT</p>
+          <h3 class="m-cartBarResponsive__price"><span>297</span> zł</h3>
         </div>
         <div class="m-cartBarResponsive__btnWrap">
           <button class="btn m-cartBarResponsive__btn" onclick="$('#cart_3_submit').click();">Wykończenie <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span> </button>
@@ -446,16 +447,25 @@
         <div class="container o-footerContacts__container">
           <div class="row o-footerContacts__row">
             <div class="col-12 col-md-6 o-footerContacts__col">
-              <h4 class="o-footerContacts__title">Subskrybuj najnowsze wydarzenia i wiadomości e-mail</h4>
+              <div class="m-emailSubscribe">
+                <h4 class="m-emailSubscribe__title">Subskrybuj najnowsze wydarzenia i wiadomości e-mail</h4>
+                <form class="m-emailSubscribe__form" method="post" action="">
+                  <div class="m-emailSubscribe__inputWrap">
+                    <input class="m-emailSubscribe__input" type="email" id="sub-email" name="sub-email" required placeholder="Wpisz swój adres e-mail" autocomplete="email">
+                    <button class="btn m-emailSubscribe__btn" type="submit" id="sub-button" name="sub-button">Subskrybuj</button>
+                  </div>
+                  <label class="m-emailSubscribe__agree"><span class="m-emailSubscribe__inlineText">Przesyłając formularz, zgadzasz się na warunki przetwarzania <a href="#">swoich danych osobowych</a></span></label>
+                </form>
+              </div>
             </div>
             <div class="col-12 col-md-6 o-footerContacts__col">
               <h4 class="o-footerContacts__title">Skontaktuj się z nami pod adresem</h4>
               <div class="o-footerContacts__wrap">
                 <div class="o-footerContacts__single">
-                  <div class="a-icon -phone -white o-footerContacts__icon"></div> +420 727 877 380
+                  <div class="a-icon -phone -white o-footerContacts__icon"></div> 656 985 734
                 </div>
                 <div class="o-footerContacts__single">
-                  <div class="a-icon -envelope -white o-footerContacts__icon"></div> info@mojespani.cz
+                  <div class="a-icon -envelope -white o-footerContacts__icon"></div> info@yarnart.pl
                 </div>
               </div>
             </div>

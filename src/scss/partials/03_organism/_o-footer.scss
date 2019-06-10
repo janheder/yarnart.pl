@@ -1,7 +1,83 @@
 .o-footer{
     background: $bg-brand-dark;
 }
+.m-emailSubscribe{
+    padding: 0;
+}
+.m-emailSubscribe__title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $text-white;
+    margin-bottom: 3rem;
+    margin-top: 0rem;
+}
+.m-emailSubscribe__text{
+    @include f-16-white-regular;
+    margin-bottom: 3rem;
+}
+.m-emailSubscribe__inputWrap{
+    position: relative;
+    max-width: 520px;
+}
+.m-emailSubscribe__input{
+    height: 5.4rem;
+    width: 100%;
+}
+.m-emailSubscribe__btn{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    min-height: 5rem;
+    height: auto;
+}
+.m-emailSubscribe__agree{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+.m-emailSubscribe__inlineText{
+    @include f-14-white-regular;
+    font-size: 1.3rem;
 
+    a{
+        color: $text-white;
+        font-size: 1.3rem;
+    }
+}
+.m-emailSubscribe__check{
+    opacity: 0;
+    position: absolute;
+}
+.m-emailSubscribe__checkbox{
+    display: block;
+    height: 14px;
+    width: 14px;
+    background: $bg-white;
+    border-radius: $border-radius-primary;
+    position: relative;
+    flex-shrink: 0;
+}
+.m-emailSubscribe__check:checked + .m-emailSubscribe__checkbox{
+    background: $bg-brand-secondary;
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: 0;
+        bottom: 0;
+        left: 5px;
+        width: 4px;
+        height: 8px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}
 /* ========================================================================== */
 /* FOOTER CONTACTS */
 /* ========================================================================== */
@@ -34,14 +110,10 @@
         background-size: 12px 12px;
     }
 }
-.o-footerContacts__col:last-child{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
+
 .o-footerContacts__title{
     font-size: 1.8rem;
-    font-weight: 00;
+    font-weight: 600;
     color: $text-white;
     margin-bottom: 3rem;
     margin-top: 0rem;
