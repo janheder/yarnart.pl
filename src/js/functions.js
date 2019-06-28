@@ -130,8 +130,8 @@ var carousel_main = new Swiper('.m-heroCarousel__content', {
       clickable: true,
   },
   navigation: {
-      nextEl: '.m-productCarousel__swiperButton.-next',
-      prevEl: '.m-productCarousel__swiperButton.-prev',
+    nextEl: '.o-hero__swiperButton.-next',
+    prevEl: '.o-hero__swiperButton.-prev',
   },
 });
 
