@@ -266,6 +266,12 @@ html(lang=lang)
                                 .collapse.o-form__groupCollapse(id="formRegisterCollapse")
 
                                     .o-form__group.m-formGroup
+                                        input.m-formGroup__input(type="text" name="register_form_register_username" id="register_form_register_username" autocomplete="username" placeholder=" ")
+                                        label.m-formGroup__label(for="register_form_register_username") Nazwa użytkownika
+                                        span.m-formGroup__error Nieprawidłowy nazwa użytkownika
+                                        span.m-formGroup__success
+
+                                    .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="password" name="register_form_register_password" id="register_form_register_password" autocomplete="password" placeholder=" ")
                                         label.m-formGroup__label(for="register_form_register_password") Hasło
                                         span.m-formGroup__error Nieprawidłowy hasło
