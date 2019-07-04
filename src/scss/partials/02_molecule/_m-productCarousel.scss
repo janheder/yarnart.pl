@@ -13,7 +13,7 @@
 .m-productCarousel__slide{
     height: auto;
 }
-.m-productCarousel__swiperButton{
+.m-productCarousel__swiperButton, .o-hero__swiperButton{
     background: rgba(0,0,0,0.5);
     border-radius: $border-radius-primary;
     height: 48px;

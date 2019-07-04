@@ -116,23 +116,25 @@ $(document).ready(function(){
 // HERO CAROUSEL CONTROL
 // =============================================================================
 
-var carousel_main = new Swiper('.m-heroCarousel__content', {
-  lazy: true,
-  autoplay: {
-    delay: 59999000,
-  },
-  spaceBetween: 0,
-  grabCursor: true,
-  zoom: false,
-  loop: true,
-  pagination: {
-      el: '.m-heroCarousel__pagination',
-      clickable: true,
-  },
-  navigation: {
-    nextEl: '.o-hero__swiperButton.-next',
-    prevEl: '.o-hero__swiperButton.-prev',
-  },
+$(document).ready(function(){
+    var carousel_main = new Swiper('.m-heroCarousel__content', {
+    lazy: true,
+    autoplay: {
+        delay: 59999000,
+    },
+    spaceBetween: 0,
+    grabCursor: true,
+    zoom: false,
+    loop: true,
+    pagination: {
+        el: '.m-heroCarousel__pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.o-hero__swiperButton.-next',
+        prevEl: '.o-hero__swiperButton.-prev',
+    },
+    });
 });
 
 // =============================================================================
