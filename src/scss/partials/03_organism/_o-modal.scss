@@ -25,6 +25,18 @@
     background: $bg-white;
     border-top-left-radius: $border-radius-primary;
     border-top-right-radius: $border-radius-primary;
+
+    &.-img{
+        .o-modal__close{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            opacity: 1;
+            background: $bg-white;
+        }
+    }
 }
 .o-modal__title{
     @include f-24-primary-semibold;
@@ -66,6 +78,11 @@
         margin-right: 0;
         order: 2;
     }
+}
+.o-modal__text{
+    font-size: 1.6rem;
+    line-height: 1.75;
+    padding-top: 1rem;
 }
 
 @media (min-width: 768px){

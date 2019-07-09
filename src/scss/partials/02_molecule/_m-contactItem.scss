@@ -12,9 +12,9 @@
     border-top-left-radius: $border-radius-primary;
 }
 .m-contactItem_content{
-    padding: 20px;
+    padding: 20px 0;
     background: $bg-white;
-    height: 100%;
+
     border-bottom-right-radius: $border-radius-primary;
     border-bottom-left-radius: $border-radius-primary;
 }
@@ -43,4 +43,7 @@
 .m-contactItem__button{
     text-align: center;
     margin-top: 20px;
+}
+.m-contactItem__subtitle {
+    display: block;
 }

@@ -490,13 +490,13 @@ $('.o-cartDeliveryForm .m-formGroup__input[name="doprava"], .o-cartDeliveryForm 
 $(".o-cartDeliveryForm .o-cartDeliveryForm__item input[name='platba']").prop("disabled", true);
 
 $(".o-cartDeliveryForm__item input[name='doprava']").click(function () {
-    $(".o-cartDeliveryForm__item input[name='platba']").load(location.href +".o-cartDeliveryForm__item input[name='platba']>*","");
+    $(".o-cartDeliveryForm__item input[name='platba']").load(location.href +" .o-cartDeliveryForm__item input[name='platba']>*","");
 });
 
 // =============================================================================
 // CART FREE DELIVERY BAR
 // =============================================================================
-
+/*
 $("body").on('DOMSubtreeModified', ".m-cartPriceOverview__priceNumber", function(){
     var valueNum = $(".m-cartPriceOverview__priceNumber").text();
     var valueMax = $(".m-cartFreeShipping__progressBar").attr("aria-valuemax");
@@ -526,7 +526,7 @@ $("body").on('DOMSubtreeModified', ".m-cartOverview__priceTitle", function(){
     var price2 = $(".m-cartOverview__priceTitle").text();
     $(".m-cartBarResponsive__price span").text(price2);
 });
-
+*/
 // =============================================================================
 // FORM USER CART
 // =============================================================================

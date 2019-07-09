@@ -1,14 +1,14 @@
-.modal.fade(id="modal-info" tabindex="-1" role="dialog" aria-labelledby="modal-info-heading" aria-hidden="true")
-    .modal-dialog(role="document")
-        .modal-content
+.modal.fade.o-modal(id="modal-info" tabindex="-1" role="dialog" aria-labelledby="modal-info-heading" aria-hidden="true")
+    .modal-dialog.o-modal__dialog(role="document")
+        .modal-content.o-modal__content
 
-            .modal-header.post__image-container
+            .modal-header.o-modal__header.-img.post__image-container
                 img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-page-contact-thumb-large.jpg" data-src=URLbase+"img/page-contact-thumb-large.jpg" alt="#" title="#")
-                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
-                    span.cross-icon
+                button.o-modal__close(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span.a-icon.-cross.-red.o-modal__closeIcon
 
-            .modal-body.modal-info__body
-                h5.modal-title(id="modal-info-heading") Lorem ipsum dolor sit amet
-                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-            .modal-footer.modal-info__footer
+            .modal-body.o-modal__body
+                h3.modal-title.o-modal__title(id="modal-info-heading") Lorem ipsum dolor sit amet
+                p.o-modal__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            .modal-footer.o-modal__footer
                 a.btn(href="#") Tekst przycisku #[span.btn__icon.arrow-icon.white]

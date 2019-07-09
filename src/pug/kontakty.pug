@@ -8,6 +8,7 @@ html(lang=lang)
             include partials/_navMain.pug
             include partials/_navProducts.pug
         include partials/_modal-reklamace.pug
+        include partials/_modal-info.pug
 
         section.o-pageHeading
             include partials/_breadcrumb-transparent.pug
@@ -20,54 +21,55 @@ html(lang=lang)
                         .row
                             .col-12.col-sm-12.col-md-6
                                 .m-contactItem
-                                    h2.m-contactItem__title Zákaznická linka
+                                    h2.m-contactItem__title Siedziba firmy
                                     .m-contactItem_content
-                                        strong.m-contactItem__subtitle Provozní doba: Po-Pá 8.00–16.00
-                                        .m-contactItem__phoneWrap
-                                            span.a-icon.-phone.m-contactItem__icon 
-                                            .m-contactItem__phone +420 606 311 796
-                                        p.m-contactItem__text Na tomto telefonním čísle zjistíte obecné informace o dostupnostech jednotlivých produktů, době dodání, technické specifikace a máte možnost provést telefonickou objednávku zboží.
-                                        strong.m-contactItem__subtitle Mimo pracovní dobu, mailově na info@best-nabytek.cz
+                                        strong.m-contactItem__subtitle AXland.cz s.r.o.
 
+                                        strong.m-contactItem__subtitle Aleje 473/109, Hošťálkovice
+                                        strong.m-contactItem__subtitle 725 28 Ostrava
+
+                                        strong.m-contactItem__subtitle IČO: 29444519
+                                        strong.m-contactItem__subtitle DIČ: CZ29444519
 
                             .col-12.col-sm-12.col-md-6
                                 .m-contactItem
-                                    h2.m-contactItem__title Stav objednávek
+                                    h2.m-contactItem__title Informacje kontaktowe
                                     .m-contactItem_content
-                                        strong.m-contactItem__subtitle Provozní doba: Po-Pá 8.00–16.00
                                         .m-contactItem__phoneWrap
                                             span.a-icon.-phone.m-contactItem__icon 
-                                            .m-contactItem__phone +420 606 311 796
-                                        p.m-contactItem__text Na tomto telefonním čísle zjistíte stav objednávky.
-                                        strong.m-contactItem__subtitle Osobní odběr, pouze po předchozí tel. domluvě na +420 602 161 304
-                                        strong.m-contactItem__subtitle Mimo pracovní dobu, mailově na info@best-nabytek.cz
+                                            .m-contactItem__phone +420 702 010 909
+ 
+                                        strong.m-contactItem__subtitle E-mail: info@bezvapleteni.cz
+                                        strong.m-contactItem__subtitle Pracovní dny od 9:00 do 15:30
 
-                            .col-12.col-sm-12.col-md-6
+                            .col-12.col-sm-12.col-md-12
                                 .m-contactItem
-                                    h2.m-contactItem__title Informace o přepravě zboží
-                                    .m-contactItem_content
-                                        strong.m-contactItem__subtitle Provozní doba: Po-Pá 8.00–16.00
-                                        .m-contactItem__phoneWrap
-                                            span.a-icon.-phone.m-contactItem__icon 
-                                            .m-contactItem__phone +420 602 764 755
-                                        strong.m-contactItem__subtitle Mimo pracovní dobu, mailově na info@best-nabytek.cz
+                                    h2.m-contactItem__title Pytania dotyczące dostępności i wariantów kolorystycznych towarów
+                                    .row
+                                        .col-12.col-sm-12.col-md-6
+                                            .m-contactItem_content
+                                                strong.m-contactItem__subtitle Kierownik magazynu
+                                                strong.m-contactItem__subtitle Bc. Eva Krylová
+                                                .m-contactItem__phoneWrap
+                                                    span.a-icon.-phone.m-contactItem__icon 
+                                                    .m-contactItem__phone +420 605 248 687
+                
 
-
-                            .col-12.col-sm-12.col-md-6
-                                .m-contactItem
-                                    h2.m-contactItem__title Reklamace
-                                    .m-contactItem_content
-                                
-                                        strong.m-contactItem__subtitle Zde podávejte případné reklamace. Reklamaci provedete kliknutím na tlačítko níže s názvem REKLAMACE. Máte zde možnost přiložit fotografie a popsat případné nedostatky.
-                                        .m-contactItem__button
-                                            button.btn.-secondary(data-toggle="modal" data-target="#modal-reklamace") #[span.-icon.-envelope] Reklamační formulář
+                                        .col-12.col-sm-12.col-md-6
+                                            .m-contactItem_content
+                                                strong.m-contactItem__subtitle Dział fakturowania
+                                                strong.m-contactItem__subtitle Bc. Eva Krylová
+                                                .m-contactItem__phoneWrap
+                                                    span.a-icon.-phone.m-contactItem__icon 
+                                                    .m-contactItem__phone +420 724 537 974
+            
 
 
                         .page-contact__map
-                            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.657631663965!2d18.3637427160331!3d49.679587479376394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713f710ff234161%3A0x732b453a9946a156!2zSmFuYSDEjGFwa2EgMzA5NywgRnLDvWRlaywgNzM4IDAxIEZyw71kZWstTcOtc3Rlaw!5e0!3m2!1scs!2scz!4v1550161260983" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen)
+                            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.131178939238!2d18.21402374954165!3d49.85878046652874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e3cd1ca10699%3A0xa253fc14190c98c6!2zQWxlamUsIDcyNSAyOCBPc3RyYXZhLUhvxaHFpcOhbGtvdmljZQ!5e0!3m2!1scs!2scz!4v1562686627239!5m2!1scs!2scz" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen)
 
-                        h3 Informační oznámení o EET
-                        p "Podle zákona o evidenci tržeb je prodávající povinen  vystavit  kupujícímu  účtenku.  Zároveň  je povinen zaevidovat přijatou  tržbu  u správce  daně  online;  v  případě  technického  výpadku  pak  nejpozději  do 48 hodin.", eviduje-li poplatník v daném pokladním místě tržby v běžném režimu.
+                        h3 EET Information Notification
+                        p Zgodnie z ustawą o rejestracji sprzedaży Sprzedający jest zobowiązany do wystawienia Kupującemu pokwitowania. Jednocześnie jest on zobowiązany do zarejestrowania otrzymanej sprzedaży u administratora podatkowego online
 
 
         include partials/_footer.pug
