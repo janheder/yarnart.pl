@@ -49,7 +49,7 @@ article{
 \*------------------------------------*/
 
 article.post{
-    & p, & b, & i, & u, & a, & strong{
+    & p, & b, & i, & u, & a, & strong, & li{
         font-family: $font-family-primary;
         line-height: 3rem;
         font-size: 1.8rem;
