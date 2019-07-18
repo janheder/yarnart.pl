@@ -47,3 +47,16 @@
     padding-right: 10px;
     width: 50%;
 }
+
+@media screen and (max-width: 991px){
+    .m-cartUserItem__row{
+        flex-basis: 50%;
+        width: 50%;
+    } 
+}
+@media screen and (max-width: 500px){
+    .m-cartUserItem__row{
+        flex-basis: 100%;
+        width: 100%;
+    } 
+}

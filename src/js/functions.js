@@ -453,16 +453,40 @@ $(".o-cartDeliveryForm__item input[name='doprava']").click(function () {
 // CART FREE DELIVERY BAR
 // =============================================================================
 
+
+/*
+$(".m-cartItemSingle").each(function(){
+    var cenaKus = $(this).find(".m-cartItemSingle__price").text();
+    var cenaKusClean = parseFloat(cenaKus.substr(0, cenaKus.indexOf(' zł')));
+
+    $(this).find(".m-numberStepper__btnUp").click(function(){
+        var SpinnerInput = $(this).closest('.m-numberStepper').find('.m-numberStepper__input');
+        if ($(SpinnerInput).val() < 99){
+            spinnerVal = parseFloat($(SpinnerInput).val());
+            $(SpinnerInput).val( spinnerVal + 1 );
+            $(SpinnerInput).parents(".m-cartItemSingle").find(".m-cartItemSingle__sum span").text(parseFloat(cenaKusClean*(spinnerVal+1)));
+        }
+    });
+    $(this).find(".m-numberStepper__btnDown").click(function(){
+        var SpinnerInput = $(this).closest('.m-numberStepper').find('.m-numberStepper__input');
+        if ($(SpinnerInput).val() > 1){
+            spinnerVal = parseFloat($(SpinnerInput).val());
+            $(SpinnerInput).val( spinnerVal - 1 );
+            $(SpinnerInput).parents(".m-cartItemSingle__inner").find(".m-cartItemSingle__sum span").text(parseFloat(cenaKusClean*(spinnerVal-1)));
+        }
+    });
+}); 
+
+*/
+
+
+
+/*
+
 var produktyCena = 0;
 
 $('.m-cartItemSingle__sum span').each(function(){
     produktyCena += parseFloat($(this).text().replace(/,/g , ""));
-});
-
-$("body").on('DOMSubtreeModified', ".m-cartItemSingle__sum span", function(){
-    $('.m-cartItemSingle__sum span').each(function(){
-        produktyCena += parseFloat($(this).text().replace(/,/g , ""));
-    }); 
 });
 
 
@@ -521,29 +545,13 @@ $(platbaInput).click(function () {
 });
 
 
+*/
 
+
+
+$("body").on('DOMSubtreeModified', ".m-cartPriceOverview__priceNumber", function(){ 
     var valueNum = $(".m-cartPriceOverview__priceNumber").text();
     var valueMax = 300;
-    var cartPrice = valueMax - valueNum;
-    if(cartPrice > 0){
-        $(".m-cartFreeShipping__text").html("Kup za <span class='m-cartFreeShipping__price'>" + (cartPrice)  + "</span> zł więcej a masz bezpłatną wysyłkę");
-    }else{
-        $(".m-cartFreeShipping__text").text("Darmowa wysyłka");
-    }
-
-
-$("body").on('DOMSubtreeModified', ".m-cartPriceOverview__priceNumber", function(){
-    var valueNum = $(".m-cartPriceOverview__priceNumber").text();
-    var valueMax = 300;
-    var valueFin = (valueNum / valueMax)*100;
-    if(valueFin <= 100){
-        $(".m-cartFreeShipping__progressBar").css("width", valueFin + "%");
-    }else{
-        $(".m-cartFreeShipping__progressBar").css("width", "100%"); 
-    }
-
-    $(".m-cartFreeShipping__price").text((valueMax - valueNum ) + " zł");
-
     var cartPrice = valueMax - valueNum;
     
     if(cartPrice > 0){
@@ -551,21 +559,28 @@ $("body").on('DOMSubtreeModified', ".m-cartPriceOverview__priceNumber", function
     }else{
         $(".m-cartFreeShipping__text").text("Darmowa wysyłka");
     }
-
-    $(".m-cartBarResponsive__price span").text(valueNum);
 });
+
+
+
+
+/*
 
 $("body").on('DOMSubtreeModified', ".m-cartItemSingle__sum span", function(){
+    var produktyCena = 0;
     $('.m-cartItemSingle__sum span').each(function(){
+        
         produktyCena += parseFloat($(this).text().replace(/,/g , ""));
+        
     }); 
-    var dname = $(dopravaInput+":checked").siblings(".m-formGroup__price").html();
-    var dnameClean= parseFloat(dname.substr(0, dname.indexOf(' zł')));
-    var pname = $(platbaInput+":checked").siblings(".m-formGroup__price").html();
-    var pnameClean= parseFloat(pname.substr(0, pname.indexOf(' zł')));
-    $(".m-cartPriceOverview__priceNumber").text(produktyCena+dnameClean+pnameClean);
+
+    var dname = $(dopravaInput+":checked").siblings(".m-formGroup__price").data("price");
+
+
+
 });
 
+*/
 
 $("body").on('DOMSubtreeModified', ".m-cartPriceOverview__priceNumber", function(){
     var price2 = $(".m-cartPriceOverview__priceNumber").text();

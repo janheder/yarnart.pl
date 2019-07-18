@@ -89,19 +89,19 @@ html(lang=lang)
                                                             span.m-numberStepper__iconDown
 
                                             .m-cartItemSingle__price-wrap
-                                                p.m-cartItemSingle__price 99 zł
+                                                p.m-cartItemSingle__price 50 zł
                                                 span.m-cartItemSingle__vat w tym VAT
                                             .m-cartItemSingle__sum-wrap
-                                                p.m-cartItemSingle__sum #[span 99] zł
+                                                p.m-cartItemSingle__sum #[span 50] zł
                                                 span.m-cartItemSingle__vat w tym VAT
                                             .m-cartItemSingle__delete-wrap
                                                 a.a-icon.-crossCircle.-red(href="#")
 
                             .m-cartPriceOverview
                                 .m-cartFreeShipping  
-                                    p.m-cartFreeShipping__text Przy zamówieniu powyżej #[span.m-cartFreeShipping__price 99 zł] masz bezpłatną wysyłkę
+                                    p.m-cartFreeShipping__text Przy zamówieniu powyżej #[span.m-cartFreeShipping__price 300 zł] masz bezpłatną wysyłkę
                                 p.m-cartPriceOverview__text Całkowita cena z VAT:
-                                h3.m-cartPriceOverview__price #[span.m-cartPriceOverview__priceNumber 297] zł
+                                h3.m-cartPriceOverview__price #[span.m-cartPriceOverview__priceNumber 0] zł
 
 
                             .o-cartDeliveryForm
@@ -112,14 +112,14 @@ html(lang=lang)
                                         input.m-formGroup__input(type="radio" name="doprava" id="delivery_form_delivery-1" required)
                                         span.m-formGroup__radiobutton.a-radiobutton
                                         label.m-formGroup__label.-bold(for="delivery_form_delivery-1") Odbiór osobisty
-                                        label.m-formGroup__price(for="delivery_form_delivery-1") 99 zł
+                                        label.m-formGroup__price(for="delivery_form_delivery-1" data-price="99") 99 zł
 
                                 .o-cartDeliveryForm__item
                                     .o-form__group.m-formGroup.-radiobutton
                                         input.m-formGroup__input(type="radio" name="doprava" id="delivery_form_delivery-2" required checked)
                                         span.m-formGroup__radiobutton.a-radiobutton
                                         label.m-formGroup__label.-bold(for="delivery_form_delivery-2") Odbiór osobisty
-                                        label.m-formGroup__price(for="delivery_form_delivery-2") 19 zł
+                                        label.m-formGroup__price(for="delivery_form_delivery-2" data-price="19") 19 zł
 
 
 
@@ -130,21 +130,21 @@ html(lang=lang)
                                         input.m-formGroup__input(type="radio" name="platba" id="delivery_form_payment-1" required checked)
                                         span.m-formGroup__radiobutton.a-radiobutton
                                         label.m-formGroup__label.-bold(for="delivery_form_payment-1") Odbiór osobisty
-                                        label.m-formGroup__price(for="delivery_form_payment-1") 99 zł
+                                        label.m-formGroup__price(for="delivery_form_payment-1" data-price="99") 99 zł
 
                                 .o-cartDeliveryForm__item
                                     .o-form__group.m-formGroup.-radiobutton
                                         input.m-formGroup__input(type="radio" name="platba" id="delivery_form_payment-2" required disabled)
                                         span.m-formGroup__radiobutton.a-radiobutton
                                         label.m-formGroup__label.-bold(for="delivery_form_payment-2") Odbiór osobisty
-                                        label.m-formGroup__price(for="delivery_form_payment-2") 99 zł
+                                        label.m-formGroup__price(for="delivery_form_payment-2" data-price="19") 19 zł
 
                                 .o-cartDeliveryForm__item
                                     .o-form__group.m-formGroup.-radiobutton
                                         input.m-formGroup__input(type="radio" name="platba" id="delivery_form_payment-3" required)
                                         span.m-formGroup__radiobutton.a-radiobutton
                                         label.m-formGroup__label.-bold(for="delivery_form_payment-3") Odbiór osobisty
-                                        label.m-formGroup__price(for="delivery_form_payment-3") 99 zł
+                                        label.m-formGroup__price(for="delivery_form_payment-3" data-price="99") 99 zł
 
 
                             .m-cartButtons

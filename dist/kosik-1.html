@@ -59,7 +59,7 @@
     <link href="css/style.min.css" rel="stylesheet">
     <!-- jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')</script>
+    <script>window.jQuery || document.write('<script src="js/plugins/jquery.min.js">\x3C/script>')</script>
   </head>
   <body>
     <div class="modal fade o-modal" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login" aria-hidden="true">
@@ -259,10 +259,10 @@
                       </div>
                     </div>
                     <div class="m-cartItemSingle__price-wrap">
-                      <p class="m-cartItemSingle__price">99 zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
+                      <p class="m-cartItemSingle__price">50 zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
                     </div>
                     <div class="m-cartItemSingle__sum-wrap">
-                      <p class="m-cartItemSingle__sum"><span>99</span> zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
+                      <p class="m-cartItemSingle__sum"><span>50</span> zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
                     </div>
                     <div class="m-cartItemSingle__delete-wrap"><a class="a-icon -crossCircle -red" href="#"></a></div>
                   </div>
@@ -290,10 +290,10 @@
                       </div>
                     </div>
                     <div class="m-cartItemSingle__price-wrap">
-                      <p class="m-cartItemSingle__price">99 zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
+                      <p class="m-cartItemSingle__price">50 zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
                     </div>
                     <div class="m-cartItemSingle__sum-wrap">
-                      <p class="m-cartItemSingle__sum"><span>99</span> zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
+                      <p class="m-cartItemSingle__sum"><span>50</span> zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
                     </div>
                     <div class="m-cartItemSingle__delete-wrap"><a class="a-icon -crossCircle -red" href="#"></a></div>
                   </div>
@@ -321,10 +321,10 @@
                       </div>
                     </div>
                     <div class="m-cartItemSingle__price-wrap">
-                      <p class="m-cartItemSingle__price">99 zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
+                      <p class="m-cartItemSingle__price">50 zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
                     </div>
                     <div class="m-cartItemSingle__sum-wrap">
-                      <p class="m-cartItemSingle__sum"><span>99</span> zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
+                      <p class="m-cartItemSingle__sum"><span>50</span> zł</p><span class="m-cartItemSingle__vat">w tym VAT</span>
                     </div>
                     <div class="m-cartItemSingle__delete-wrap"><a class="a-icon -crossCircle -red" href="#"></a></div>
                   </div>
@@ -332,10 +332,10 @@
               </div>
               <div class="m-cartPriceOverview">
                 <div class="m-cartFreeShipping"> 
-                  <p class="m-cartFreeShipping__text">Przy zamówieniu powyżej <span class="m-cartFreeShipping__price">99 zł</span> masz bezpłatną wysyłkę</p>
+                  <p class="m-cartFreeShipping__text">Przy zamówieniu powyżej <span class="m-cartFreeShipping__price">300 zł</span> masz bezpłatną wysyłkę</p>
                 </div>
                 <p class="m-cartPriceOverview__text">Całkowita cena z VAT:</p>
-                <h3 class="m-cartPriceOverview__price"><span class="m-cartPriceOverview__priceNumber">297</span> zł</h3>
+                <h3 class="m-cartPriceOverview__price"><span class="m-cartPriceOverview__priceNumber">0</span> zł</h3>
               </div>
               <div class="o-cartDeliveryForm">
                 <h2 class="o-cartDeliveryForm__title">Wybór transportu</h2>
@@ -343,14 +343,14 @@
                   <div class="o-form__group m-formGroup -radiobutton">
                     <input class="m-formGroup__input" type="radio" name="doprava" id="delivery_form_delivery-1" required><span class="m-formGroup__radiobutton a-radiobutton"></span>
                     <label class="m-formGroup__label -bold" for="delivery_form_delivery-1">Odbiór osobisty</label>
-                    <label class="m-formGroup__price" for="delivery_form_delivery-1">99 zł</label>
+                    <label class="m-formGroup__price" for="delivery_form_delivery-1" data-price="99">99 zł</label>
                   </div>
                 </div>
                 <div class="o-cartDeliveryForm__item">
                   <div class="o-form__group m-formGroup -radiobutton">
                     <input class="m-formGroup__input" type="radio" name="doprava" id="delivery_form_delivery-2" required checked><span class="m-formGroup__radiobutton a-radiobutton"></span>
                     <label class="m-formGroup__label -bold" for="delivery_form_delivery-2">Odbiór osobisty</label>
-                    <label class="m-formGroup__price" for="delivery_form_delivery-2">19 zł</label>
+                    <label class="m-formGroup__price" for="delivery_form_delivery-2" data-price="19">19 zł</label>
                   </div>
                 </div>
                 <h2 class="o-cartDeliveryForm__title">Wybór płatności</h2>
@@ -358,21 +358,21 @@
                   <div class="o-form__group m-formGroup -radiobutton">
                     <input class="m-formGroup__input" type="radio" name="platba" id="delivery_form_payment-1" required checked><span class="m-formGroup__radiobutton a-radiobutton"></span>
                     <label class="m-formGroup__label -bold" for="delivery_form_payment-1">Odbiór osobisty</label>
-                    <label class="m-formGroup__price" for="delivery_form_payment-1">99 zł</label>
+                    <label class="m-formGroup__price" for="delivery_form_payment-1" data-price="99">99 zł</label>
                   </div>
                 </div>
                 <div class="o-cartDeliveryForm__item">
                   <div class="o-form__group m-formGroup -radiobutton">
                     <input class="m-formGroup__input" type="radio" name="platba" id="delivery_form_payment-2" required disabled><span class="m-formGroup__radiobutton a-radiobutton"></span>
                     <label class="m-formGroup__label -bold" for="delivery_form_payment-2">Odbiór osobisty</label>
-                    <label class="m-formGroup__price" for="delivery_form_payment-2">99 zł</label>
+                    <label class="m-formGroup__price" for="delivery_form_payment-2" data-price="19">19 zł</label>
                   </div>
                 </div>
                 <div class="o-cartDeliveryForm__item">
                   <div class="o-form__group m-formGroup -radiobutton">
                     <input class="m-formGroup__input" type="radio" name="platba" id="delivery_form_payment-3" required><span class="m-formGroup__radiobutton a-radiobutton"></span>
                     <label class="m-formGroup__label -bold" for="delivery_form_payment-3">Odbiór osobisty</label>
-                    <label class="m-formGroup__price" for="delivery_form_payment-3">99 zł</label>
+                    <label class="m-formGroup__price" for="delivery_form_payment-3" data-price="99">99 zł</label>
                   </div>
                 </div>
               </div>
