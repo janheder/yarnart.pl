@@ -40,8 +40,9 @@
     }
     .a-icon{
         display: inline-block;
-        height: 8px;
-        width: 5px;
+        height: 10px;
+        width: 8px;
+        background-size: 10px 8px;
     }
     &:hover, &:active, &:focus{
         color: $text-white;
