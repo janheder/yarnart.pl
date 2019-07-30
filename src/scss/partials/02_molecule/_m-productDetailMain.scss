@@ -111,6 +111,7 @@
         height: 20px;
         width: 20px;
         margin-right: 10px;
+        background-size: 20px;
     }
 }
 
@@ -238,8 +239,15 @@
     }
     .m-productDetailMain__info{
         flex-direction: column;
+        margin-top: 20px;
     }
     .m-productDetailMain__id{
         margin-top: 5px;
+    }
+    .m-productDetailMain__infoContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
