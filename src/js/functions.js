@@ -283,9 +283,9 @@ $('#show_password_toggler').click(function() {
 
 
 $(document).on('input change','#filter-range-input-1, #filter-range-input-2', function() {
-    $("#filter-range-value-1").text($("#filter-range-input-1").val() + " zł");
+    $("#filter-range-value-1").text($("#filter-range-input-1").val() + " $");
 
-    $("#filter-range-value-2").text($("#filter-range-input-2").val() + " zł");
+    $("#filter-range-value-2").text($("#filter-range-input-2").val() + " $");
 
 });
 
@@ -418,7 +418,7 @@ $(window).bind("load", function() {
         
     }else{platba = 0;}
     
-    $(".m-cartOverview__priceTitle").text((doprava+platba+cena) + " zł").digits(); ;
+    $(".m-cartOverview__priceTitle").text((doprava+platba+cena) + " $").digits(); ;
 
 });
 
@@ -436,7 +436,7 @@ $('.o-cartDeliveryForm .m-formGroup__input[name="doprava"], .o-cartDeliveryForm 
         
     }else{platba = 0;}
     
-    $(".m-cartOverview__priceTitle").text((doprava+platba+cena) + " zł").digits(); ;
+    $(".m-cartOverview__priceTitle").text((doprava+platba+cena) + " $").digits(); ;
 
 });
 */
@@ -457,7 +457,7 @@ $(".o-cartDeliveryForm__item input[name='doprava']").click(function () {
 /*
 $(".m-cartItemSingle").each(function(){
     var cenaKus = $(this).find(".m-cartItemSingle__price").text();
-    var cenaKusClean = parseFloat(cenaKus.substr(0, cenaKus.indexOf(' zł')));
+    var cenaKusClean = parseFloat(cenaKus.substr(0, cenaKus.indexOf(' $')));
 
     $(this).find(".m-numberStepper__btnUp").click(function(){
         var SpinnerInput = $(this).closest('.m-numberStepper').find('.m-numberStepper__input');
@@ -496,10 +496,10 @@ var platbaInput = '.o-cartDeliveryForm .m-formGroup__input[name="platba"]';
 
 if($(dopravaInput).is(':checked')){ 
     var name = $(dopravaInput+":checked").siblings(".m-formGroup__price").html();
-    var nameClean= parseFloat(name.substr(0, name.indexOf(' zł')));
+    var nameClean= parseFloat(name.substr(0, name.indexOf(' $')));
     if($(platbaInput).is(':checked')){ 
         var platbaName = $(platbaInput+":checked").siblings(".m-formGroup__price").html();
-        var platbaNameClean= parseFloat(platbaName.substr(0, platbaName.indexOf(' zł')));
+        var platbaNameClean= parseFloat(platbaName.substr(0, platbaName.indexOf(' $')));
         $(".m-cartPriceOverview__priceNumber").text(nameClean+produktyCena+platbaNameClean);
     }else{
         $(".m-cartPriceOverview__priceNumber").text(nameClean+produktyCena);
@@ -508,10 +508,10 @@ if($(dopravaInput).is(':checked')){
 
 $(dopravaInput).click(function () { 
     var name = $(dopravaInput+":checked").siblings(".m-formGroup__price").html();
-    var nameClean= parseFloat(name.substr(0, name.indexOf(' zł')));
+    var nameClean= parseFloat(name.substr(0, name.indexOf(' $')));
     if($(platbaInput).is(':checked')){ 
         var platbaName = $(platbaInput+":checked").siblings(".m-formGroup__price").html();
-        var platbaNameClean= parseFloat(platbaName.substr(0, platbaName.indexOf(' zł')));
+        var platbaNameClean= parseFloat(platbaName.substr(0, platbaName.indexOf(' $')));
         $(".m-cartPriceOverview__priceNumber").text(nameClean+produktyCena+platbaNameClean);
     }else{
         $(".m-cartPriceOverview__priceNumber").text(nameClean+produktyCena);
@@ -522,10 +522,10 @@ $(dopravaInput).click(function () {
 
 if($(platbaInput).is(':checked')){ 
     var name = $(platbaInput+":checked").siblings(".m-formGroup__price").html();
-    var nameClean= parseFloat(name.substr(0, name.indexOf(' zł')));
+    var nameClean= parseFloat(name.substr(0, name.indexOf(' $')));
     if($(dopravaInput).is(':checked')){ 
         var dopravaName = $(dopravaInput+":checked").siblings(".m-formGroup__price").html();
-        var dopravaNameClean= parseFloat(dopravaName.substr(0, dopravaName.indexOf(' zł')));
+        var dopravaNameClean= parseFloat(dopravaName.substr(0, dopravaName.indexOf(' $')));
         $(".m-cartPriceOverview__priceNumber").text(nameClean+produktyCena+dopravaNameClean);
     }else{
         $(".m-cartPriceOverview__priceNumber").text(nameClean+produktyCena);
@@ -534,10 +534,10 @@ if($(platbaInput).is(':checked')){
 
 $(platbaInput).click(function () { 
     var name = $(platbaInput+":checked").siblings(".m-formGroup__price").html();
-    var nameClean= parseFloat(name.substr(0, name.indexOf(' zł')));
+    var nameClean= parseFloat(name.substr(0, name.indexOf(' $')));
     if($(dopravaInput).is(':checked')){ 
         var dopravaName = $(dopravaInput+":checked").siblings(".m-formGroup__price").html();
-        var dopravaNameClean= parseFloat(dopravaName.substr(0, dopravaName.indexOf(' zł')));
+        var dopravaNameClean= parseFloat(dopravaName.substr(0, dopravaName.indexOf(' $')));
         $(".m-cartPriceOverview__priceNumber").text(nameClean+produktyCena+dopravaNameClean);
     }else{
         $(".m-cartPriceOverview__priceNumber").text(nameClean+produktyCena);
@@ -555,9 +555,9 @@ $("body").on('DOMSubtreeModified', ".m-cartPriceOverview__priceNumber", function
     var cartPrice = valueMax - valueNum;
     
     if(cartPrice > 0){
-        $(".m-cartFreeShipping__text").html("Kup za <span class='m-cartFreeShipping__price'>" + (cartPrice)  + "</span> zł więcej a masz bezpłatną wysyłkę");
+        $(".m-cartFreeShipping__text").html("Kup za <span class='m-cartFreeShipping__price'>" + (cartPrice)  + "</span> $ to get free shipping");
     }else{
-        $(".m-cartFreeShipping__text").text("Darmowa wysyłka");
+        $(".m-cartFreeShipping__text").text("Free shipping");
     }
 });
 
