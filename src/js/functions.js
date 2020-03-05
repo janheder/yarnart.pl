@@ -555,7 +555,7 @@ $("body").on('DOMSubtreeModified', ".m-cartPriceOverview__priceNumber", function
     var cartPrice = valueMax - valueNum;
     
     if(cartPrice > 0){
-        $(".m-cartFreeShipping__text").html("Kaufen Sie für <span class='m-cartFreeShipping__price'>" + (cartPrice)  + "</span> $ und Sie haben kostenlosen versand");
+        $(".m-cartFreeShipping__text").html("Kaufen Sie für <span class='m-cartFreeShipping__price'>" + (cartPrice)  + "</span> € und Sie haben kostenlosen versand");
     }else{
         $(".m-cartFreeShipping__text").text("Kostenloser versand");
     }
