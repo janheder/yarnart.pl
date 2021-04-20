@@ -140,6 +140,10 @@
 .btn.-dark{
     background: $bg-primary;
 
+    &:hover, &:active, &:focus{
+        background: $bg-primary-dark;
+    }
+
     &.-transparent{
         background: transparent;
         color: $text-dark;

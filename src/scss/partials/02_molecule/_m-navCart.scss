@@ -8,6 +8,10 @@
     transition: 0.2s ease all;
     cursor: pointer;
     padding: 0;
+    
+    &:hover, &:active, &:focus{
+        text-decoration: none;
+    }
 }
 .m-navCart__toggle{
     height: 100%;

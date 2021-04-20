@@ -8,6 +8,7 @@ $grey: #E5E5E5;
 $grey-medium: #8D8D8D;
 $grey-dark: #4E5055;
 $grey-deep: #434351;
+$grey-deepest: #383844;
 $black: #000000;
 
 $red: #D00109;
@@ -68,6 +69,7 @@ $text-blue: $blue;
 
 // Backgorund colors
 $bg-primary: $grey-deep;
+$bg-primary-dark: $grey-deepest;
 $bg-brand: $red;
 $bg-brand-dark: $red-dark;
 $bg-brand-secondary: $green;

@@ -3,11 +3,11 @@
 /* ========================================================================== */
 
 .m-productCell{
-    padding: 10px;
+    padding: 10px;      
     z-index: 2;
     position: relative;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
 }
 .m-productCell__link{
     padding: 0px 0px 20px 0px;
@@ -182,9 +182,10 @@
 }
 .m-productCell__infoText{
     flex-grow: 1;
-    white-space: nowrap;
+    white-space: normal;
     justify-content: flex-end;
     display: flex;
+    text-align: right;
 }
 .m-productCell__infoList{
     display: flex;
